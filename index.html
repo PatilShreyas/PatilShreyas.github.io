@@ -15,8 +15,16 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
 
-    <body>
     <style>
+        body {
+            background: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)), url("images/code.jpg");
+            background-color: #cccccc; /* Used if the image is unavailable */
+            background-position: center; /* Center the image */
+            background-attachment: fixed;
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+
         .fab {
             padding: 16px;
             font-size: large;
@@ -72,6 +80,9 @@
         }
 
     </style>
+
+    <body>
+
         <div class="container-fluid">
             <div class="card d-block mx-auto m-3" style="width: fit-content">
                 <div class="card-header">
