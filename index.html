@@ -13,50 +13,78 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
     <script src="js/typecursor.js"></script>
+
+    <script>
+        const progressCode = "<div class=\"spinner-border text-danger\" role=\"status\"></div>";
+
+        function loadApps() {
+            document.getElementById("pills-tabContent").innerHTML = progressCode;
+            $("#pills-tabContent").load("Content/Apps.html");
+        }
+        function loadOpenSource() {
+            document.getElementById("pills-tabContent").innerHTML = progressCode;
+            $("#pills-tabContent").load("Content/OpenSource.html");
+        }
+        function loadWeb() {
+            document.getElementById("pills-tabContent").innerHTML = progressCode;
+            $("#pills-tabContent").load("Content/Web.html");
+        }
+        function loadArticles() {
+            document.getElementById("pills-tabContent").innerHTML = progressCode;
+            $("#pills-tabContent").load("Content/Articles.html");
+        }
+
+        $(document).ready( function() {
+            loadApps();
+        });
+
+    </script>
 </head>
 
 <body>
 
 <div class="container-fluid">
 
-            <div class="card d-block mx-auto m-3" style="width: fit-content">
-                <div class="card-header">
-                    <img class="rounded-circle d-block mx-auto" src="images/profile.jpg" height="256" width="256" >
-                    <div class="h2 mt-2 text-center font-weight-bold" style="color: #154360">Shreyas Sharad Patil</div>
-                    <div class="text-center h6 mt-2"><h4><i class="fas fa-laptop-code mr-2"></i></h4>
-                        <span
-                                class="txt-rotate"
-                                data-period="2000"
-                                data-rotate='[ "Android Developer.", "Web Developer.", "Open Source Enthusiast.", "ML/AI Enthusiast."]'>
+    <!-- Profile -->
+    <div class="card d-block mx-auto m-3" style="width: fit-content">
+        <div class="card-header">
+            <img class="rounded-circle d-block mx-auto" src="images/profile.jpg" height="256" width="256" >
+            <div class="h2 mt-2 text-center font-weight-bold" style="color: #154360">Shreyas Sharad Patil</div>
+            <div class="text-center h6 mt-2"><h4><i class="fas fa-laptop-code mr-2"></i></h4>
+                <span
+                        class="txt-rotate"
+                        data-period="2000"
+                        data-rotate='[ "Android Developer.", "Web Developer.", "Open Source Enthusiast.", "ML/AI Enthusiast."]'>
 
-                        </span>
-                    </div>
-                    <p class="text-monospace d-block mx-auto p-2 small" style="width: fit-content">
-                        I'm 20 year old Information Technology Engineering student<br>
-                        with several applications released onto Google Play Store and living in Pune. <br>
-                        I am self taught developer and make apps, libraries/APIs.<br>
-                        I spend a lot of my development time contributing to open-source projects. <br>
-                        Most of it started by myself which can be found from my GitHub profile.
-                    </p>
-                </div>
-
-                <div class="card-body d-block mx-auto">
-                    <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
-                        <div class="text-center h3 font-weight-bold">Contact :</div>
-                        <a href="mailto: shreyaspatil125@gmail.com" href="#" class="far fa-envelope rounded-circle"></a>
-                        <a href="https://www.facebook.com/shreyaspatil99" target="_blank" class="fab fa-facebook-f rounded-circle"></a>
-                        <a href="https://twitter.com/imShreyasPatil" target="_blank" href="#" class="fab fa-twitter rounded-circle"></a>
-                        <a href="https://instagram.com/_patilshreyas/" target="_blank" href="#" class="fab fa-instagram rounded-circle"></a>
-                        <a href="https://www.linkedin.com/in/patil-shreyas" target="_blank" href="#" class="fab fa-linkedin-in rounded-circle"></a>
-                        <a href="https://github.com/PatilShreyas" target="_blank" href="#" class="fab fa-github rounded-circle"></a>
-                        <a href="https://play.google.com/store/apps/dev?id=7315706573700759915" target="_blank" href="#" class="fab fa-google-play rounded-circle"></a>
-                        <a href="https://medium.com/@patilshreyas" target="_blank" href="#" class="fab fa-medium-m rounded-circle"></a>
-                    </div>
-
-                </div>
+                </span>
             </div>
+            <p class="text-monospace d-block mx-auto p-2 small" style="width: fit-content">
+                I'm 20 year old Information Technology Engineering student<br>
+                with several applications released onto Google Play Store and living in Pune. <br>
+                I am self taught developer and make apps, libraries/APIs.<br>
+                I spend a lot of my development time contributing to open-source projects. <br>
+                Most of it started by myself which can be found from my GitHub profile.
+            </p>
+        </div>
+
+        <div class="card-body d-block mx-auto">
+            <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
+                <div class="text-center h3 font-weight-bold">Contact :</div>
+                <a href="mailto: shreyaspatil125@gmail.com" href="#" class="far fa-envelope rounded-circle"></a>
+                <a href="https://www.facebook.com/shreyaspatil99" target="_blank" class="fab fa-facebook-f rounded-circle"></a>
+                <a href="https://twitter.com/imShreyasPatil" target="_blank" href="#" class="fab fa-twitter rounded-circle"></a>
+                <a href="https://instagram.com/_patilshreyas/" target="_blank" href="#" class="fab fa-instagram rounded-circle"></a>
+                <a href="https://www.linkedin.com/in/patil-shreyas" target="_blank" href="#" class="fab fa-linkedin-in rounded-circle"></a>
+                <a href="https://github.com/PatilShreyas" target="_blank" href="#" class="fab fa-github rounded-circle"></a>
+                <a href="https://play.google.com/store/apps/dev?id=7315706573700759915" target="_blank" href="#" class="fab fa-google-play rounded-circle"></a>
+                <a href="https://medium.com/@patilshreyas" target="_blank" href="#" class="fab fa-medium-m rounded-circle"></a>
+            </div>
+
+        </div>
+    </div>
 
 
     <!-- Row 2 -->
@@ -103,7 +131,6 @@
             <div class="card w-100 mx-auto mt-3" style="background-color: rgba(255,255,255,0.97);">
                 <div class="card-header text-center"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-tasks mr-2"></i> Activities</div></div>
                 <div class="card-body">
-
                     <ul class="list-group">
                         <li class="list-group-item">Organised a Seminar on 'Android App Development' and taught basic app development at Government Polytechnic, Jalgaon.</li>
                         <li class="list-group-item">Participated and finalist in <b>Smart India Hackathon 2017</b>.</li>
@@ -119,6 +146,35 @@
 
     </div>
 
+    <!-- Work View -->
+    <div class="card d-block mx-auto mt-5 w-100">
+        <div class="card-header"><div class="h3 text-center font-weight-bold p-3"><i class="fas fa-laptop-code mr-2"></i> My Work</div>
+
+            <nav class="nav nav-pills flex-column flex-sm-row">
+                <a class="flex-sm-fill text-sm-center nav-link bordered-nav active" id="nav-apps-tab" data-toggle="tab" href="#pills-apps" role="tab" aria-controls="nav-apps" aria-selected="true" onclick="loadApps()"><div class="fa fa-mobile-alt mr-2"></div>Apps</a>
+                <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1" id="nav-opensource-tab" data-toggle="tab" href="#pills-opensource" role="tab" aria-controls="nav-opensource" aria-selected="false" onclick="loadOpenSource()"><div class="fab fa-github-alt mr-2 p-0 m-0" style="width: fit-content"></div>Open Source</a>
+                <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1" id="nav-web-tab" data-toggle="tab" href="#pills-web" role="tab" aria-controls="nav-web" aria-selected="false" onclick="loadWeb()"><div class="fa fa-globe mr-2"></div>Web</a>
+                <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1" id="nav-article-tab" data-toggle="tab" href="#pills-article" role="tab" aria-controls="nav-article" aria-selected="false" onclick="loadArticles()"><div class="fa fa-pen-alt mr-2"></div>Articles</a>
+            </nav>
+        </div>
+
+        <div class="card-body d-block mx-auto">
+            <div class="tab-content d-flex justify-content-center" style="width: auto; overflow: auto;" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-apps" role="tabpanel" aria-labelledby="nav-apps-tab">
+                    <div class="spinner-border text-danger" role="status"></div>
+                </div>
+                <div class="tab-pane fade" id="pills-opensource" role="tabpanel" aria-labelledby="nav-opensource-tab">
+                    <div class="spinner-border text-danger" role="status"></div>
+                </div>
+                <div class="tab-pane fade" id="pills-web" role="tabpanel" aria-labelledby="nav-web-tab">
+                    <div class="spinner-border text-danger" role="status"></div>
+                </div>
+                <div class="tab-pane fade" id="pills-article" role="tabpanel" aria-labelledby="nav-article-tab">
+                    <div class="spinner-border text-danger" role="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </div>
