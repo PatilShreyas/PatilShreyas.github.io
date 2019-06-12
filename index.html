@@ -7,16 +7,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Questrial" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="js/typecursor.js"></script>
     </head>
 
     <style>
         body {
+            font-family: 'Montserrat', sans-serif;
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("images/code.jpg");
             background-color: #cccccc; /* Used if the image is unavailable */
             background-position: center; /* Center the image */
@@ -31,9 +34,16 @@
             width: 50px;
             text-align: center;
             text-decoration: none;
-            margin-top: 16px;
-            margin-right: 8px;
-            margin-left: 8px;
+            margin: 8px;
+        }
+
+        .far {
+            padding: 16px;
+            font-size: large;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 8px;
         }
 
         .fab:hover {
@@ -42,6 +52,11 @@
             opacity: 0.7;
         }
 
+        .far:hover {
+            text-decoration: none;
+            color: white;
+            opacity: 0.7;
+        }
 
         .fa-facebook-f {
             background: #3B5998;
@@ -79,36 +94,139 @@
             color: white;
         }
 
+        .fa-envelope {
+            background: #e25748;
+            color: white;
+        }
+        .skill {
+            border-radius: 15px;
+            text-align: center;
+            padding: 8px;
+            margin: 4px;
+        }
+
     </style>
 
     <body>
 
         <div class="container-fluid">
-            <div class="card d-block mx-auto m-3" style="width: fit-content">
-                <div class="card-header">
-                    <img class="rounded-circle d-block mx-auto" src="images/profile.jpg" height="256" width="256" >
-                    <div class="h2 mt-2 text-center font-weight-bold" style="color: #154360">Shreyas Sharad Patil</div>
-                    <div class="text-center h6 mt-2"><h4><i class="fas fa-laptop-code mr-2"></i></h4> Android Developer <br> Web Developer</div>
+
+            <!-- Row 1 -->
+            <div class="row">
+            <!-- Profile View-->
+                <div class="col-md w-100 d-flex align-items-stretch">
+
+                    <div class="card m-3" style="width: 100%;background-color: rgba(255,255,255,0.97);">
+                        <div class="card-header">
+                            <img class="rounded-circle d-block mx-auto" src="images/profile.jpg" height="256" width="256" >
+                            <div class="h2 mt-2 text-center font-weight-bold" style="color: #154360">Shreyas Sharad Patil</div>
+                            <div class="text-center h6 mt-2"><h4><i class="fas fa-laptop-code mr-2"></i></h4>
+                                <span
+                                    class="txt-rotate"
+                                    data-period="2000"
+                                    data-rotate='[ "Android Developer.", "Web Developer.", "Open Source Enthusiast.", "ML/AI Enthusiast."]'></span></div>
+                        </div>
+
+                        <div class="card-body d-block mx-auto">
+                            <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
+                                <div class="text-center h3">Links :</div>
+                                <a href="mailto: shreyaspatil125@gmail.com" href="#" class="far fa-envelope rounded-circle"></a>
+                                <a href="https://www.facebook.com/shreyaspatil99" target="_blank" class="fab fa-facebook-f rounded-circle"></a>
+                                <a href="https://twitter.com/imShreyasPatil" target="_blank" href="#" class="fab fa-twitter rounded-circle"></a>
+                                <a href="https://instagram.com/_patilshreyas/" target="_blank" href="#" class="fab fa-instagram rounded-circle"></a>
+                                <a href="https://www.linkedin.com/in/patil-shreyas" target="_blank" href="#" class="fab fa-linkedin-in rounded-circle"></a>
+                                <a href="https://github.com/PatilShreyas" target="_blank" href="#" class="fab fa-github rounded-circle"></a>
+                                <a href="https://play.google.com/store/apps/dev?id=7315706573700759915" target="_blank" href="#" class="fab fa-google-play rounded-circle"></a>
+                                <a href="https://medium.com/@patilshreyas" target="_blank" href="#" class="fab fa-medium-m rounded-circle"></a>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
-                <div class="card-body d-block mx-auto">
-                    <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
-                        <div class="text-center h3">Links :</div>
-                        <a href="https://www.facebook.com/shreyaspatil99" target="_blank" class="fab fa-facebook-f rounded-circle"></a>
-                        <a href="https://twitter.com/imShreyasPatil" target="_blank" href="#" class="fab fa-twitter rounded-circle"></a>
-                        <a href="https://instagram.com/_patilshreyas/" target="_blank" href="#" class="fab fa-instagram rounded-circle"></a>
-                        <a href="https://www.linkedin.com/in/patil-shreyas" target="_blank" href="#" class="fab fa-linkedin-in rounded-circle"></a>
-                        <a href="https://github.com/PatilShreyas" target="_blank" href="#" class="fab fa-github rounded-circle"></a>
-                        <a href="https://play.google.com/store/apps/dev?id=7315706573700759915" target="_blank" href="#" class="fab fa-google-play rounded-circle"></a>
-                        <a href="https://medium.com/@patilshreyas" target="_blank" href="#" class="fab fa-medium-m rounded-circle"></a>
-                    </div>
+                    <!-- About View-->
+                <div class="col-md w-100 d-flex align-items-stretch">
+                    <div class="card m-3" style="background-color: rgba(255,255,255,0.97);">
+                        <div class="card-header text-center"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-user-circle mr-2"></i> About Me</div></div>
+                        <div class="card-body">
+                            <div class="container-fluid d-block mx-auto" style="width:fit-content;">
+                                <p class="text-monospace">
+                                    I'm Shreyas, 20 year old Information Technology Engineering student with interest in an Android, ML, AI and Web Development. With several applications released onto Google Play Store living in Pune. <br><br>
+                                    I am self taught developer and make apps, libraries/APIs. <br><br>
+                                    I spend a lot of my development time contributing to open-source projects. Most of it started by myself. I have developed Android and Java libraries which can be found from my GitHub profile
+                                </p>
+                            </div>
 
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Row 2 -->
+            <div class="row">
+                <!-- Skills View-->
+                <div class="col-md-6 w-100 d-flex align-items-stretch">
+
+                    <div class="card m-3 w-100" style="background-color: rgba(255,255,255,0.97);">
+                        <div class="card-header text-center"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-star mr-2"></i> Skills</div></div>
+
+                        <div class="card-body d-block mx-auto">
+                            <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
+                                <div class="h4">Languages/Tools:</div>
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="skill" style="color: #29bf0f"><div class="fab fa-android p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Android</div></div>
+                                    <div class="skill" style="color: #e43e00"><div class="fab fa-java  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Java</div></div>
+                                    <div class="skill" style="color: #cf4237"><div class="fas fa-code p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Kotlin</div></div>
+                                    <div class="skill" style="color: #b2b200"><div class="fab fa-js-square  p-0 m-1" style="font-size: 30px;"></div><div class="font-weight-bold">JavaScript</div></div>
+                                    <div class="skill" style="color: #597fb2"><div class="fab fa-php  p-0 m-1" style="font-size: 30px;"></div><div class="font-weight-bold">PHP</div></div>
+                                    <div class="skill" style="color: #bfa748"><div class="fas fa-server  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">JSP</div></div>
+                                    <div class="skill" style="color: #6685e4"><div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">SQL</div></div>
+                                    <div class="skill" style="color: #4e3f8c"><div class="fab fa-bootstrap p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Bootstrap</div></div>
+                                    <div class="skill" style="color: #cf5b1e"><div class="fab fa-html5  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">HTML</div></div>
+                                    <div class="skill" style="color: #559cc4"><div class="fab fa-css3  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">CSS</div></div>
+                                    <div class="skill" style="color: #585b58"><div class="fab fa-git-square  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Git</div></div>
+                                    <div class="skill" style="color: #000000"><div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">GitHub</div></div>
+                                    <div class="skill" style="color: #edeb21"><div class="fas fa-fire p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Firebase</div></div>
+                                    <div class="skill" style="color: #ed5b74"><div class="fas fa-palette p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">UI/UX Designing</div></div>
+                                </div>
+
+                                <div class="h4 mt-4">Other:</div>
+                                <div class="row justify-content-center align-items-center">
+                                    <div class="skill" style="color: #000000"><div class="fas fa-pen-alt p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Technical Writing</div></div>
+                                    <div class="skill" style="color: #000000"><div class="fas fa-user-friends  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Team Management</div></div>
+                                    <div class="skill" style="color: #000000"><div class="fas fa-users p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Team Leadership</div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About View-->
+                <div class="col-md-6 w-100 d-flex align-items-stretch">
+                    <div class="card m-3" style="background-color: rgba(255,255,255,0.97);">
+                        <div class="card-header text-center"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-tasks mr-2"></i> Activities</div></div>
+                        <div class="card-body">
+
+                            <ul class="list-group">
+                                <li class="list-group-item">Organised a Seminar on 'Android App Development' and taught basic app development at Government Polytechnic, Jalgaon.</li>
+                                <li class="list-group-item">Participated and finalist in <b>Smart India Hackathon 2017</b>.</li>
+                                <li class="list-group-item">Participated and finalist in <b>Smart India Hackathon 2018</b> - Software Edition.</li>
+                                <li class="list-group-item">Organised a district level and was main Co-ordinator of the event <b><i>'TechnoFest 2k17'</i></b>.</li>
+                                <li class="list-group-item">Designed and developed official website for college <a class="link" href="http://www.gpjalgaon.org.in">Government Polytechnic, Jalgaon</a>.</li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
         </div>
 
     <footer class="m-3 mx-auto">
-
             <div class="text-center text-white p-3" style="background-color: rgba(0,0,0,0.8)">Designed By : Shreyas Patil</div>
 
     </footer>
