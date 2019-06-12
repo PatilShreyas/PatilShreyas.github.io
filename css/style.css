@@ -1,0 +1,86 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("../images/code.jpg");
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.fab {
+    padding: 16px;
+    font-size: large;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 8px;
+}
+
+.far {
+    padding: 16px;
+    font-size: large;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 8px;
+}
+
+.fab:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+}
+
+.far:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+}
+
+.fa-facebook-f {
+    background: #3B5998;
+    color: white;
+    text-decoration: none;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin-in {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-github {
+    background: #000000;
+    color: white;
+}
+
+.fa-medium-m {
+    background: #000000;
+    color: white;
+}
+
+.fa-google-play {
+    background: #2c4762;
+    color: white;
+}
+
+.fa-envelope {
+    background: #e25748;
+    color: white;
+}
+.skill {
+    border-radius: 15px;
+    text-align: center;
+    padding: 8px;
+    margin: 4px;
+}
