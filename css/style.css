@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("../images/code.jpg");
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("../Images/code.jpg");
     background-color: #cccccc; /* Used if the image is unavailable */
     background-position: center; /* Center the image */
     background-attachment: fixed;
