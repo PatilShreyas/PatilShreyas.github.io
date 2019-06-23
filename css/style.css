@@ -91,3 +91,55 @@ body {
 
 
 }
+
+@media (min-width:200px) {
+    body{
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+@media (min-width:300px) {
+    body{
+        margin-right: 0.5%;
+        margin-left: 0.5%;
+    }
+}
+@media (min-width: 576px) {
+    body{
+        margin-right: 1.5%;
+        margin-left: 1.5%;
+    }
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    body{
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    body{
+        margin-right: 7%;
+        margin-left: 7%;
+    }
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body{
+        margin-right: 8%;
+        margin-left: 8%;
+    }
+    .container {
+        max-width: 1140px;
+    }
+}
