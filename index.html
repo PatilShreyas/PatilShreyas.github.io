@@ -17,6 +17,9 @@
     <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
     <script src="js/typecursor.js"></script>
 
+    <!---HACK Update-->
+    <link rel="stylesheet" href="css/hack.css">
+
     <script>
         const progressCode = "<div class=\"spinner-border text-danger\" role=\"status\"></div>";
 
@@ -45,169 +48,173 @@
 </head>
 
 <body>
+<div class="parallax">
+    <div class="container-fluid">
 
-<div class="container-fluid">
-
-    <!-- Profile -->
-    <div class="card d-block mx-auto m-3" style="width: fit-content">
-        <div class="card-header justify-content-center" style="background-color: #f9f9f9">
-            <img class="rounded-circle d-block mx-auto" src="Images/profile.jpg" height="256" width="256" >
-            <div class="h2 mt-2 text-center font-weight-bold" style="color: #154360">Shreyas Sharad Patil</div>
-            <div class="text-center h6 mt-2"><h4><i class="fas fa-laptop-code"></i></h4>
-                <span
-                        class="txt-rotate"
-                        data-period="2000"
-                        data-rotate='[ "Android Developer.", "Web Developer.", "Open Source Enthusiast.", "ML/AI Enthusiast.", "UI/UX Designer"]'>
-
-                </span>
+        <!-- Profile -->
+        <div class="card d-block mx-auto m-3" style="width: fit-content">
+            <div class="card-header justify-content-center" style="background-color: #f9f9f9">
+                <img class="rounded-circle d-block mx-auto" src="Images/profile.jpg" height="256" width="256" >
+                <div class="h2 mt-2 text-center font-weight-bold" style="color: #154360">Shreyas Sharad Patil</div>
+                <div class="text-center h6 mt-2"><h4><i class="fas fa-laptop-code"></i></h4>
+                    <span
+                            class="txt-rotate"
+                            data-period="2000"
+                            data-rotate='[ "Android Developer.", "Web Developer.", "Open Source Enthusiast.", "ML/AI Enthusiast.", "UI/UX Designer"]'>
+    
+                    </span>
+                </div>
+                <a href="https://drive.google.com/open?id=1HzpT87-Goedm9wQicDSLM3D2or7Mfutc" class="btn btn-outline-dark d-block mx-auto m-4" style="width:fit-content" target="_blank" role="button"><i class="fas fa-file mr-2"></i>View Resume</a>
+           
             </div>
-            <a href="https://drive.google.com/open?id=1HzpT87-Goedm9wQicDSLM3D2or7Mfutc" class="btn btn-outline-dark d-block mx-auto m-4" style="width:fit-content" target="_blank" role="button"><i class="fas fa-file mr-2"></i>View Resume</a>
-       
+    
+            <div class="card-body d-block mx-auto">
+                <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
+                    <div class="text-center h3 font-weight-bold">Contact :</div>
+                    <a href="mailto: shreyaspatil125@gmail.com" href="#" class="far fa-envelope rounded-circle"></a>
+                    <a href="https://www.facebook.com/shreyaspatil99" target="_blank" class="fab fa-facebook-f rounded-circle"></a>
+                    <a href="https://twitter.com/imShreyasPatil" target="_blank" href="#" class="fab fa-twitter rounded-circle"></a>
+                    <a href="https://instagram.com/_patilshreyas/" target="_blank" href="#" class="fab fa-instagram rounded-circle"></a>
+                    <a href="https://www.linkedin.com/in/patil-shreyas" target="_blank" href="#" class="fab fa-linkedin-in rounded-circle"></a>
+                    <a href="https://github.com/PatilShreyas" target="_blank" href="#" class="fab fa-github rounded-circle"></a>
+                    <a href="https://play.google.com/store/apps/dev?id=7315706573700759915" target="_blank" href="#" class="fab fa-google-play rounded-circle"></a>
+                    <a href="https://medium.com/@patilshreyas" target="_blank" href="#" class="fab fa-medium-m rounded-circle"></a>
+                </div>
+            
+             </div>
         </div>
-
-        <div class="card-body d-block mx-auto">
-            <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
-                <div class="text-center h3 font-weight-bold">Contact :</div>
-                <a href="mailto: shreyaspatil125@gmail.com" href="#" class="far fa-envelope rounded-circle"></a>
-                <a href="https://www.facebook.com/shreyaspatil99" target="_blank" class="fab fa-facebook-f rounded-circle"></a>
-                <a href="https://twitter.com/imShreyasPatil" target="_blank" href="#" class="fab fa-twitter rounded-circle"></a>
-                <a href="https://instagram.com/_patilshreyas/" target="_blank" href="#" class="fab fa-instagram rounded-circle"></a>
-                <a href="https://www.linkedin.com/in/patil-shreyas" target="_blank" href="#" class="fab fa-linkedin-in rounded-circle"></a>
-                <a href="https://github.com/PatilShreyas" target="_blank" href="#" class="fab fa-github rounded-circle"></a>
-                <a href="https://play.google.com/store/apps/dev?id=7315706573700759915" target="_blank" href="#" class="fab fa-google-play rounded-circle"></a>
-                <a href="https://medium.com/@patilshreyas" target="_blank" href="#" class="fab fa-medium-m rounded-circle"></a>
-            </div>
-        
-         </div>
-    </div>
-
-
-    <!-- Row 2 -->
-    <div class="row">
-
-        <!-- About View-->
-        <div class="col-md-6 w-100 d-flex align-items-stretch">
-            <div class="card w-100 mx-auto mt-3" style="background-color: rgba(255,255,255,0.97);">
-                <div class="card-header text-center"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-user-alt mr-2"></i> About Me</div></div>
-                <div class="card-body">
-                    <p class="text-monospace d-block mx-auto p-2 small" style="width: fit-content;">
-                        I'm 20 year old Information Technology Engineering student with several applications released onto Google Play Store and living in Pune. <br>
-                        I am self taught developer and make apps, libraries/APIs under Developer Name: <a href="https://www.facebook.com/spdroid/">SPDroid</a>.<br>
-                        I spend a lot of my development time contributing to open-source projects. <br>
-                        Most of it started by myself which can be found from my GitHub profile. <br>
-                        Other than this, I love Music 🎵. I love to sing songs.
-                    </p>
-                    <div class="h4 text-center"><i class="fas fa-graduation-cap"></i>Education:</div>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <div class="small" style="color: #b7b6bb">2018 - PRESENT</div>
-                            <div class="large font-weight-bold mt-2">D. Y. Patil College of Engineering, Pune</div>
-                            <div class="small" style="color: #b7b6bb">Pune, Maharashtra</div>
-                            <div class="font-weight-light mt-1" style="color: #7b7a7f">Bachelor of Engineering in Information Technology</div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="small" style="color: #b7b6bb">2015 - 2018</div>
-                            <div class="large font-weight-bold mt-2">Government Polytechnic, Jalgaon</div>
-                            <div class="small" style="color: #b7b6bb">Jalgaon, Maharashtra</div>
-                            <div class="font-weight-light mt-1" style="color: #7b7a7f">Diploma in Information Technology</div>
-                        </li>
-                    </ul>
+    
+    
+        <!-- Row 2 -->
+        <div class="row">
+    
+            <!-- About View-->
+            <div class="col-md-6 w-100 d-flex align-items-stretch">
+                <div class="card w-100 mx-auto mt-3" style="background-color: rgba(255,255,255,0.97);">
+                    <div class="card-header text-center" style="background-color: #4deeea;"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-user-alt mr-2"></i> About Me</div></div>
+                    <div class="card-body">
+                        <p class="text-monospace d-block mx-auto p-2 small" style="width: fit-content;">
+                            I'm 20 year old Information Technology Engineering student with several applications released onto Google Play Store and living in Pune. <br>
+                            I am self taught developer and make apps, libraries/APIs under Developer Name: <a href="https://www.facebook.com/spdroid/">SPDroid</a>.<br>
+                            I spend a lot of my development time contributing to open-source projects. <br>
+                            Most of it started by myself which can be found from my GitHub profile. <br>
+                            Other than this, I love Music 🎵. I love to sing songs.
+                        </p>
+                        <div class="h4 text-center"><i class="fas fa-graduation-cap"></i>Education:</div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="small" style="color: #b7b6bb">2018 - PRESENT</div>
+                                <div class="large font-weight-bold mt-2">D. Y. Patil College of Engineering, Pune</div>
+                                <div class="small" style="color: #b7b6bb">Pune, Maharashtra</div>
+                                <div class="font-weight-light mt-1" style="color: #7b7a7f">Bachelor of Engineering in Information Technology</div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="small" style="color: #b7b6bb">2015 - 2018</div>
+                                <div class="large font-weight-bold mt-2">Government Polytechnic, Jalgaon</div>
+                                <div class="small" style="color: #b7b6bb">Jalgaon, Maharashtra</div>
+                                <div class="font-weight-light mt-1" style="color: #7b7a7f">Diploma in Information Technology</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Skills View-->
-        <div class="col-md-6 w-100 d-flex align-items-stretch">
-
-            <div class="card w-100 mx-auto mt-3" style="background-color: rgba(255,255,255,0.97);">
-                <div class="card-header text-center"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-star mr-2"></i> Skills</div></div>
-
-                <div class="card-body d-block mx-auto">
-                    <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
-                        <div class="h4">Languages/Tools:</div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="skill" style="color: #29bf0f"><div class="fab fa-android p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Android</div></div>
-                            <div class="skill" style="color: #e43e00"><div class="fab fa-java  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Java</div></div>
-                            <div class="skill" style="color: #cf4237"><div class="fas fa-code p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Kotlin</div></div>
-                            <div class="skill" style="color: #b2b200"><div class="fab fa-js-square  p-0 m-1" style="font-size: 30px;"></div><div class="font-weight-bold">JavaScript</div></div>
-                            <div class="skill" style="color: #597fb2"><div class="fab fa-php  p-0 m-1" style="font-size: 30px;"></div><div class="font-weight-bold">PHP</div></div>
-                            <div class="skill" style="color: #bfa748"><div class="fas fa-server  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">JSP</div></div>
-                            <div class="skill" style="color: #6685e4"><div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">SQL</div></div>
-                            <div class="skill" style="color: #4e3f8c"><div class="fab fa-bootstrap p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Bootstrap</div></div>
-                            <div class="skill" style="color: #cf5b1e"><div class="fab fa-html5  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">HTML</div></div>
-                            <div class="skill" style="color: #559cc4"><div class="fab fa-css3  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">CSS</div></div>
-                            <div class="skill" style="color: #585b58"><div class="fab fa-git-square  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Git</div></div>
-                            <div class="skill" style="color: #000000"><div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">GitHub</div></div>
-                            <div class="skill" style="color: #ed8b20"><div class="fas fa-fire p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Firebase</div></div>
-                            <div class="skill" style="color: #ed5b74"><div class="fas fa-palette p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">UI/UX Designing</div></div>
+    
+            <!-- Skills View-->
+            <div class="col-md-6 w-100 d-flex align-items-stretch">
+    
+                <div class="card w-100 mx-auto mt-3" style="background-color: rgba(255,255,255,0.97);">
+                    <div class="card-header text-center" style="background-color: #4deeea;"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-star mr-2"></i> Skills</div></div>
+    
+                    <div class="card-body d-block mx-auto">
+                        <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
+                            <div class="h4">Languages/Tools:</div>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="skill" style="color: #29bf0f"><div class="fab fa-android p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Android</div></div>
+                                <div class="skill" style="color: #e43e00"><div class="fab fa-java  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Java</div></div>
+                                <div class="skill" style="color: #cf4237"><div class="fas fa-code p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Kotlin</div></div>
+                                <div class="skill" style="color: #b2b200"><div class="fab fa-js-square  p-0 m-1" style="font-size: 30px;"></div><div class="font-weight-bold">JavaScript</div></div>
+                                <div class="skill" style="color: #597fb2"><div class="fab fa-php  p-0 m-1" style="font-size: 30px;"></div><div class="font-weight-bold">PHP</div></div>
+                                <div class="skill" style="color: #bfa748"><div class="fas fa-server  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">JSP</div></div>
+                                <div class="skill" style="color: #6685e4"><div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">SQL</div></div>
+                                <div class="skill" style="color: #4e3f8c"><div class="fab fa-bootstrap p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Bootstrap</div></div>
+                                <div class="skill" style="color: #cf5b1e"><div class="fab fa-html5  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">HTML</div></div>
+                                <div class="skill" style="color: #559cc4"><div class="fab fa-css3  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">CSS</div></div>
+                                <div class="skill" style="color: #585b58"><div class="fab fa-git-square  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Git</div></div>
+                                <div class="skill" style="color: #000000"><div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">GitHub</div></div>
+                                <div class="skill" style="color: #ed8b20"><div class="fas fa-fire p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Firebase</div></div>
+                                <div class="skill" style="color: #ed5b74"><div class="fas fa-palette p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">UI/UX Designing</div></div>
+                            </div>
+    
+                            <div class="h4 mt-4">Other:</div>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="skill" style="color: #000000"><div class="fas fa-pen-alt p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Technical Writing</div></div>
+                                <div class="skill" style="color: #000000"><div class="fas fa-user-friends  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Team Management</div></div>
+                                <div class="skill" style="color: #000000"><div class="fas fa-users p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Team Leadership</div></div>
+                            </div>
                         </div>
-
-                        <div class="h4 mt-4">Other:</div>
-                        <div class="row justify-content-center align-items-center">
-                            <div class="skill" style="color: #000000"><div class="fas fa-pen-alt p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Technical Writing</div></div>
-                            <div class="skill" style="color: #000000"><div class="fas fa-user-friends  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Team Management</div></div>
-                            <div class="skill" style="color: #000000"><div class="fas fa-users p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Team Leadership</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- About View -->
+        <div class="card w-100 mx-auto mt-3" style="background-color:#4deeea;">
+            <div class="card-header text-center" style="background-color: #4deeea;"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-tasks mr-2"></i> Activities</div></div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">Developed many android apps or APIs under Developer Name : <a href="https://www.facebook.com/spdroid/">SPDroid</a>.</li>
+                    <li class="list-group-item">Organised a Seminar on 'Android App Development' and taught basic app development at Government Polytechnic, Jalgaon.</li>
+                    <li class="list-group-item">Participated and finalist in <b>Smart India Hackathon 2017</b>.</li>
+                    <li class="list-group-item">Participated and finalist in <b>Smart India Hackathon 2018</b> - Software Edition.</li>
+                    <li class="list-group-item">Organised a district level and was main Co-ordinator of the event <b><i>'TechnoFest 2k17'</i></b>.</li>
+                    <li class="list-group-item">Designed and developed official website for college <a class="link" href="http://www.gpjalgaon.org.in">Government Polytechnic, Jalgaon</a>.</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Work View -->
+        <div class="card d-block mx-auto mt-3 w-100">
+            <div class="card-header"><div class="h3 text-center font-weight-bold p-3"><i class="fas fa-laptop-code mr-2"></i> My Work</div>
+    
+                <nav class="nav nav-pills flex-column flex-sm-row">
+                    <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1 mr-1 work-tab active" id="nav-apps-tab" data-toggle="tab" href="#pills-apps" role="tab" aria-controls="nav-apps" aria-selected="true" onclick="loadApps()"><div class="fa fa-mobile-alt mr-2"></div>Apps</a>
+    
+                    <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1 mr-1 work-tab" id="nav-opensource-tab" data-toggle="tab" href="#pills-opensource" role="tab" aria-controls="nav-opensource" aria-selected="false" onclick="loadOpenSource()"><div class="fab fa-github-alt mr-2 p-0 m-0" style="width: fit-content"></div>Open Source</a>
+    
+                    <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1 mr-1 work-tab" id="nav-web-tab" data-toggle="tab" href="#pills-web" role="tab" aria-controls="nav-web" aria-selected="false" onclick="loadWeb()"><div class="fa fa-globe mr-2"></div>Web</a>
+    
+                    <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1 mr-1 work-tab" id="nav-article-tab" data-toggle="tab" href="#pills-article" role="tab" aria-controls="nav-article" aria-selected="false" onclick="loadArticles()"><div class="fa fa-pen-alt mr-2"></div>Articles</a>
+                </nav>
+            </div>
+    
+            <div class="card-body d-block mx-auto">
+                <div class="container-fluid p-0">
+                    <div class="tab-content d-flex justify-content-center" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-apps" role="tabpanel" aria-labelledby="nav-apps-tab">
+                            <div class="spinner-border text-danger" role="status"></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-opensource" role="tabpanel" aria-labelledby="nav-opensource-tab">
+                            <div class="spinner-border text-danger" role="status"></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-web" role="tabpanel" aria-labelledby="nav-web-tab">
+                            <div class="spinner-border text-danger" role="status"></div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-article" role="tabpanel" aria-labelledby="nav-article-tab">
+                            <div class="spinner-border text-danger" role="status"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    
+    
     </div>
-
-    <!-- About View -->
-    <div class="card w-100 mx-auto mt-3" style="background-color: rgba(255,255,255,0.97);">
-        <div class="card-header text-center"><div class="h3 font-weight-bold p-2 d-flex align-items-center"><i class="fas fa-tasks mr-2"></i> Activities</div></div>
-        <div class="card-body">
-            <ul class="list-group">
-                <li class="list-group-item">Developed many android apps or APIs under Developer Name : <a href="https://www.facebook.com/spdroid/">SPDroid</a>.</li>
-                <li class="list-group-item">Organised a Seminar on 'Android App Development' and taught basic app development at Government Polytechnic, Jalgaon.</li>
-                <li class="list-group-item">Participated and finalist in <b>Smart India Hackathon 2017</b>.</li>
-                <li class="list-group-item">Participated and finalist in <b>Smart India Hackathon 2018</b> - Software Edition.</li>
-                <li class="list-group-item">Organised a district level and was main Co-ordinator of the event <b><i>'TechnoFest 2k17'</i></b>.</li>
-                <li class="list-group-item">Designed and developed official website for college <a class="link" href="http://www.gpjalgaon.org.in">Government Polytechnic, Jalgaon</a>.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Work View -->
-    <div class="card d-block mx-auto mt-3 w-100">
-        <div class="card-header"><div class="h3 text-center font-weight-bold p-3"><i class="fas fa-laptop-code mr-2"></i> My Work</div>
-
-            <nav class="nav nav-pills flex-column flex-sm-row">
-                <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1 mr-1 active" id="nav-apps-tab" data-toggle="tab" href="#pills-apps" role="tab" aria-controls="nav-apps" aria-selected="true" onclick="loadApps()"><div class="fa fa-mobile-alt mr-2"></div>Apps</a>
-                <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1 mr-1" id="nav-opensource-tab" data-toggle="tab" href="#pills-opensource" role="tab" aria-controls="nav-opensource" aria-selected="false" onclick="loadOpenSource()"><div class="fab fa-github-alt mr-2 p-0 m-0" style="width: fit-content"></div>Open Source</a>
-                <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1 mr-1" id="nav-web-tab" data-toggle="tab" href="#pills-web" role="tab" aria-controls="nav-web" aria-selected="false" onclick="loadWeb()"><div class="fa fa-globe mr-2"></div>Web</a>
-                <a class="flex-sm-fill text-sm-center nav-link bordered-nav ml-1 mr-1" id="nav-article-tab" data-toggle="tab" href="#pills-article" role="tab" aria-controls="nav-article" aria-selected="false" onclick="loadArticles()"><div class="fa fa-pen-alt mr-2"></div>Articles</a>
-            </nav>
-        </div>
-
-        <div class="card-body d-block mx-auto">
-            <div class="container-fluid p-0">
-                <div class="tab-content d-flex justify-content-center" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-apps" role="tabpanel" aria-labelledby="nav-apps-tab">
-                        <div class="spinner-border text-danger" role="status"></div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-opensource" role="tabpanel" aria-labelledby="nav-opensource-tab">
-                        <div class="spinner-border text-danger" role="status"></div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-web" role="tabpanel" aria-labelledby="nav-web-tab">
-                        <div class="spinner-border text-danger" role="status"></div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-article" role="tabpanel" aria-labelledby="nav-article-tab">
-                        <div class="spinner-border text-danger" role="status"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+    
+    <footer class="m-3 mx-auto">
+        <div class="text-center text-white p-3" style="background-color: rgba(0,0,0,0.8)">Designed By : Shreyas Patil</div>
+    
+    </footer>
+    
 </div>
-
-<footer class="m-3 mx-auto">
-    <div class="text-center text-white p-3" style="background-color: rgba(0,0,0,0.8)">Designed By : Shreyas Patil</div>
-
-</footer>
-
 </body>
 </html>
