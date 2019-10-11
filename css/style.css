@@ -94,3 +94,32 @@ body {
 .loadable-content-spinner.hidden {
 	display: none;
 }
+
+.contact-information {
+	width:fit-content;
+}
+
+.card-header h3 {
+	margin: 0;
+}
+
+.nav-pills .nav-link.active {
+	transition: all 0.25s;
+}
+
+#pills-tabContent .content {
+	min-height: 400px;
+}
+
+#pills-tabContent .content .card.visible {
+	opacity: 1;
+	transition: opacity 0.25s;
+}
+
+#pills-tabContent .content .card {
+	opacity: 0;
+}
+
+.skill > div:first-child {
+	font-size: 30px;
+}
