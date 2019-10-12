@@ -1,12 +1,16 @@
 body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("../Images/code.jpg");
-    background-color: #cccccc; /* Used if the image is unavailable */
-    background-position: center; /* Center the image */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url("../Images/code.jpg");
+    background-color: #cccccc;
+    /* Used if the image is unavailable */
+    background-position: center;
+    /* Center the image */
     background-attachment: fixed;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
 }
 
 .fab {
@@ -79,6 +83,7 @@ body {
     background: #e25748;
     color: white;
 }
+
 .skill {
     border-radius: 15px;
     text-align: center;
@@ -89,6 +94,13 @@ body {
 .bordered-nav {
     border: 1px solid #AED6F1;
     border-radius: 3px;
+}
 
+.card-scalable {
+    transition: all .2s;
+    margin-top: 5px;
+}
 
+.card-scalable:hover {
+    transform: scale(1.02);
 }
