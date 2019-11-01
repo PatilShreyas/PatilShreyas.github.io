@@ -29,7 +29,7 @@ body {
 
 .fab:hover {
     text-decoration: none;
-    color: white;
+    color: #15010166;
     opacity: 0.7;
 }
 
@@ -91,4 +91,13 @@ body {
     border-radius: 3px;
 
 
+}
+
+.card{
+    -webkit-transition:  box-shadow .5s ease-out;
+}
+
+.card:hover {
+    box-shadow: 1px 8px 20px grey;
+    -webkit-transition:  box-shadow .3s ease-in;
 }
