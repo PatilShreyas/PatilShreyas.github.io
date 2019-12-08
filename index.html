@@ -16,9 +16,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/typecursor.js"></script>
 </head>
-
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
         <a class="navbar-brand" href="index.html">Shreyas Patil</a>
@@ -52,7 +53,7 @@
     <!-- Home Section -->
     <section id="home" style="margin-top: 0%;">
         <div class="container-fluid">
-            <img class="rounded-circle d-block mx-auto m-3" src="Images/profile.jpg" height="256" width="256" >
+            <img class="rounded-circle d-block mx-auto m-3" src="Images/profile.jpg" height="256" width="256" data-aos="zoom-in-up">
             <div class="h2 mt-2 text-center font-weight-bold" style="color: #FFFFFF">Shreyas Sharad Patil</div>
             <div class="text-center h6 mt-2" style="color: #FFFFFF"><h4><i class="fas fa-laptop-code"></i></h4>
                 <span
@@ -62,7 +63,7 @@
                 </span>
             </div>
             <a href="https://drive.google.com/open?id=1HzpT87-Goedm9wQicDSLM3D2or7Mfutc" class="btn btn-outline-light d-block mx-auto m-4" style="width:fit-content" target="_blank" role="button"><i class="fas fa-file mr-2"></i>View Resume</a>
-            <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
+            <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                 <a href="mailto: shreyaspatil125@gmail.com" href="#" class="far fa-envelope rounded-circle"></a>
                 <a href="https://www.facebook.com/shreyaspatil99" target="_blank" class="fab fa-facebook-f rounded-circle"></a>
                 <a href="https://twitter.com/imShreyasPatil" target="_blank" href="#" class="fab fa-twitter rounded-circle"></a>
@@ -79,8 +80,8 @@
     <section id="aboutMe">
         <div class="container-fluid">
             <div class="justify-content-center">
-                <div class="h1 text-center"><i class="fas fa-user-alt mr-2"></i><b>About</b> Me</div>
-                <div class="p text-monospace d-block mx-auto p-2 larger" style="width: fit-content;">
+                <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-user-alt mr-2"></i><b>About</b> Me</div>
+                <div class="p text-monospace d-block mx-auto p-2 larger" style="width: fit-content;" data-aos="zoom-in-down">
                         I'm 20 year old Information Technology Engineering student with several applications released onto Google Play Store and living in Pune. <br>
                         I am self taught developer and make apps, libraries/APIs under Developer Name: <a href="https://www.facebook.com/spdroid/">SPDroid</a>.<br>
                         I spend a lot of my development time contributing to open-source projects. <br>
@@ -93,7 +94,7 @@
 
     <!-- Education Section -->
     <section id="education">
-        <div class="container-fluid">
+        <div class="container-fluid" data-aos="zoom-out">
             <div class="h1 text-center"><i class="fas fa-graduation-cap"></i>My <b>Education</b></div>
             <ul class="list-group p-3 mx-auto" style="width: fit-content;">
                 <li class="list-group-item">
@@ -115,10 +116,10 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container-fluid">
-            <div class="h1 text-center"><i class="fas fa-star"></i>My <b>Skills</b></div>
+            <div class="h1 text-center" data-aos="zoom-out"><i class="fas fa-star"></i>My <b>Skills</b></div>
             <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
                 <div class="h4 mt-4">Languages:</div>
-                <div class="row justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <div class="skill" style="color: #e43e00"><div class="fab fa-java  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Java</div></div>
                     <div class="skill" style="color: #cf4237"><div class="fas fa-code p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Kotlin</div></div>
                     <div class="skill" style="color: #b2b200"><div class="fab fa-js-square  p-0 m-1" style="font-size: 30px;"></div><div class="font-weight-bold">JavaScript</div></div>
@@ -131,28 +132,28 @@
                 </div>
 
                 <div class="h4 mt-4">Technologies/Frameworks:</div>
-                <div class="row justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <div class="skill" style="color: #29bf0f"><div class="fab fa-android p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Android</div></div>
                     <div class="skill" style="color: #0f96bf"><div class="fas fa-mobile p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Flutter</div></div>
                     <div class="skill" style="color: #4e3f8c"><div class="fab fa-bootstrap p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Bootstrap</div></div>
                 </div>
 
                 <div class="h4 mt-4">Databases:</div>
-                <div class="row justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <div class="skill" style="color: #6685e4"><div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">SQL</div></div>
                     <div class="skill" style="color: #046e16"><div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">MongoDB</div></div>
                     <div class="skill" style="color: #d9ff00"><div class="fas fa-fire p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Firebase</div></div>
                 </div>
 
                 <div class="h4 mt-4">Tools:</div>
-                <div class="row justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <div class="skill" style="color: #ffffff"><div class="fab fa-git-square  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Git</div></div>
                     <div class="skill" style="color: #ffffff"><div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">GitHub</div></div>
                     <div class="skill" style="color: #d9ff00"><div class="fas fa-fire p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Firebase</div></div>
                 </div>
 
                 <div class="h4 mt-4">Other:</div>
-                <div class="row justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                     <div class="skill" style="color: #ffffff"><div class="fas fa-pen-alt p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Technical Writing</div></div>
                     <div class="skill" style="color: #ffffff"><div class="fas fa-user-friends  p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Team Management</div></div>
                     <div class="skill" style="color: #ffffff"><div class="fas fa-users p-0 m-1" style="font-size: 30px"></div><div class="font-weight-bold">Team Leadership</div></div>
@@ -165,8 +166,8 @@
     <!-- Activities Section -->
     <section id="activities">
         <div class="container-fluid">
-            <div class="h1 text-center"><i class="fas fa-tasks mr-2"></i>My <b>Activities</b></div></div>
-            <ul class="list-group p-3 mx-auto" style="width: fit-content;">
+            <div class="h1 text-center" data-aos="zoom-out"><i class="fas fa-tasks mr-2"></i>My <b>Activities</b></div></div>
+            <ul class="list-group p-3 mx-auto" style="width: fit-content;" data-aos="zoom-in-left"> 
                 <li class="list-group-item" style=" background: transparent;">
                     <div class="small" style="color: #b7b6bb">2016 - PRESENT</div>
                     <div class="large mt-2">Developing Android mobiles apps or APIs under Developer Name : <a href="https://www.facebook.com/spdroid/" target="_blank">SPDroid</a>.</div>
@@ -210,7 +211,7 @@
     <!-- Education Section -->
     <section id="myWork">
         <div class="container-fluid">
-            <div class="h1 text-center"><i class="fas fa-laptop-code"></i>My <b>Work</b></div></div>
+            <div class="h1 text-center" data-aos="zoom-out"><i class="fas fa-laptop-code"></i>My <b>Work</b></div></div>
             <nav>
                 <div class="nav nav-pills nav-fill" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link bordered-nav ml-1 mr-1 active" id="nav-apps-tab" data-toggle="tab" href="#nav-apps" role="tab" aria-controls="nav-apps" aria-selected="true"><div class="fa fa-mobile-alt mr-2"></div>Apps</a>
@@ -220,7 +221,7 @@
                     <a class="nav-item nav-link bordered-nav ml-1 mr-1" id="nav-articles-tab" data-toggle="tab" href="#nav-articles" role="tab" aria-controls="nav-articles" aria-selected="false"><div class="fa fa-pen-alt mr-2"></div>Articles</a>
                 </div>
             </nav>
-            <div class="tab-content" id="nav-tabContent">
+            <div class="tab-content" id="nav-tabContent" data-aos="zoom-in-right">
                 <div class="tab-pane fade show active" id="nav-apps" role="tabpanel" aria-labelledby="nav-apps-tab">
                     <!-- START APPS -->
                     <div class="card-deck">
@@ -534,5 +535,10 @@
         alt="Web Analytics"></a></div>
     </noscript>
     <!-- End of Statcounter Code -->
+
+    <!-- Initialize Animation -->
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
