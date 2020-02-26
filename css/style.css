@@ -18,8 +18,8 @@ section {
     margin-top: 100px;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-  }
+    padding-top: 80px;
+}
 
 .fab {
     padding: 16px;
@@ -105,17 +105,6 @@ section {
 .bordered-nav {
     border: 1px solid #AED6F1;
     border-radius: 3px;
-}
-
-.page-section {
-    height: 480px;
-    width: 50%;
-    margin-left: 35%;
-    margin-top: 5%;
-    padding: 3em;
-    background: linear-gradient(45deg, #43cea2 10%, #185a9d 90%);
-    color: white;
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
 }
 
 .list-group-item {
