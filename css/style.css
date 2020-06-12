@@ -171,3 +171,8 @@ section {
     from, to { border-color: transparent }
     50% { border-color: orange }
   }
+
+/* Scrolling problem in MyWork Section */
+#myWork {
+  overflow-x: hidden;
+}
