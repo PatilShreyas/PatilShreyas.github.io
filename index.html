@@ -27,11 +27,11 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/modernizr.js"></script> 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/typecursor.js"></script>
 
     <meta property="og:title" content="Shreyas Patil - Android Developer, Web Developer">
     <meta property="og:image"
@@ -76,12 +76,20 @@
     <section id="home" style="margin-top: 0%; padding-top: 60px;">
         <img class="rounded-circle d-block mx-auto m-3" src="Images/profile.jpg" height="256" width="256"
             data-aos="zoom-in-up">
-        <div class="h2 mt-2 text-center font-weight-bold" style="color: #FFFFFF">Shreyas Sharad Patil</div>
-        <div class="text-center h6 mt-2" style="color: #FFFFFF">
-            <h4><i class="fas fa-laptop-code"></i></h4>
-            <span class="txt-rotate" data-period="2000"
-                data-rotate='[ "Android Developer.", "Web Developer.", "Open Source Enthusiast.", "ML/AI Enthusiast.", "UI/UX Designer"]'>
-            </span>
+        <div class="h2 mt-2 text-center" style="color: #FFFFFF">Shreyas Sharad Patil</div>
+
+        <div class="cd-intro m-3 text-center">
+            <h4 class="cd-headline slide">
+                <span class="cd-words-wrapper">
+                    <b class="is-visible">❤️ Android</b>
+                    <b>✈️ Kotlin</b>
+                    <b>😍 Open Source</b>
+                    <b>🔥 Firebase</b>
+                    <b>👨🏻‍💻 Enthusiast</b>
+                    <b>✍️ Technical</b>
+                    <b>🇮🇳 Indian</b>
+                </span>
+            </h4>
         </div>
 
         <div class="d-flex align-items-center">
@@ -209,10 +217,6 @@
                     <div class="fab fa-php  p-0 m-1" style="font-size: 30px;"></div>
                     <div class="font-weight-bold">PHP</div>
                 </div>
-                <div class="skill" style="color: #bfa748">
-                    <div class="fas fa-server  p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">JSP</div>
-                </div>
                 <div class="skill" style="color: #cf5b1e">
                     <div class="fab fa-html5  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">HTML</div>
@@ -224,6 +228,10 @@
                 <div class="skill" style="color: #2099df">
                     <div class="fas fa-code p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Dart</div>
+                </div>
+                <div class="skill" style="color: #f3c623">
+                    <div class="fab fa-python p-0 m-1" style="font-size: 30px"></div>
+                    <div class="font-weight-bold">Python</div>
                 </div>
 
             </div>
@@ -247,6 +255,10 @@
                     <div class="fab fa-node p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Node.js</div>
                 </div>
+                <div class="skill" style="color: #32e0c4">
+                    <div class="fab fa-node p-0 m-1" style="font-size: 30px"></div>
+                    <div class="font-weight-bold">Django</div>
+                </div>
             </div>
 
             <div class="h4 mt-4">Databases:</div>
@@ -260,7 +272,7 @@
                     <div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">MongoDB</div>
                 </div>
-                <div class="skill" style="color: #d9ff00">
+                <div class="skill" style="color: #FFA000">
                     <div class="fas fa-fire p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Firebase</div>
                 </div>
@@ -277,7 +289,11 @@
                     <div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">GitHub</div>
                 </div>
-                <div class="skill" style="color: #d9ff00">
+                <div class="skill" style="color: #ffffff">
+                    <div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div>
+                    <div class="font-weight-bold">GitHub Actions</div>
+                </div>
+                <div class="skill" style="color: #FFA000">
                     <div class="fas fa-fire p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Firebase</div>
                 </div>
@@ -1009,7 +1025,6 @@
         </div>
     </footer>
 
-
     <!-- Statcounter -->
     <script type="text/javascript">
         var sc_project = 12121673;
@@ -1028,6 +1043,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
