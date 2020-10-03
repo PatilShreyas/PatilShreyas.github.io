@@ -82,8 +82,13 @@ section {
 }
 
 .fa-medium-m {
-    background: #000000;
+    background: #333333;
     color: white;
+}
+
+.fa-blog {
+  background: #408ebb;
+  color: white;
 }
 
 .fa-google-play {
