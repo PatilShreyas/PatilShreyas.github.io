@@ -1,89 +1,90 @@
 body {
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(rgba(1,1,1,0.9), rgba(1,1,1,0.9)), url("../Images/code.jpg");
-    background-color: #000000; /* Used if the image is unavailable */
-    background-position: center; /* Center the image */
-    background-attachment: fixed;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    color: #FFFFFF;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.9)),
+    url("../Images/code.jpg");
+  background-color: #000000; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-attachment: fixed;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  color: #ffffff;
 }
 
 .navbar {
-    background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 section {
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
-    padding-top: 80px;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
 }
 
 .fab {
-    padding: 16px;
-    font-size: large;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 8px;
+  padding: 16px;
+  font-size: large;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 8px;
 }
 
 .nav-item {
-    margin: 4px;
+  margin: 4px;
 }
 
 .far {
-    padding: 16px;
-    font-size: large;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 8px;
+  padding: 16px;
+  font-size: large;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 8px;
 }
 
 .fab:hover {
-    text-decoration: none;
-    color: white;
-    opacity: 0.7;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
 }
 
 .far:hover {
-    text-decoration: none;
-    color: white;
-    opacity: 0.7;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
 }
 
 .fa-facebook-f {
-    background: #3B5998;
-    color: white;
-    text-decoration: none;
+  background: #3b5998;
+  color: white;
+  text-decoration: none;
 }
 
 .fa-twitter {
-    background: #55ACEE;
-    color: white;
+  background: #55acee;
+  color: white;
 }
 
 .fa-linkedin-in {
-    background: #007bb5;
-    color: white;
+  background: #007bb5;
+  color: white;
 }
 
 .fa-instagram {
-    background: #125688;
-    color: white;
+  background: #125688;
+  color: white;
 }
 
 .fa-github-alt {
-    background: #272727;
-    color: white;
+  background: #272727;
+  color: white;
 }
 
 .fa-medium-m {
-    background: #333333;
-    color: white;
+  background: #333333;
+  color: white;
 }
 
 .fa-blog {
@@ -92,64 +93,64 @@ section {
 }
 
 .fa-google-play {
-    background: #2c4762;
-    color: white;
+  background: #2c4762;
+  color: white;
 }
 
 .fa-envelope {
-    background: #e25748;
-    color: white;
+  background: #e25748;
+  color: white;
 }
 .skill {
-    border-radius: 15px;
-    text-align: center;
-    padding: 8px;
-    margin: 4px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 8px;
+  margin: 4px;
 }
 
 .bordered-nav {
-    border: 1px solid #AED6F1;
-    border-radius: 3px;
+  border: 1px solid #aed6f1;
+  border-radius: 3px;
 }
 
 .list-group-item {
-    background-color: transparent;
-    border-color: rgb(255, 255, 255);
+  background-color: transparent;
+  border-color: rgb(255, 255, 255);
 }
 
 .tab-pane .list-group-item {
-    background-color: transparent;
-    border-color: rgb(146, 146, 146);
+  background-color: transparent;
+  border-color: rgb(146, 146, 146);
 }
 
 .tab-pane .list-group-item .small {
-    color: #adadad;
+  color: #adadad;
 }
 
 .list-group-item .large {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .list-group-item a {
-    color: #47d3f7;
+  color: #47d3f7;
 }
 
 .nav-pills .nav-item {
-    margin: 2px;
-    color: #FFFFFF;
+  margin: 2px;
+  color: #ffffff;
 }
 
 .tab-content {
-    padding: 4px;
+  padding: 4px;
 }
 
 .card-deck .card {
-    margin-top: 16px;
-    color: #FFFFFF;
-    background-color: transparent;
-    border-width: 1px;
-    border-radius: 4px;
-    border-color: rgb(255, 255, 255);
+  margin-top: 16px;
+  color: #ffffff;
+  background-color: transparent;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: rgb(255, 255, 255);
 }
 
 /* Scrolling problem in MyWork Section */
@@ -157,7 +158,9 @@ section {
   overflow-x: hidden;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -211,7 +214,7 @@ xslide
 -------------------------------- */
 .cd-headline.slide span {
   display: inline-block;
-  padding: .2em 0;
+  padding: 0.2em 0;
 }
 .cd-headline.slide .cd-words-wrapper {
   overflow: hidden;
@@ -219,7 +222,7 @@ xslide
 }
 .cd-headline.slide b {
   opacity: 0;
-  top: .2em;
+  top: 0.2em;
 }
 .cd-headline.slide b.is-visible {
   top: 0;
@@ -341,4 +344,17 @@ xslide
     -o-transform: translateY(100%);
     transform: translateY(100%);
   }
+}
+
+/* Tilt effect */
+
+#tilt {
+  display: block;
+  margin: 0 auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+
+#tilt:hover {
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.123);
+  cursor: pointer;
 }
