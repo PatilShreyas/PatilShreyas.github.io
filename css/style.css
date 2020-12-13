@@ -101,6 +101,12 @@ section {
   background: #e25748;
   color: white;
 }
+
+.fa-blog {
+  background: #2c4762;
+  color: white;
+}
+
 .skill {
   border-radius: 15px;
   text-align: center;
