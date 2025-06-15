@@ -1,150 +1,117 @@
 body {
   padding: 0;
-  font-family: "Montserrat", sans-serif;
-  background: linear-gradient(rgba(1, 1, 1, 0.9), rgba(1, 1, 1, 0.9)),
-    url("../Images/code.jpg");
-  background-color: #000000; /* Used if the image is unavailable */
-  background-position: center; /* Center the image */
-  background-attachment: fixed;
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000; /* Solid black background */
+  color: #FFFFFF; /* White text */
+  /* Removing background image for minimalism */
 }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #111111; /* Dark gray for navbar */
+  border-bottom: 1px solid #333333; /* Subtle border */
 }
 
 section {
-  margin-top: 100px;
+  margin-top: 80px; /* Adjusted margin slightly if needed */
   justify-content: center;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 60px; /* Adjusted padding slightly if needed */
 }
 
-.fab {
-  padding: 16px;
+/* Hyperlinks */
+a, .list-group-item a {
+  color: #4FC3F7; /* Cool light blue for links - will confirm this color choice */
+  text-decoration: none;
+}
+
+a:hover, .list-group-item a:hover {
+  color: #81D4FA; /* Lighter blue on hover */
+  text-decoration: underline;
+}
+
+/* Icons */
+.fab, .far, .fas {
+  padding: 14px; /* Slightly adjusted padding */
   font-size: large;
-  width: 50px;
+  width: 48px; /* Slightly adjusted width */
   text-align: center;
   text-decoration: none;
   margin: 8px;
+  border-radius: 50%; /* Make all icons circular for consistency */
+  background-color: #222222; /* Dark gray background for icons */
+  color: #FFFFFF; /* White icon color */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
-.nav-item {
-  margin: 4px;
-}
-
-.far {
-  padding: 16px;
-  font-size: large;
-  width: 50px;
-  text-align: center;
+.fab:hover, .far:hover, .fas:hover {
   text-decoration: none;
-  margin: 8px;
+  background-color: #333333; /* Slightly lighter gray on hover */
+  color: #FFFFFF;
 }
 
-.fab:hover {
-  text-decoration: none;
-  color: white;
-  opacity: 0.7;
-}
-
-.far:hover {
-  text-decoration: none;
-  color: white;
-  opacity: 0.7;
-}
-
-.fa-facebook-f {
-  background: #3b5998;
-  color: white;
-  text-decoration: none;
-}
-
-.fa-twitter {
-  background: #55acee;
-  color: white;
-}
-
-.fa-linkedin-in {
-  background: #007bb5;
-  color: white;
-}
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-github-alt {
-  background: #272727;
-  color: white;
-}
-
-.fa-medium-m {
-  background: #333333;
-  color: white;
-}
-
-.fa-blog {
-  background: #408ebb;
-  color: white;
-}
-
-.fa-google-play {
-  background: #2c4762;
-  color: white;
-}
-
-.fa-envelope {
-  background: #e25748;
-  color: white;
-}
-
-.fa-blog {
-  background: #2c4762;
-  color: white;
-}
+/* Removing specific social media icon background colors for B&W theme */
+/* .fa-facebook-f, .fa-twitter, etc. will inherit the new .fab styles */
 
 .skill {
-  border-radius: 15px;
+  border: 1px solid #444444; /* Subtle border for skills */
+  border-radius: 8px; /* Consistent border radius */
   text-align: center;
-  padding: 8px;
+  padding: 10px;
   margin: 4px;
+  background-color: #1C1C1C; /* Dark background for skill items */
+  color: #DDDDDD; /* Light gray text for skills */
 }
 
+.skill .fab, .skill .fas { /* Ensure icons within skills also follow the B&W theme */
+    background-color: transparent;
+    color: #4FC3F7; /* Using link color for skill icons */
+    padding: 0;
+    margin: 0.5em 0; /* Adjust margin for skill icons */
+    font-size: 28px; /* Adjust icon size in skills */
+    width: auto;
+}
+.skill .font-weight-bold {
+    color: #FFFFFF; /* White for the skill text itself */
+}
+
+
 .bordered-nav {
-  border: 1px solid #aed6f1;
+  border: 1px solid #444444; /* Darker border for nav tabs */
   border-radius: 3px;
 }
 
+.nav-pills .nav-link {
+    color: #CCCCCC; /* Lighter gray for nav links */
+}
+
+.nav-pills .nav-link.active {
+    background-color: #333333; /* Dark gray for active tab */
+    color: #FFFFFF;
+}
+
+
 .list-group-item {
   background-color: transparent;
-  border-color: rgb(255, 255, 255);
+  border: 1px solid #333333; /* Darker, subtle borders for list items */
+  color: #DDDDDD; /* Light gray text for list items */
 }
 
 .tab-pane .list-group-item {
   background-color: transparent;
-  border-color: rgb(146, 146, 146);
+  border-color: #444444; /* Consistent border color */
 }
 
 .tab-pane .list-group-item .small {
-  color: #adadad;
+  color: #AAAAAA; /* Lighter gray for small text in tabs */
 }
 
-.list-group-item .large {
-  color: #ffffff;
+.list-group-item .large, .list-group-item .large a {
+  color: #FFFFFF; /* White for large text */
+}
+.list-group-item .small, .list-group-item .font-weight-light {
+    color: #BBBBBB; /* Consistent light gray for secondary text */
 }
 
-.list-group-item a {
-  color: #47d3f7;
-}
-
-.nav-pills .nav-item {
-  margin: 2px;
-  color: #ffffff;
-}
 
 .tab-content {
   padding: 4px;
@@ -152,42 +119,72 @@ section {
 
 .card-deck .card {
   margin-top: 16px;
-  color: #ffffff;
-  background-color: transparent;
-  border-width: 1px;
+  color: #FFFFFF; /* White text for cards */
+  background-color: #1A1A1A; /* Very dark gray for card background */
+  border: 1px solid #333333; /* Subtle border for cards */
   border-radius: 4px;
-  border-color: rgb(255, 255, 255);
 }
 
-/* Scrolling problem in MyWork Section */
+.card-title {
+    color: #FFFFFF;
+}
+
+.card-text {
+    color: #CCCCCC;
+}
+
+.btn-outline-light {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+.btn-outline-light:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.btn-outline-primary {
+    color: #4FC3F7; /* Link color */
+    border-color: #4FC3F7;
+}
+.btn-outline-primary:hover {
+    color: #000000; /* Black text on hover */
+    background-color: #4FC3F7;
+    border-color: #4FC3F7;
+}
+
+
+/* MyWork Section Tabs */
+#myWork .nav-pills .nav-link {
+    border: 1px solid #555555;
+}
+#myWork .nav-pills .nav-link.active {
+    background-color: #4FC3F7; /* Link color for active tab */
+    color: #000000; /* Black text for active tab */
+    border-color: #4FC3F7;
+}
+#myWork .nav-pills .nav-link:not(.active) {
+    color: #CCCCCC;
+}
+#myWork .nav-pills .nav-link:not(.active):hover {
+    background-color: #222222;
+    border-color: #666666;
+}
+
+
+/* Scrolling problem in MyWork Section - Keep as is if not causing issues */
 #myWork {
   overflow-x: hidden;
 }
 
-*,
-*::after,
-*::before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.cd-title {
-  position: relative;
-  text-align: center;
-}
-
+/* Text rotator - cd-headline styles */
 .cd-intro {
   text-align: center;
 }
 
 .cd-headline {
   text-align: center;
+  color: #FFFFFF; /* Ensure headline text is white */
 }
 
 .cd-words-wrapper {
@@ -202,6 +199,7 @@ html * {
   text-align: center;
   left: 0;
   top: 0;
+  color: #FFFFFF; /* Ensure rotating words are white */
 }
 .cd-words-wrapper b.is-visible {
   position: relative;
@@ -213,11 +211,7 @@ html * {
   opacity: 1;
 }
 
-/* -------------------------------- 
-
-xslide 
-
--------------------------------- */
+/* slide animation for cd-headline */
 .cd-headline.slide span {
   display: inline-block;
   padding: 0.2em 0;
@@ -243,124 +237,142 @@ xslide
   animation: slide-out 0.6s;
 }
 
+/* Keyframes for slide animation (keep as is, colors are handled above) */
 @-webkit-keyframes slide-in {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-100%);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateY(20%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
+  0% { opacity: 0; -webkit-transform: translateY(-100%); }
+  60% { opacity: 1; -webkit-transform: translateY(20%); }
+  100% { opacity: 1; -webkit-transform: translateY(0); }
 }
 @-moz-keyframes slide-in {
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(-100%);
-  }
-  60% {
-    opacity: 1;
-    -moz-transform: translateY(20%);
-  }
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
+  0% { opacity: 0; -moz-transform: translateY(-100%); }
+  60% { opacity: 1; -moz-transform: translateY(20%); }
+  100% { opacity: 1; -moz-transform: translateY(0); }
 }
 @keyframes slide-in {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateY(20%);
-    -moz-transform: translateY(20%);
-    -ms-transform: translateY(20%);
-    -o-transform: translateY(20%);
-    transform: translateY(20%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(-100%); }
+  60% { opacity: 1; transform: translateY(20%); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 @-webkit-keyframes slide-out {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-  60% {
-    opacity: 0;
-    -webkit-transform: translateY(120%);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-  }
+  0% { opacity: 1; -webkit-transform: translateY(0); }
+  60% { opacity: 0; -webkit-transform: translateY(120%); }
+  100% { opacity: 0; -webkit-transform: translateY(100%); }
 }
 @-moz-keyframes slide-out {
-  0% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-  60% {
-    opacity: 0;
-    -moz-transform: translateY(120%);
-  }
-  100% {
-    opacity: 0;
-    -moz-transform: translateY(100%);
-  }
+  0% { opacity: 1; -moz-transform: translateY(0); }
+  60% { opacity: 0; -moz-transform: translateY(120%); }
+  100% { opacity: 0; -moz-transform: translateY(100%); }
 }
 @keyframes slide-out {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
-  60% {
-    opacity: 0;
-    -webkit-transform: translateY(120%);
-    -moz-transform: translateY(120%);
-    -ms-transform: translateY(120%);
-    -o-transform: translateY(120%);
-    transform: translateY(120%);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%);
-  }
+  0% { opacity: 1; transform: translateY(0); }
+  60% { opacity: 0; transform: translateY(120%); }
+  100% { opacity: 0; transform: translateY(100%); }
 }
 
-/* Tilt effect */
-
+/* Tilt effect for profile image - ensure it looks good on black */
 #tilt {
   display: block;
   margin: 0 auto;
   transition: box-shadow 0.1s, transform 0.1s;
+  border: 2px solid #555555; /* Add a subtle border if needed for visibility */
 }
 
 #tilt:hover {
-  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.123);
+  box-shadow: 0px 0px 20px rgba(200, 200, 200, 0.2); /* Lighter shadow for dark theme */
   cursor: pointer;
+}
+
+/* Footer */
+footer .text-center {
+    background-color: #111111 !important; /* Darker footer background */
+    color: #AAAAAA; /* Lighter text for footer */
+    padding: 15px !important;
+    margin-top: 30px; /* Ensure some space before footer */
+}
+
+/* Specific overrides for elements that might have hardcoded colors or need adjustment */
+#home .h2 {
+    color: #FFFFFF !important; /* Ensure home section title is white */
+}
+
+#experience .list-group-item .small,
+#community .list-group-item .small,
+#education .list-group-item .small,
+#activities .list-group-item .small,
+#sessions .list-group-item .small {
+    color: #BBBBBB !important; /* Lighter gray for date/small text in these sections */
+}
+
+#experience .list-group-item .large,
+#community .list-group-item .large,
+#education .list-group-item .large,
+#activities .list-group-item .large,
+#sessions .list-group-item .large,
+#experience .list-group-item .large a, /* Ensure links within these are also correctly styled */
+#community .list-group-item .large a,
+#education .list-group-item .large a,
+#activities .list-group-item .large a,
+#sessions .list-group-item .large a {
+    color: #FFFFFF !important; /* Ensure main text in these sections is white */
+}
+
+/* Ensure section titles are white */
+#aboutMe .h1,
+#experience .h1,
+#community .h1,
+#education .h1,
+#skills .h1,
+#activities .h1,
+#sessions .h1,
+#myWork .h1 {
+    color: #FFFFFF !important;
+}
+#aboutMe .p { /* About me text */
+    color: #DDDDDD !important;
+}
+
+/* Remove background gradient if it was part of the original body style */
+body {
+  background-image: none; /* Explicitly remove background image */
+}
+
+/* Ensure image with specific background in experience section is handled */
+/* This will be addressed in index.html modification step if it's an inline style */
+/* If it were in CSS, it would be like: */
+/* #experience img[src*='scalereal.svg'] { background-color: transparent !important; border: 1px solid #444; } */
+
+/* Style for ScaleReal logo */
+.company-logo-scalereal {
+  background-color: #FFFFFF; /* Keep white background for this SVG if it looks best */
+  padding: 4px; /* Add some padding if needed */
+  border: 1px solid #444444; /* Match other subtle borders */
+}
+
+
+
+/* Images within cards */
+.card .card-img-top {
+  border-bottom: 1px solid #333333; /* Add a border to separate image from card body */
+  /* Optional: add a very subtle background if many images are transparent and look bad on black */
+  /* background-color: #050505; */
+}
+
+/* Ensure profile picture also looks good */
+#home #tilt.rounded-circle {
+    border: 2px solid #555555; /* Existing style, ensure it's sufficient */
+    background-color: #111111; /* Add a slight off-black background if the image has transparency */
+}
+
+/* Images in the Experience section (company logos) */
+#experience .list-group-item img {
+  border-radius: 4px; /* Consistent border radius */
+  /* If these images are SVGs or have transparent backgrounds, they might need a background or border */
+  /* Example: background-color: #FFFFFF; padding: 2px; border: 1px solid #444; */
+  /* The company-logo-scalereal class already handles one case. */
+  /* Let's add a general rule for other company logos if they don't have specific classes */
+}
+#experience .list-group-item img:not(.company-logo-scalereal) {
+    background-color: #FFFFFF; /* Default to white background for other company logos */
+    padding: 4px; /* Add some padding */
+    border: 1px solid #444444; /* Match other subtle borders */
 }

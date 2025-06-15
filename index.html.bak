@@ -76,7 +76,7 @@
     <section id="home" style="margin-top: 0%; padding-top: 60px;">
         <img id="tilt" class="rounded-circle d-block mx-auto m-3" src="Images/profile.png" height="256" width="256"
             data-aos="zoom-in-up">
-        <div class="h2 mt-2 text-center" >Shreyas Sharad Patil</div>
+        <div class="h2 mt-2 text-center" style="color: #FFFFFF">Shreyas Sharad Patil</div>
 
         <div class="cd-intro m-3 text-center">
             <h4 class="cd-headline slide">
@@ -151,48 +151,48 @@
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-auto">
-                            <img class="img-responsive rounded m-2"
+                            <img class="img-responsive rounded m-2" style="background-color: #ffffff;"
                                 src="https://play-lh.googleusercontent.com/vIL5SVs5s307EmCUZ6rWx11YvcoRnk0sMfGB1VCMBD3m78PMGGsZG_3VIwOZoI4TSQ=l64" width="64"
                                 height="64" />
                         </div>
                         <div class="col-auto">
-                            <div class="small" >09/2024 - PRESENT</div>
-                            <div class="large font-weight-bold font-italic mt-2" >Senior Android Engineer</div>
-                            <div class="large mt-2" ><a class="text-decoration-none"
+                            <div class="small" style="color: #b7b6bb">09/2024 - PRESENT</div>
+                            <div class="large font-weight-bold font-italic mt-2" style="color: #FFFFFF;">Senior Android Engineer</div>
+                            <div class="large mt-2" style="color: #FFFFFF;"><a class="text-decoration-none"
                                     href="https://deliveroo.co.uk" target="_blank">Deliveroo</a></div>
-                            <div class="small" >Hyderabad, Telangana, India</div>
+                            <div class="small" style="color: #b7b6bb">Hyderabad, Telangana, India</div>
                         </div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-auto">
-                            <img class="img-responsive rounded m-2"
+                            <img class="img-responsive rounded m-2" style="background-color: #ffffff;"
                                 src="https://play-lh.googleusercontent.com/2tH3ybpe3Tb5y2vamr4s0IJ-ffW83ouOFl4qDeZ8qvKdil5OjMN5_kiQviniaIBz420=l64" width="64"
                                 height="64" />
                         </div>
                         <div class="col-auto">
-                            <div class="small" >09/2021 - 08/2024</div>
-                            <div class="large font-weight-bold font-italic mt-2" >Senior Android Engineer</div>
-                            <div class="large mt-2" ><a class="text-decoration-none"
+                            <div class="small" style="color: #b7b6bb">09/2021 - 08/2024</div>
+                            <div class="large font-weight-bold font-italic mt-2" style="color: #FFFFFF;">Senior Android Engineer</div>
+                            <div class="large mt-2" style="color: #FFFFFF;"><a class="text-decoration-none"
                                     href="https://paytm.com" target="_blank">Paytm</a></div>
-                            <div class="small" >Mumbai, Maharashtra, India</div>
+                            <div class="small" style="color: #b7b6bb">Mumbai, Maharashtra, India</div>
                         </div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-auto">
-                            <img class="img-responsive rounded m-2 pr-2 pl-2 company-logo-scalereal"
+                            <img class="img-responsive rounded m-2 pr-2 pl-2" style="background-color: #0eccd8;"
                                 src="Images/Company/scalereal.svg" width="64"
                                 height="64" />
                         </div>
                         <div class="col-auto">
-                            <div class="small" >05/2020 - 09/2021</div>
-                            <div class="large font-weight-bold font-italic mt-2" >Software Engineer</div>
-                            <div class="large mt-2" ><a class="text-decoration-none"
+                            <div class="small" style="color: #b7b6bb">05/2020 - 09/2021</div>
+                            <div class="large font-weight-bold font-italic mt-2" style="color: #FFFFFF;">Software Engineer</div>
+                            <div class="large mt-2" style="color: #FFFFFF;"><a class="text-decoration-none"
                                     href="https://scalereal.com/" target="_blank">ScaleReal</a></div>
-                            <div class="small" >Pune, Maharashtra, India</div>
+                            <div class="small" style="color: #b7b6bb">Pune, Maharashtra, India</div>
                         </div>
                     </div>
                 </li>
@@ -214,9 +214,9 @@
                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" width="78" />
                         </div>
                         <div class="col-auto">
-                            <div class="small" >08/2021 - PRESENT</div>
-                            <div class="large font-weight-bold font-italic mt-2" >Category - Android</div>
-                            <div class="large mt-2" ><a class="text-decoration-none"
+                            <div class="small" style="color: #b7b6bb">08/2021 - PRESENT</div>
+                            <div class="large font-weight-bold font-italic mt-2" style="color: #FFFFFF;">Category - Android</div>
+                            <div class="large mt-2" style="color: #FFFFFF;"><a class="text-decoration-none"
                                     href="https://g.dev/shreyaspatil" target="_blank">Google Developer Expert</a></div>
                         </div>
                     </div>
@@ -228,9 +228,9 @@
                                 src="https://pbs.twimg.com/profile_images/1361975143610806272/XvJlVRxW_400x400.jpg" width="78" />
                         </div>
                         <div class="col-auto">
-                            <div class="small" >11/2020 - 07/2022</div>
-                            <div class="large font-weight-bold font-italic mt-2" >Organizer</div>
-                            <div class="large mt-2" ><a class="text-decoration-none"
+                            <div class="small" style="color: #b7b6bb">11/2020 - 07/2022</div>
+                            <div class="large font-weight-bold font-italic mt-2" style="color: #FFFFFF;">Organizer</div>
+                            <div class="large mt-2" style="color: #FFFFFF;"><a class="text-decoration-none"
                                     href="https://www.meetup.com/Kotlin-Mumbai/" target="_blank">Kotlin User Group: Mumbai</a></div>
                         </div>
                     </div>
@@ -247,19 +247,19 @@
         <div class="d-flex align-items-center">
             <ul class="list-group p-3 mx-auto" data-aos="zoom-in-down">
                 <li class="list-group-item">
-                    <div class="small" >2018 - 2021</div>
-                    <div class="large font-weight-bold mt-2" >D. Y. Patil College of Engineering,
+                    <div class="small" style="color: #b7b6bb">2018 - 2021</div>
+                    <div class="large font-weight-bold mt-2" style="color: #FFFFFF;">D. Y. Patil College of Engineering,
                         Pune</div>
-                    <div class="small" >Pune, Maharashtra</div>
-                    <div class="font-weight-light mt-1" >Bachelor of Engineering in Information
+                    <div class="small" style="color: #b7b6bb">Pune, Maharashtra</div>
+                    <div class="font-weight-light mt-1" style="color: #7b7a7f">Bachelor of Engineering in Information
                         Technology</div>
                 </li>
                 <li class="list-group-item">
-                    <div class="small" >2015 - 2018</div>
-                    <div class="large font-weight-bold mt-2" >Government Polytechnic, Jalgaon
+                    <div class="small" style="color: #b7b6bb">2015 - 2018</div>
+                    <div class="large font-weight-bold mt-2" style="color: #FFFFFF;">Government Polytechnic, Jalgaon
                     </div>
-                    <div class="small" >Jalgaon, Maharashtra</div>
-                    <div class="font-weight-light mt-1" >Diploma in Information Technology</div>
+                    <div class="small" style="color: #b7b6bb">Jalgaon, Maharashtra</div>
+                    <div class="font-weight-light mt-1" style="color: #7b7a7f">Diploma in Information Technology</div>
                 </li>
             </ul>
         </div>
@@ -274,35 +274,35 @@
             <div class="h4 mt-4">Languages:</div>
             <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear"
                 data-aos-duration="500">
-                <div class="skill" >
+                <div class="skill" style="color: #e43e00">
                     <div class="fab fa-java  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Java</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #cf4237">
                     <div class="fas fa-code p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Kotlin</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #2099df">
                     <div class="fas fa-code p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Dart</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #b2b200">
                     <div class="fab fa-js-square  p-0 m-1" style="font-size: 30px;"></div>
                     <div class="font-weight-bold">JavaScript</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #cf5b1e">
                     <div class="fab fa-html5  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">HTML</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #559cc4">
                     <div class="fab fa-css3  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">CSS</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #f3c623">
                     <div class="fab fa-python p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Python</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #597fb2">
                     <div class="fab fa-php  p-0 m-1" style="font-size: 30px;"></div>
                     <div class="font-weight-bold">PHP</div>
                 </div>
@@ -311,27 +311,27 @@
             <div class="h4 mt-4">Technologies/Frameworks:</div>
             <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear"
                 data-aos-duration="500">
-                <div class="skill" >
+                <div class="skill" style="color: #29bf0f">
                     <div class="fab fa-android p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Android</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #0f96bf">
                     <div class="fas fa-mobile p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Flutter</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #cf4237">
                     <div class="fas fa-code p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Micronaut</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #cf4237">
                     <div class="fas fa-code p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Ktor</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #00ff22">
                     <div class="fab fa-node p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Node.js</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #32e0c4">
                     <div class="fab fa-python p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Django</div>
                 </div>
@@ -340,15 +340,15 @@
             <div class="h4 mt-4">Databases:</div>
             <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear"
                 data-aos-duration="500">
-                <div class="skill" >
+                <div class="skill" style="color: #6685e4">
                     <div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">SQL</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #046e16">
                     <div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">MongoDB</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #FFA000">
                     <div class="fas fa-fire p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Firebase</div>
                 </div>
@@ -357,23 +357,23 @@
             <div class="h4 mt-4">Tools:</div>
             <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear"
                 data-aos-duration="500">
-                <div class="skill" >
+                <div class="skill" style="color: #ffffff">
                     <div class="fab fa-git-square  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Git</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #ffffff">
                     <div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">GitHub</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #ffffff">
                     <div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">GitHub Actions</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #FFA000">
                     <div class="fas fa-fire p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Firebase</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #FFA000">
                     <div class="fab fa-aws p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">AWS</div>
                 </div>
@@ -382,19 +382,19 @@
             <div class="h4 mt-4">Other:</div>
             <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear"
                 data-aos-duration="500">
-                <div class="skill" >
+                <div class="skill" style="color: #ffffff">
                     <div class="fas fa-pen-alt p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Technical Writing</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #ffffff">
                     <div class="fas fa-user-friends  p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Team Management</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #ffffff">
                     <div class="fas fa-users p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">Team Leadership</div>
                 </div>
-                <div class="skill" >
+                <div class="skill" style="color: #ffffff">
                     <div class="fas fa-palette p-0 m-1" style="font-size: 30px"></div>
                     <div class="font-weight-bold">UI/UX Designing</div>
                 </div>
@@ -408,45 +408,45 @@
         <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-tasks mr-2"></i>My <b>Activities</b></div>
         <ul class="list-group p-3 mx-auto" style="width: fit-content;" data-aos="zoom-in-down">
             <li class="list-group-item" style=" background: transparent;">
-                <div class="small" >2016 - PRESENT</div>
+                <div class="small" style="color: #b7b6bb">2016 - PRESENT</div>
                 <div class="large mt-2">Developing Android mobiles apps or APIs under Developer Name : <a
                         href="https://www.facebook.com/spdroid/" target="_blank">SPDroid</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >April, 2017</div>
+                <div class="small" style="color: #b7b6bb">April, 2017</div>
                 <div class="large mt-2">Participated and qualified for Grand Finale of <b>Smart India Hackathon
                         2017</b>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >September, 2017</div>
+                <div class="small" style="color: #b7b6bb">September, 2017</div>
                 <div class="large mt-2">Organised a district level and was main Co-ordinator of the event
                     <b><i>'TechnoFest 2k17'</i></b>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >March, 2018</div>
+                <div class="small" style="color: #b7b6bb">March, 2018</div>
                 <div class="large mt-2">Participated and qualified for Grand Finale of <b>Smart India Hackathon
                         2018</b>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >July - August, 2018</div>
+                <div class="small" style="color: #b7b6bb">July - August, 2018</div>
                 <div class="large mt-2">Designed and developed official website for college <a class="link"
                         href="http://www.gpjalgaon.org.in" target="_blank">Government Polytechnic, Jalgaon</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >September, 2019</div>
+                <div class="small" style="color: #b7b6bb">September, 2019</div>
                 <div class="large mt-2">Volunteer of GDG DevFest Pune 2019. (Mobile Application Development).</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >2019</div>
+                <div class="small" style="color: #b7b6bb">2019</div>
                 <div class="large mt-2">Attended Conferences - <b>Firebase India Roadshow 2019</b> and <b>GDG Pune
                         DevFest19</b></div>
             </li>
             <li class="list-group-item">
-                <div class="small" >2021</div>
+                <div class="small" style="color: #b7b6bb">2021</div>
                 <div class="large mt-2">Became the Youngest Google Developer Expert for Android in India</b></div>
             </li>
             <li class="list-group-item">
-                <div class="small" >2022</div>
+                <div class="small" style="color: #b7b6bb">2022</div>
                 <div class="large mt-2">Reviewed a book, <a href="https://www.packtpub.com/product/simplifying-android-development-with-coroutines-and-flows/9781801816243" target="_blank">Simplifying Android Development with Coroutines and Flows</a> by Packt Publication</b></div>
             </li>
         </ul>
@@ -458,112 +458,112 @@
         <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-user-tie mr-2"></i>My <b>Workshops / Sessions / Webinars</b></div>
         <ul class="list-group p-3 mx-auto" style="width: fit-content;" data-aos="zoom-in-down">
             <li class="list-group-item">
-                <div class="small" >March, 2016</div>
+                <div class="small" style="color: #b7b6bb">March, 2016</div>
                 <div class="large mt-2">Organized a Seminar on 'Android App Development' and taught basic app
                     development at Government Polytechnic, Jalgaon. See <a
                         href="https://www.facebook.com/shreyaspatil99/posts/945712815511124">here</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >September - October, 2019</div>
+                <div class="small" style="color: #b7b6bb">September - October, 2019</div>
                 <div class="large mt-2">Conducted 9-DAYS Beginner Level Hands-on Workshop on Android App Development at
                     IT Dept., DYPCOE, Pune. See <a href="https://www.facebook.com/shreyaspatil99/posts/2450994571649600"
                         target="_blank">here</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >24 February, 2020</div>
+                <div class="small" style="color: #b7b6bb">24 February, 2020</div>
                 <div class="large mt-2">Conducted One day Hands-on workshop 'Hello Git' under DevClub DYPCOE. See <a
                         href="https://devclub-dypcoe.github.io/Events/HelloGit/" target="_blank">here</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >31 May, 2020</div>
+                <div class="small" style="color: #b7b6bb">31 May, 2020</div>
                 <div class="large mt-2">Conducted webinar on 'Hello Git' for the students and faculties of all the colleges.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >24 October, 2020</div>
+                <div class="small" style="color: #b7b6bb">24 October, 2020</div>
                 <div class="large mt-2">Conducted webinar on <a href="https://docs.google.com/presentation/d/1MNDJz2ChQO7_X_Ix8Et9J_otlbk4WL33kLE1rQtzQT4/edit?usp=sharing" target="_blank">'How to Code CLEAN?'</a> with DSC DYPCOE. Watch session video <a href="https://youtu.be/Tj6q1iD1xfM" target="_blank">here</a> on YouTube.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >12 December, 2020</div>
+                <div class="small" style="color: #b7b6bb">12 December, 2020</div>
                 <div class="large mt-2">Conducted session: <a href="https://dsc.community.dev/events/details/developer-student-clubs-dy-patil-college-of-engineering-presents-android-study-jam-03-kotlin-koans/" target="_blank">'Android Study Jam - 03 - Kotlin Koans'</a> with DSC DYPCOE. Watch session video <a href="https://www.youtube.com/watch?v=2lG5E7sDeC4" target="_blank">here</a> on YouTube.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >19 December, 2020</div>
+                <div class="small" style="color: #b7b6bb">19 December, 2020</div>
                 <div class="large mt-2">Delivered a session on "Beginner's Guide for Kotlin Programming language" for <a href="https://dsc.community.dev/events/details/developer-student-clubs-sandip-institute-of-technology-and-research-centre-presents-get-started-with-android/" target="_blank">Android Study Jams series at DSC SITRC</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >27 December, 2020</div>
+                <div class="small" style="color: #b7b6bb">27 December, 2020</div>
                 <div class="large mt-2">Conducted a Hands-on workshop on Mobile app development in Kotlin at <a href="https://dsc.community.dev/events/details/developer-student-clubs-mlr-institute-of-technology-presents-android-study-jams-2/" target="_blank">Android Study Jams series at DSC MLRIT, Hyderabad</a>. Watch Video <a href="https://www.youtube.com/watch?v=AZEMfMsCDh8" target="blank">here</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >23 January, 2021</div>
+                <div class="small" style="color: #b7b6bb">23 January, 2021</div>
                 <div class="large mt-2">Conducted a Hands-on workshop on "Build an Android application with superpower of Kotlin and Coroutines" at <a href="https://dsc.community.dev/events/details/developer-student-clubs-mit-academy-of-engineering-presents-build-an-android-application-with-superpower-of-kotlin-and-coroutines-asj-session-3/" target="_blank">Android Study Jams series at DSC MITAOE, Pune</a>. Watch Video <a href="https://www.youtube.com/watch?v=t3EHKHhZYFM" target="_blank">here</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >28 August, 2021</div>
+                <div class="small" style="color: #b7b6bb">28 August, 2021</div>
                 <div class="large mt-2">Conducted a session on "Let's talk Android Dev with Shreyas Patil" at DSC MESCOE, Pune. Watch Video <a href="https://youtu.be/EzImuJIPP4s" target="_blank">here</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >23 October, 2021</div>
+                <div class="small" style="color: #b7b6bb">23 October, 2021</div>
                 <div class="large mt-2">Conducted a session on "Navigating screens in Jetpack Compose" at DevFest India 2021. See more about it <a href="https://blog.shreyaspatil.dev/navigating-screens-in-jetpack-compose-devfest-india-2021-mobile-track" target="_blank">here</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >18 December, 2021</div>
+                <div class="small" style="color: #b7b6bb">18 December, 2021</div>
                 <div class="large mt-2">Conducted a session on "Introduction to Jetpack Compose" at GDSC VJTI, GDSC UMIT, GDSC MIET & GDSC VIT. See <a href="https://www.youtube.com/watch?v=kh_6TX3iHBI" target="_blank">here</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >24 December, 2021</div>
+                <div class="small" style="color: #b7b6bb">24 December, 2021</div>
                 <div class="large mt-2">Conducted a session on "Introduction to Jetpack Compose" at GDSC NIT Delhi. See <a href="https://youtu.be/LpxUUVjnXZ4" target="_blank">here</a>.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >10 January, 2022</div>
+                <div class="small" style="color: #b7b6bb">10 January, 2022</div>
                 <div class="large mt-2">Team GDSC India organized this panel discussion with several Android experts as a part of the closing ceremony of Android Study Jams. We guided leads and facilitators regarding career opportunities in the field of Android development.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >05 February, 2022</div>
+                <div class="small" style="color: #b7b6bb">05 February, 2022</div>
                 <div class="large mt-2">Talked on <a href="https://gdsc.community.dev/events/details/developer-student-clubs-national-institute-of-technology-nit-silchar-presents-tech-talk-with-shreyas-patil/" target="_blank">"Kickstarting career as a student Android developer"</a> organized by GDSC NIT Silchar and GDSC AEC, GDSC NIT Agartala, GDSC IIITG</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >27, 28 August, 2022</div>
+                <div class="small" style="color: #b7b6bb">27, 28 August, 2022</div>
                 <div class="large mt-2">Conducted a two day workshop on "Developing Android Apps with Modern Architecture". See <a href="https://gdg.community.dev/events/details/google-gdg-cloud-pune-presents-android-study-jam-2022-gdg-cloud-pune-1/" target="_blank">Day 1</a> and <a href="https://gdg.community.dev/events/details/google-gdg-cloud-pune-presents-android-study-jam-2022-gdg-cloud-pune-2/" target="_blank">Day 2</a></div>
             </li>
             <li class="list-group-item">
-                <div class="small" >30 August, 2022</div>
+                <div class="small" style="color: #b7b6bb">30 August, 2022</div>
                 <div class="large mt-2">Conducted workshop on <a href="https://www.commudle.com/communities/moreficent/events/developing-ui-with-jetpack-compose" target="_blank">"Developing UI with Jetpack Compose"</a> organized by Moreficent.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >11 September, 2022</div>
+                <div class="small" style="color: #b7b6bb">11 September, 2022</div>
                 <div class="large mt-2">Conducted workshop on <a href="https://gdsc.community.dev/events/details/developer-student-clubs-national-institute-of-technology-nit-silchar-presents-compose-camp-2022/" target="_blank">"Compose Camp - Introduction to Jetpack Compose"</a> @ GDSC NIT Silchar.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >27 November, 2022</div>
+                <div class="small" style="color: #b7b6bb">27 November, 2022</div>
                 <div class="large mt-2">Delivered session on <a href="https://gdg.community.dev/events/details/google-gdg-gurugram-presents-devfest22-gurugram/" target="_blank">"Adopting Jetpack Compose in your Android apps"</a> @ GDG Gurugram DevFest 2022.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >24 December, 2022</div>
+                <div class="small" style="color: #b7b6bb">24 December, 2022</div>
                 <div class="large mt-2">Delivered session on <a href="https://gdg.community.dev/events/details/google-gdg-gwalior-presents-devfest-2022-gdg-gwalior/" target="_blank">"Adopting Jetpack Compose in your Android apps"</a> @ GDG Gwalior DevFest 2022.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >4 June, 2023</div>
+                <div class="small" style="color: #b7b6bb">4 June, 2023</div>
                 <div class="large mt-2">Delivered a talk on <a href="https://gdg.community.dev/events/details/google-gdg-nagpur-presents-google-io-extended-nagpur/" target="_blank">"Getting Started with Jetpack Compose"</a> @ GDG Nagpur I/O Extended 2023.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >11 June, 2023</div>
+                <div class="small" style="color: #b7b6bb">11 June, 2023</div>
                 <div class="large mt-2">Delivered a talk on <a href="https://gdsc.community.dev/events/details/developer-student-clubs-dy-patil-college-of-engineering-pune-presents-google-io-extended-watch-party-pathway-to-become-a-senior-developer-at-paytm/" target="_blank">"Kickstarting career as a student Android Developer"</a> @ GDSC DYPCOE.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >28 June, 2023</div>
+                <div class="small" style="color: #b7b6bb">28 June, 2023</div>
                 <div class="large mt-2">Delivered a lightning talk on <a href="https://twitter.com/imShreyasPatil/status/1674072269654736896" target="_blank">"Adopting Jetpack Compose at Scale"</a> @ Google I/O Connect Bangalore 2023.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >16 July, 2023</div>
+                <div class="small" style="color: #b7b6bb">16 July, 2023</div>
                 <div class="large mt-2">Delivered a talk on <a href="https://twitter.com/imShreyasPatil/status/1681535446130774021" target="_blank">"Jetpack: One Stop Shop for Android Developers"</a> @ Google I/O Extended New Delhi 2023.</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >4 Nov, 2023</div>
+                <div class="small" style="color: #b7b6bb">4 Nov, 2023</div>
                 <div class="large mt-2">Delivered a talk on <a href="https://gdg.community.dev/events/details/google-gdg-siliguri-presents-devfest-siliguri-2023/" target="_blank">"Jetpack: One Stop Shop for Android Developers"</a> @ DevFest Siliguri 2023</div>
             </li>
             <li class="list-group-item">
-                <div class="small" >16 Dec, 2023</div>
+                <div class="small" style="color: #b7b6bb">16 Dec, 2023</div>
                 <div class="large mt-2">Delivered a talk on <a href="https://youtu.be/RENtdbB2OG4?si=Zo6eQkND50EKc9FO" target="_blank">"Jetpack: One Stop Shop for Android Developers"</a> @ DevFest Bangalore 2023</div>
             </li>
         </ul>
@@ -658,7 +658,7 @@
                                 target="_blank" class="btn btn-outline-primary">View App</a>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <img class="card-img-top" src="Images/Apps/GoSafe.png"
                             alt="GoSafe App">
@@ -688,7 +688,7 @@
                                 class="btn btn-outline-primary">View Project</a>
                         </div>
                     </div>
-                  
+
                 </div>
                 <div class="card-deck">
                     <div class="card">
@@ -750,7 +750,7 @@
                                 <b>Technologies Used :</b> Android, Java, HTML, Firebase - Database, FCM</p>
                         </div>
                     </div>
-                    
+
                     <div class="card">
                         <img class="card-img-top" src="Images/Apps/CProComm.png" alt="C Programming Community">
                         <div class="card-body">
@@ -788,8 +788,8 @@
                         <div class="card-body">
                             <h5 class="card-title font-weight-bold">Jalgaon CoHelp | COVID19 Resources
                             </h5>
-                            <p class="card-text">A web application which includes the Crowdsourced resources to fight COVID across Jalgaon District. Find hospital beds, oxygen, plasma, and more. 
-                                <br><br><b>Technologies Used:</b> 
+                            <p class="card-text">A web application which includes the Crowdsourced resources to fight COVID across Jalgaon District. Find hospital beds, oxygen, plasma, and more.
+                                <br><br><b>Technologies Used:</b>
                                 <br> <b>Frontend</b> ReactJS, TypeScript, CSS, Bootstrap
                                 <br> <b>Backend:</b> Kotlin, Ktor, PostgreSQL
                                 <br> <b>Deployment:</b> Heroku, Netlify</p>
@@ -814,7 +814,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- END APPS -->
             </div>
 
@@ -1231,7 +1231,7 @@
                                 target="_blank" class="btn btn-outline-primary">View on Medium</a>
                         </div>
                     </div>
-                </div>  
+                </div>
                 <div class="card-deck">
                     <div class="card">
                         <img class="card-img-top" src="Images/Article/SingleExpr-Kotlin.png" alt="Don't let Kotlin's single-expression function ruin your business😲">
@@ -1268,10 +1268,10 @@
                             <a href="https://medium.com/scalereal/let-your-delegates-auto-nullify-references-%EF%B8%8F-3ad6d8875497"
                                 target="_blank" class="btn btn-outline-primary">View on Medium</a>
                         </div>
-                    </div> 
-                </div> 
+                    </div>
+                </div>
                 <div class="card-deck">
-                    
+
                     <div class="card">
                         <img class="card-img-top" src="Images/Article/TastyKotlin.png" alt="Kotlin">
                         <div class="card-body">
@@ -1295,7 +1295,7 @@
                             <a href="https://medium.com/scalereal/cooking-tasty-code-in-kotlin-part-2-354b7635bf09"
                                 target="_blank" class="btn btn-outline-primary">View on Medium</a>
                         </div>
-                    </div>   
+                    </div>
                     <div class="card">
                         <img class="card-img-top" src="Images/Article/AutoFirebaseAppDistribution.png" alt="AutomateFirebaseAppDistribution">
                         <div class="card-body">
@@ -1307,8 +1307,8 @@
                             <a href="https://medium.com/firebase-developers/quickly-distribute-app-with-firebase-app-distribution-using-github-actions-fastlane-c7d8eca18ee0"
                                 target="_blank" class="btn btn-outline-primary">View on Medium</a>
                         </div>
-                    </div>      
-                </div> 
+                    </div>
+                </div>
                 <div class="card-deck">
                     <div class="card">
                         <img class="card-img-top" src="Images/Article/AndroidFastlaneCICD.png" alt="AutomateAndroidApp">
@@ -1608,7 +1608,7 @@
     <script type="text/javascript">
         var sc_project = 12121673;
         var sc_invisible = 1;
-        var sc_security = "206010bd"; 
+        var sc_security = "206010bd";
     </script>
     <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
     <noscript>
