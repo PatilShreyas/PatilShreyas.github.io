@@ -218,3 +218,40 @@ opensource:
         url: "https://github.com/PatilShreyas/FirebaseRecyclerPagination"
       - text: "View Docs"
         url: "https://firebaseopensource.com/projects/patilshreyas/firebaserecyclerpagination/"
+
+  - title: "GitKtDroid"
+    description: "A sample Android application📱 built with Kotlin for #30DaysOfKotlin which is built with Kotlin🦸superpower and Modern Android development tools."
+    image: "/Images/OpenSource/GitKtDroid.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/GitKtDroid"
+
+  - title: "LiveStream - Flutter Package"
+    description: "Flutter package to which makes data communication easy among different modules of your application."
+    image: "/Images/OpenSource/LiveStream-Flutter.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/LiveStream-Flutter"
+      - text: "Pub.dev"
+        url: "https://pub.dev/packages/livestream"
+
+  - title: "LiveStream-kt Library"
+    description: "LiveStream is a simple class which makes communication easy among different modules of your application."
+    image: "/Images/OpenSource/LiveStream-Kt.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/LiveStream-kt"
+
+  - title: "🔔 FCM - Push Notification Scheduler⏰ (On Device 📱)"
+    description: "📱Demo implementation to Schedule FCM Notifications on Android Device using AlarmManager + WorkManager."
+    image: "/Images/OpenSource/ScheduleFCM.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/FCM-OnDeviceNotificationScheduler"
+
+  - title: "Easy Database - Java Library"
+    description: "Java API to easily implement JDBC-ODBC Database connection and operations."
+    image: "https://opengraph.githubassets.com/0022313ed19414e949c91ca3350e72846717c7c16695ac5f2a3faaf5289fdd5a/PatilShreyas/EasyDatabase"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/EasyDatabase"
