@@ -55,7 +55,7 @@ apps:
     image: "/Images/Apps/GPJSite.png"
     links:
       - text: "Visit Site"
-        url: "http://gpjalgaon.org.in"
+        url: "http://gpjalgaon.ac.in"
 
   - title: "C Programs - Contribute, Learn, Write, Share Code"
     description: "Let's Browse all C Programs developed by users worldwide and also contribute to make this app as Treasure of C Programs. Let's learn coding and share coding. It has **13k Installs** till date."
@@ -63,6 +63,34 @@ apps:
     links:
       - text: "View App"
         url: "https://play.google.com/store/apps/details?id=com.spdroid.cpcom&hl=en"
+
+  - title: "DYPCOE App (For TGs and Students)"
+    description: "Developed app 'DYPCOE Student' and 'DYPCOE TeacherG' for Teacher Guardian and students interaction. Teacher guardian can see all students details and contact them and their parents. Whenever TG calls/message parent, automatically that details are saved into Google Sheets in Google drive. This makes easy for them to manage and avoids fake reports.<br><br>**Technologies Used:** Android-Kotlin, Firebase Authentication, Firebase Cloud Firestore, Google AppScript, Google Sheets API."
+    image: "/Images/Apps/TGApp.png"
+    links:
+      - text: "View Details"
+        url: "#"
+
+  - title: "DYPCOE-IT-MIS Android App - Faculty Information Management System"
+    description: "Developed app 'DYPCOE-IT-MIS' for faculty information management system where faculties can submit their information through the app. Then this information is saved directly into the Google Docs Spreadsheet of admin for easy management. Only approved faculties with the mobile number can use this app by logging in with Phone Authentication.<br><br>**Technologies Used:** Android, Java, Firebase Authentication, Google AppScript, Google Sheets API."
+    image: "/Images/Apps/DYPITMIS.png"
+    links:
+      - text: "View Details"
+        url: "#"
+
+  - title: "E-Noticeboard App for College"
+    description: "Developed app \"E-Noticeboard\" for College department. In this app, there are 3 user roles: 1. Student, 2. Staff, 3. Admin. Admin and staff can publish Notices and all users will receive notice on their mobile. After that if anyone has doubt he/she can interact with commenting on that notice. Anyone can discuss on published notice."
+    image: "/Images/Apps/GPJITNoticeboardApp.png"
+    links:
+      - text: "View App"
+        url: "https://goo.gl/RitoQR"
+
+  - title: "App for Ministry of AYUSH - Smart India Hackathon 2017"
+    description: "Our Team TechnoDroid was selected for grand finale in Smart India Hackathon 2017.<br><br>**Project:** Development of official app for the Ministry of AYUSH with reference to the official website AYUSH.<br>**Technologies Used:** Android, Java, HTML, Firebase - Database, FCM"
+    image: "/Images/Apps/AYUSH.png"
+    links:
+      - text: "View Details"
+        url: "#"
 
   - title: "Smart EMI Calculator"
     description: "This was my first basic app which Calculates EMI."
