@@ -10,12 +10,20 @@
     <meta name="keywords" content="{{ .Site.Params.keywords }}">
     <meta name="author" content="{{ .Site.Params.author }}">
     <link rel="canonical" href="{{ .Permalink }}" />
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}Images/profile.jpg" type="image/jpeg" />
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}Images/profile.png" type="image/png" />
     
     <!-- Open Graph -->
     <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:image" content="{{ .Site.BaseURL }}Images/profile.jpg">
+    <meta property="og:image" content="{{ .Site.BaseURL }}Images/profile.png">
     <meta property="og:description" content="{{ .Site.Params.description }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Site.Title }}">
+    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}Images/profile.png">
     
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +31,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://www.statcounter.com">
     
     <!-- Fonts and CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">

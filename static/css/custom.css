@@ -12,33 +12,22 @@ a {
     transition: all 0.3s ease;
 }
 
-/* Specific styling ONLY for content links (not navigation or buttons) */
+/* Content link styling - consolidated */
 .project-description a,
 .work-description a,
-p a:not(.social-icon):not(.nav-link):not(.btn) {
-    color: #47d3f7 !important;
-    text-decoration: underline !important;
-    font-weight: 500;
-}
-
-.project-description a:hover,
-.work-description a:hover,
-p a:not(.social-icon):not(.nav-link):not(.btn):hover {
-    color: #00bcd4 !important;
-    text-decoration: underline !important;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 2px;
-}
-
-/* Ensure markdown links in content cards are styled properly */
+p a:not(.social-icon):not(.nav-link):not(.btn),
 .bg-dark-card .text-lg a,
 .bg-dark-card .text-white a,
 .bg-dark-card p a {
     color: #47d3f7 !important;
     text-decoration: underline !important;
     font-weight: 500;
+    transition: all 0.3s ease;
 }
 
+.project-description a:hover,
+.work-description a:hover,
+p a:not(.social-icon):not(.nav-link):not(.btn):hover,
 .bg-dark-card .text-lg a:hover,
 .bg-dark-card .text-white a:hover,
 .bg-dark-card p a:hover {
@@ -157,18 +146,6 @@ body::after {
     animation: blink 1s infinite;
 }
 
-/* Card hover effects */
-.card-hover {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
-}
-
-/* Gradient text */
-.gradient-text {
-    background: linear-gradient(135deg, #47d3f7, #00bcd4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -204,29 +181,6 @@ body::after {
     animation: fadeInUp 0.6s ease-out;
 }
 
-/* Skill item hover effect */
-.skill-item {
-    @apply transition-all duration-300 hover:scale-110 hover:shadow-lg;
-}
-
-/* Timeline styles for experience/education */
-.timeline-item {
-    @apply relative pl-8;
-}
-
-.timeline-item::before {
-    content: '';
-    @apply absolute left-0 top-2 w-3 h-3 bg-primary rounded-full;
-}
-
-.timeline-item::after {
-    content: '';
-    @apply absolute left-1.5 top-5 w-0.5 h-full bg-gray-600;
-}
-
-.timeline-item:last-child::after {
-    display: none;
-}
 
 /* Navigation enhancements */
 #navbar {
