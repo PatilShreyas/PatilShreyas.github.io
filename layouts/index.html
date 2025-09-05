@@ -101,7 +101,7 @@
         </div>
         
         <div class="max-w-4xl mx-auto">
-            <div class="bg-dark-card backdrop-blur-sm rounded-lg p-8 shadow-xl" data-aos="zoom-in-down">
+            <div class="bg-dark-card backdrop-blur-md rounded-lg p-8 shadow-xl" data-aos="zoom-in-down">
                 {{ range .Site.Data.about }}
                 <p class="text-lg leading-relaxed mb-6 text-gray-300">
                     {{ .content | markdownify }}
@@ -125,7 +125,7 @@
         <div class="max-w-4xl mx-auto">
             <div class="space-y-6" data-aos="zoom-in-down">
                 {{ range .Site.Data.experience }}
-                <div class="bg-dark-card backdrop-blur-sm rounded-lg p-6 shadow-xl border border-gray-800 hover:border-primary transition-colors">
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 shadow-xl border border-gray-800 hover:border-primary transition-colors">
                     <div class="flex flex-col md:flex-row gap-4">
                         {{ if .logo }}
                         <div class="flex-shrink-0">
@@ -165,7 +165,7 @@
         <div class="max-w-4xl mx-auto">
             <div class="space-y-6" data-aos="zoom-in-down">
                 {{ range .Site.Data.community }}
-                <div class="bg-dark-card backdrop-blur-sm rounded-lg p-6 shadow-xl border border-gray-800 hover:border-primary transition-colors">
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 shadow-xl border border-gray-800 hover:border-primary transition-colors">
                     <div class="flex flex-col md:flex-row md:items-center gap-4">
                         {{ if .logo }}
                         <div class="flex-shrink-0">
@@ -204,7 +204,7 @@
         <div class="max-w-4xl mx-auto">
             <div class="space-y-6" data-aos="zoom-in-down">
                 {{ range .Site.Data.education }}
-                <div class="bg-dark-card backdrop-blur-sm rounded-lg p-6 shadow-xl border border-gray-800">
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 shadow-xl border border-gray-800">
                     <div class="text-sm text-dark-muted mb-2">{{ .duration }}</div>
                     <h3 class="text-xl font-bold text-white mb-1">{{ .institution }}</h3>
                     <div class="text-sm text-dark-muted mb-2">{{ .location }}</div>
@@ -230,7 +230,7 @@
         <div class="max-w-4xl mx-auto">
             <div class="space-y-2" data-aos="zoom-in-down">
                 {{ range .Site.Data.workshops }}
-                <div class="bg-dark-card backdrop-blur-sm rounded-lg p-4 shadow-xl border border-gray-800 hover:border-primary transition-colors">
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-4 shadow-xl border border-gray-800 hover:border-primary transition-colors">
                     <div class="xs text-dark-muted mb-2">{{ .date }}</div>
                     <div class="text-md text-white">{{ .title | markdownify }}</div>
                 </div>
@@ -266,7 +266,7 @@
         <div id="apps-content" class="work-content">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="zoom-in-down">
                 {{ range .Site.Data.work.apps }}
-                <div class="bg-dark-card backdrop-blur-sm rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
+                <div class="bg-dark-card backdrop-blur-md rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
                     {{ if .image }}
                     <img src="{{ .image }}" alt="{{ .title }}" class="w-full h-48 object-cover">
                     {{ end }}
@@ -294,7 +294,7 @@
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="zoom-in-down">
                 {{ range .Site.Data.work.opensource }}
-                <div class="bg-dark-card backdrop-blur-sm rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
+                <div class="bg-dark-card backdrop-blur-md rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
                     {{ if .image }}
                     <img src="{{ .image }}" alt="{{ .title }}" class="w-full h-48 object-cover">
                     {{ end }}
