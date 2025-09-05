@@ -1,0 +1,158 @@
+apps:
+  - title: "C Programming Course"
+    description: "C Programming Course is all in one Application to learn C Programming Language. This is educational app with many features. This app is much popular on Play Store for learning C Programming and has around **740k+ installs** till 2025-08-05."
+    image: "/Images/Apps/CProgramming.png"
+    links:
+      - text: "View App"
+        url: "https://play.google.com/store/apps/details?id=com.spdroid.c&hl=en"
+
+  - title: "PU Alerts"
+    description: "PU Alerts is all in one app for all students who are pursuing engineering in SPPU (Pune University) which provides all important latest news, updates and notifications from SPPU. No need to visit site again and again after using this app. It has **8K Installs** till date."
+    image: "/Images/Apps/PUAlerts.png"
+    links:
+      - text: "View App"
+        url: "https://play.google.com/store/apps/details?id=com.spdroid.sppu.alerts"
+
+  - title: "Diploma Alerts"
+    description: "App developed for students of MSBTE board to get in touch with all news and updates regarding Exam, Syllabus, timetable, Hall tickets, etc. They will not have any need to check website again and again. All board information will available on app. It has around **45K Installs** till date."
+    image: "/Images/Apps/DiplomaAlerts.png"
+    links:
+      - text: "View App"
+        url: "https://play.google.com/store/apps/details?id=com.spdroid.diploma&hl=en"
+
+  - title: "SecurMi - Personal Security App"
+    description: "This is a personal security app, which helps you to inform about your dangerous situation to your trusty persons along with information. View this app for better understanding."
+    image: "/Images/Apps/SecurMi.png"
+    links:
+      - text: "View App"
+        url: "https://play.google.com/store/apps/details?id=com.csr.securmi&hl=en"
+
+  - title: "GoSafe"
+    description: "*A Safety and Real-time Emergency mediator System between Police officials and Citizens of India*<br><br>**Project:** Developed Cross-platform mobile application for Citizen/User app and Web application for Police officials that provides an easy way to report an incident which saves time as well as reduces the efforts which are required in the manual procedure.<br><br>**Technologies Used:** Google Cloud / Firebase, Google Maps API, Flutter - Dart, ReactJS, HTML, CSS, JavaScript, NodeJS, ExpressJS"
+    image: "/Images/Apps/GoSafe.png"
+    links:
+      - text: "View Details"
+        url: "https://www.irjet.net/archives/V8/i4/IRJET-V8I4315.pdf"
+
+  - title: "Passenger Security App - Smart India Hackathon 2018"
+    description: "Our Team TechnoDroid was selected for grand finale in Smart India Hackathon 2018 - Software Edition.<br><br>**Project:** Development of android app for Passenger Security which informs central ministry about Passenger's panic situation. Also, FIR can be registered through the app.<br><br>**Technologies Used:** Android, Java, MySQL, Firebase, PHP, Google Maps API"
+    image: "/Images/Apps/PassengerSecurity.png"
+    links:
+      - text: "View Project"
+        url: "https://github.com/PatilShreyas/PassengerSecurity-SIH2018"
+
+  - title: "Jalgaon CoHelp | COVID19 Resources"
+    description: "A web application which includes the Crowdsourced resources to fight COVID across Jalgaon District. Find hospital beds, oxygen, plasma, and more.<br><br>**Technologies Used:**<br>**Frontend:** ReactJS, TypeScript, CSS, Bootstrap<br>**Backend:** Kotlin, Ktor, PostgreSQL<br>**Deployment:** Heroku, Netlify"
+    image: "/Images/Apps/JalgaonCoHelp.png"
+    links:
+      - text: "Visit Site"
+        url: "https://jalgaoncohelp.in"
+      - text: "Source code"
+        url: "https://github.com/Jalgaon-CoHelp"
+
+  - title: "Official Website of Government Polytechnic, Jalgaon"
+    description: "Developed official website for institute Government Polytechnic, Jalgaon in 2018<br><br>**Technologies Used:** HTML, CSS, Bootstrap, Ajax, JQuery, JavaScript."
+    image: "/Images/Apps/GPJSite.png"
+    links:
+      - text: "Visit Site"
+        url: "http://gpjalgaon.org.in"
+
+  - title: "C Programs - Contribute, Learn, Write, Share Code"
+    description: "Let's Browse all C Programs developed by users worldwide and also contribute to make this app as Treasure of C Programs. Let's learn coding and share coding. It has **13k Installs** till date."
+    image: "/Images/Apps/CProComm.png"
+    links:
+      - text: "View App"
+        url: "https://play.google.com/store/apps/details?id=com.spdroid.cpcom&hl=en"
+
+  - title: "Smart EMI Calculator"
+    description: "This was my first basic app which Calculates EMI."
+    image: "/Images/Apps/EMICalc.png"
+    links:
+      - text: "View App"
+        url: "https://play.google.com/store/apps/details?id=com.spdroid.emi&hl=en"
+
+opensource:
+  - title: "Generative AI SDK for Kotlin Multiplatform"
+    description: "✨Generative AI SDK for Kotlin Multiplatform (Supports: JVM, Android, iOS, Desktop, Web JS, Wasm)"
+    image: "https://opengraph.githubassets.com/0022313ed19414e949c91ca3350e72846717c7c16695ac5f2a3faaf5289fdd5a/PatilShreyas/generative-ai-kmp"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/generative-ai-kmp"
+
+  - title: "Foodium - KMM"
+    description: "📱Sample application built to demonstrate the use of Kotlin Multiplatform Mobile for developing Android and iOS applications using Jetpack Compose 🚀"
+    image: "https://raw.githubusercontent.com/PatilShreyas/Foodium-KMM/main/readme-media/graphic.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/Foodium-KMM"
+
+  - title: "Compose Compiler Report to HTML"
+    description: "A utility (Gradle Plugin + CLI) to convert Jetpack Compose compiler metrics and reports to beautified HTML page."
+    image: "https://opengraph.githubassets.com/0022313ed19414e949c91ca3350e72846717c7c16695ac5f2a3faaf5289fdd5a/PatilShreyas/compose-report-to-html"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/compose-report-to-html"
+      - text: "View Docs"
+        url: "https://patilshreyas.github.io/compose-report-to-html/"
+
+  - title: "Mutekt"
+    description: "Simplify mutating \"immutable\" state models"
+    image: "https://opengraph.githubassets.com/391a826b3e7d8c3f47832b72c7e2be3127d9fba5a3fec5c83872a79a19ccbae0/PatilShreyas/mutekt"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/mutekt"
+
+  - title: "Permission Flow for Android"
+    description: "Know about real-time state of a Android app Permissions with Kotlin Flow APIs."
+    image: "https://opengraph.githubassets.com/a0b34a184e19158ee270f60716400d38caca4fdd95448f90ac346a6d27810639/PatilShreyas/permission-flow-android"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/permission-flow-android"
+      - text: "View Docs"
+        url: "https://patilshreyas.github.io/permission-flow-android/"
+
+  - title: "Capturable"
+    description: "🚀Jetpack Compose utility library for capturing Composable content and transforming it into Bitmap Image🖼️"
+    image: "/Images/OpenSource/Capturable.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/Capturable"
+      - text: "View Docs"
+        url: "https://patilshreyas.github.io/Capturable/"
+
+  - title: "NotyKT 🖊️"
+    description: "📒 NotyKT is a complete 💎Kotlin-stack (Backend + Android) 📱 application built to demonstrate the use of Modern development tools with best practices implementation."
+    image: "/Images/OpenSource/NotyKT.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/NotyKT"
+      - text: "View Docs"
+        url: "https://patilshreyas.github.io/NotyKT"
+
+  - title: "Foodium 🍲"
+    description: "🍲Foodium is a sample food blog Android application 📱 built to demonstrate use of Modern Android development tools."
+    image: "/Images/OpenSource/Foodium.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/Foodium"
+
+  - title: "COVID19 Notifier - India 🇮🇳"
+    description: "A sample Android App which notifies about COVID19 cases in 🇮🇳India after every 1 hour. Built to demonstrate use of Modern Android development tools."
+    image: "/Images/OpenSource/Covid19India.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/Covid19-Notifier-IN"
+
+  - title: "Easy UPI Payment - Android Library"
+    description: "📱Android Library to implement UPI Payment integration easily in Android App 💳💸"
+    image: "/Images/OpenSource/EasyUpiPayment.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/EasyUpiPayment-Android"
+
+  - title: "Material Dialogs for Android 📱"
+    description: "📱Android Library to implement animated, 😍beautiful, 🎨stylish Material Dialog in android apps easily."
+    image: "/Images/OpenSource/MaterialDialog.png"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/MaterialDialog-Android"

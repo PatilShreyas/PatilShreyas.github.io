@@ -1,11 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="789f5878-5d21-411f-9f45-35f2b9e16897" name="Default" comment="Updated Open-Source project link." />
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="789f5878-5d21-411f-9f45-35f2b9e16897" name="Default" comment="Add 2025's talk/session details">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/AYUSH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/CProComm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/CProgramming.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/DYPITMIS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/DiplomaAlerts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/EMICalc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/GPJITNoticeboardApp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/GPJSite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/GoSafe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/JalgaonCoHelp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/PUAlerts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/PassengerSecurity.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/SIH17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/SecurMi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Apps/TGApp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/AndroidFastlaneCICD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/AndroidLib.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/AutoFirebaseAppDistribution.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/CellLocation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/CombineStateFlows.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/ComposeNetwork.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/ComposeVisualTransformation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/DaggerLife.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/DataStore-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/DataStore-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/DevOps-AndroidLib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/EasyUpiPayment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/FirebaseFlow.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/FirebasePagination.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/FirebaseUpdateQuery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/FirestorePagination.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/Flutter2GS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/Flutter2GS2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/Hilt-AssistedInject-ViewModel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/InlineTextComponent-JetpackCompose.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/KotlinInternalApi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/KotlinSemaphore.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/LetYourDelegatesAutoNullifyRefs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/MaterialDialog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/MaterialNav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/PromiseComposeCompiler.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/PublishMavenCentralCI.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/ScheduleFCM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/SingleExpr-Kotlin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/StateFlow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/TastyKotlin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Article/ViewModelBestPractice.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Company/scalereal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/Capturable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/Covid19India.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/EasyUpiPayment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/FirebasePagination.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/Foodium.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/GitKtDroid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/LiveStream-Flutter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/LiveStream-Kt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/MaterialDialog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/MaterialNav.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/NotyKT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/OpenSource/ScheduleFCM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/SPDroid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/Web/GPJalgaon.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/code.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,6 +174,11 @@
         <option value="Shreyas Patil &lt;shreyaspatilg@gmail.com&gt;" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -130,7 +201,6 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -176,15 +246,14 @@
       <pane id="Scope" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Images/OpenSource" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "git-widget-placeholder": "hugo",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Dev\GitHub\PatilShreyas.github.io\PatilShreyas.github.io\Images\OpenSource" />
@@ -193,18 +262,9 @@
       <recent name="F:\Dev\GitHub\PatilShreyas.github.io\PatilShreyas.github.io\Images\Apps" />
       <recent name="F:\Dev\GitHub\PatilShreyas.github.io\PatilShreyas.github.io\images\Article" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/Images" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -455,7 +515,23 @@
       <option name="project" value="LOCAL" />
       <updated>1567841851664</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Add latest talk/session details">
+      <option name="closed" value="true" />
+      <created>1757053983956</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1757053983956</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Add 2025's talk/session details">
+      <option name="closed" value="true" />
+      <created>1757054007281</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1757054007281</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -484,9 +560,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
       <list>
@@ -500,7 +573,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added Code" />
     <MESSAGE value="Fix" />
     <MESSAGE value="Improved" />
     <MESSAGE value="Improved margin" />
@@ -524,7 +596,9 @@
     <MESSAGE value="Added new Article link." />
     <MESSAGE value="Updated Article link." />
     <MESSAGE value="Updated Open-Source project link." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Open-Source project link." />
+    <MESSAGE value="Add latest talk/session details" />
+    <MESSAGE value="Add 2025's talk/session details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 2025's talk/session details" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/bootstrap.js" />

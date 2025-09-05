@@ -1,0 +1,36 @@
+<!-- Navigation -->
+<nav class="fixed top-0 w-full bg-black bg-opacity-95 backdrop-blur-md z-50 transition-all duration-300 shadow-lg" id="navbar" style="position: fixed !important; top: 0 !important; z-index: 9999 !important;">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-3 md:py-4">
+            <!-- Brand -->
+            <a href="#home" class="text-xl font-bold text-white hover:text-primary transition-colors">
+                Shreyas Patil
+            </a>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-white hover:text-primary focus:outline-none focus:text-primary transition-colors p-3 rounded-lg hover:bg-gray-800" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-6">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="text-white hover:text-primary transition-colors font-medium">
+                    {{ .Name }}
+                </a>
+                {{ end }}
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden bg-black bg-opacity-95 backdrop-blur-md" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2 border-t border-gray-700 max-h-96 overflow-y-auto">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="block text-white hover:text-primary transition-colors font-medium py-3 px-2 rounded-lg hover:bg-gray-800 mobile-menu-link">
+                    {{ .Name }}
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</nav>
