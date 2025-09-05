@@ -1,6 +1,9 @@
 baseURL = "https://shreyaspatil.dev"
 languageCode = "en-us"
-title = "Shreyas Patil - Android Developer, Web Developer"
+title = "Shreyas Patil - Software Engineer (Mobile - Android, Kotlin, Open Source)"
+
+# Disable taxonomies since this is a single-page portfolio
+disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Official Website of Shreyas Sharad Patil. Android Developer, Web Developer, Open Source Enthusiast."
