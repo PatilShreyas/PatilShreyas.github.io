@@ -27,11 +27,10 @@ title = "Shreyas Patil - Android Developer, Web Developer"
   # Animated headlines
   animated_headlines = [
     "❤️ Android",
-    "✈️ Kotlin", 
+    "💜 Kotlin & KMP",
     "😍 Open Source",
-    "🔥 Firebase",
     "👨🏻‍💻 Enthusiast",
-    "✍️ Technical",
+    "✍️ Blogger",
     "🇮🇳 Indian"
   ]
 
@@ -42,34 +41,30 @@ title = "Shreyas Patil - Android Developer, Web Developer"
 
 [menu]
   [[menu.main]]
-    name = "Home"
-    url = "#home"
-    weight = 1
-  [[menu.main]]
     name = "About Me"
     url = "#about"
-    weight = 2
+    weight = 1
   [[menu.main]]
     name = "Experience"
     url = "#experience"
+    weight = 2
+  [[menu.main]]
+    name = "Community"
+    url = "#community"
     weight = 3
   [[menu.main]]
     name = "Education"
     url = "#education"
-    weight = 5
-  [[menu.main]]
-    name = "Community"
-    url = "#community"
     weight = 4
   [[menu.main]]
     name = "Workshops"
     url = "#workshops"
-    weight = 6
+    weight = 5
   [[menu.main]]
     name = "My Work"
     url = "#work"
-    weight = 7
+    weight = 6
   [[menu.main]]
     name = "Blog"
     url = "https://blog.shreyaspatil.dev"
-    weight = 8
+    weight = 7

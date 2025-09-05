@@ -60,7 +60,6 @@ button a {
 
 /* Hero section should account for navbar height */
 #home {
-    padding-top: 120px; /* More padding to ensure profile image is fully visible */
     min-height: 100vh; /* Full viewport height */
 }
 
