@@ -24,15 +24,6 @@ title = "Shreyas Patil - Android Developer, Web Developer"
   medium = "https://medium.com/@patilshreyas"
   blog = "https://blog.shreyaspatil.dev"
   
-  # Animated headlines
-  animated_headlines = [
-    "❤️ Android",
-    "💜 Kotlin & KMP",
-    "😍 Open Source",
-    "👨🏻‍💻 Enthusiast",
-    "✍️ Blogger",
-    "🇮🇳 Indian"
-  ]
 
 [markup]
   [markup.goldmark]

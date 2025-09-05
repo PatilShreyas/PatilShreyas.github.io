@@ -35,11 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
 function initAnimatedHeadlines() {
     const headlines = [
         "❤️ Android",
-        "✈️ Kotlin", 
+        "💜 Kotlin & KMP",
         "😍 Open Source",
-        "🔥 Firebase",
         "👨🏻‍💻 Enthusiast",
-        "✍️ Technical",
+        "✍️ Blogger",
         "🇮🇳 Indian"
     ];
     
