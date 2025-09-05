@@ -1,0 +1,64 @@
+baseURL = "https://shreyaspatil.dev"
+languageCode = "en-us"
+title = "Shreyas Patil - Software Engineer (Mobile - Android, Kotlin, Open Source)"
+
+# Disable taxonomies since this is a single-page portfolio
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Official Website of Shreyas Sharad Patil. Android Developer, Web Developer, Open Source Enthusiast."
+  author = "Shreyas Sharad Patil"
+  keywords = "shreyas patil, shreyas, patil, shreyaspatil, patil shreyas, patilshreyas, android developer, web developer, shreyaspatil99, shreyas sharad patil, androiddev, shreyaspatil99, ssp"
+  
+  # Profile information
+  name = "Shreyas Sharad Patil"
+  tagline = "Google Developer Expert for Android"
+  profile_image = "/Images/profile.png"
+  cv_url = "https://drive.google.com/file/d/1RMyErD4VNG2IhoHghwugXm0PGAxcGL0m/view?usp=sharing"
+  
+  # Social media links
+  email = "hi@shreyaspatil.dev"
+  facebook = "https://www.facebook.com/shreyaspatil99"
+  twitter = "https://twitter.com/imShreyasPatil"
+  instagram = "https://instagram.com/shreyaspatil.dev/"
+  linkedin = "https://www.linkedin.com/in/patil-shreyas"
+  github = "https://github.com/PatilShreyas"
+  playstore = "https://play.google.com/store/apps/dev?id=7315706573700759915"
+  medium = "https://medium.com/@patilshreyas"
+  blog = "https://blog.shreyaspatil.dev"
+  
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "About Me"
+    url = "#about"
+    weight = 1
+  [[menu.main]]
+    name = "Experience"
+    url = "#experience"
+    weight = 2
+  [[menu.main]]
+    name = "Community"
+    url = "#community"
+    weight = 3
+  [[menu.main]]
+    name = "Education"
+    url = "#education"
+    weight = 4
+  [[menu.main]]
+    name = "Workshops"
+    url = "#workshops"
+    weight = 5
+  [[menu.main]]
+    name = "My Work"
+    url = "#work"
+    weight = 6
+  [[menu.main]]
+    name = "Blog"
+    url = "https://blog.shreyaspatil.dev"
+    weight = 7

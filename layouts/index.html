@@ -1,0 +1,320 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center relative">
+    <!-- Background with overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90"></div>
+    <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/Images/background.png');"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    
+    <div class="relative z-10 text-center px-4" data-aos="fade-up">
+        <!-- Profile Image -->
+        <div class="mb-8">
+            <img src="{{ .Site.Params.profile_image }}" 
+                 alt="{{ .Site.Params.name }}" 
+                 class="w-64 h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-transform duration-300"
+                 data-aos="zoom-in-up">
+        </div>
+        
+        <!-- Name -->
+        <h1 class="text-2xl md:text-4xl mb-4 text-white font-weight-normal">
+            {{ .Site.Params.name }}
+        </h1>
+        
+        <!-- Animated Headlines -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-medium text-secondary">
+                <span id="animated-text">❤️ Android</span>
+                <span class="animate-pulse">|</span>
+            </h2>
+        </div>
+        
+        <!-- CV Button -->
+        {{ with .Site.Params.cv_url }}
+        <div class="mb-8">
+            <a href="{{ . }}" target="_blank" 
+               class="inline-flex items-center px-8 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black transition-all duration-300 rounded-lg font-medium">
+                <i class="fas fa-file mr-2"></i>
+                View CV
+            </a>
+        </div>
+        {{ end }}
+        
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-4 flex-wrap" data-aos="fade-up" data-aos-delay="200">
+            {{ with .Site.Params.email }}
+            <a href="mailto:{{ . }}" class="social-icon bg-red-600 hover:bg-red-700">
+                <i class="far fa-envelope"></i>
+            </a>
+            {{ end }}
+            {{ with .Site.Params.facebook }}
+            <a href="{{ . }}" target="_blank" class="social-icon bg-blue-600 hover:bg-blue-700">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            {{ end }}
+            {{ with .Site.Params.twitter }}
+            <a href="{{ . }}" target="_blank" class="social-icon bg-blue-400 hover:bg-blue-500">
+                <i class="fab fa-twitter"></i>
+            </a>
+            {{ end }}
+            {{ with .Site.Params.instagram }}
+            <a href="{{ . }}" target="_blank" class="social-icon bg-pink-600 hover:bg-pink-700">
+                <i class="fab fa-instagram"></i>
+            </a>
+            {{ end }}
+            {{ with .Site.Params.linkedin }}
+            <a href="{{ . }}" target="_blank" class="social-icon bg-blue-800 hover:bg-blue-900">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            {{ end }}
+            {{ with .Site.Params.github }}
+            <a href="{{ . }}" target="_blank" class="social-icon bg-gray-800 hover:bg-gray-900">
+                <i class="fab fa-github-alt"></i>
+            </a>
+            {{ end }}
+            {{ with .Site.Params.playstore }}
+            <a href="{{ . }}" target="_blank" class="social-icon bg-green-600 hover:bg-green-700">
+                <i class="fab fa-google-play"></i>
+            </a>
+            {{ end }}
+            {{ with .Site.Params.medium }}
+            <a href="{{ . }}" target="_blank" class="social-icon bg-gray-700 hover:bg-gray-800">
+                <i class="fab fa-medium-m"></i>
+            </a>
+            {{ end }}
+            {{ with .Site.Params.blog }}
+            <a href="{{ . }}" target="_blank" class="social-icon bg-blue-500 hover:bg-blue-600">
+                <i class="fas fa-blog"></i>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="zoom-in-up">
+            <h2 class="text-4xl mb-4">
+                <i class="fas fa-user-alt mr-4"></i>
+                About <span class="font-bold">Me</span>
+            </h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-dark-card backdrop-blur-md rounded-lg p-8 shadow-xl" data-aos="zoom-in-down">
+                {{ range .Site.Data.about }}
+                <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                    {{ .content | markdownify }}
+                </p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-8" data-aos="zoom-in-up">
+            <h2 class="text-4xl mb-2">
+                <i class="fas fa-briefcase mr-4"></i>
+                My <span class="font-bold">Experience</span>
+            </h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-6" data-aos="zoom-in-down">
+                {{ range .Site.Data.experience }}
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 shadow-xl border border-gray-800 hover:border-primary transition-colors">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        {{ if .logo }}
+                        <div class="flex-shrink-0">
+                            <img src="{{ .logo }}" alt="{{ .company }}" class="w-16 h-16 rounded-lg bg-white">
+                        </div>
+                        {{ end }}
+                        <div class="flex-grow">
+                            <div class="text-sm text-dark-muted mb-2">{{ .duration }}</div>
+                            <h3 class="text-xl font-bold text-white mb-1">{{ .position }}</h3>
+                            <div class="text-lg text-primary mb-1">
+                                {{ if .url }}
+                                <a href="{{ .url }}" target="_blank" class="hover:underline">{{ .company }}</a>
+                                {{ else }}
+                                {{ .company }}
+                                {{ end }}
+                            </div>
+                            <div class="text-sm text-dark-muted">{{ .location }}</div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community Section -->
+<section id="community" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="zoom-in-up">
+            <h2 class="text-4xl mb-4">
+                <i class="fas fa-users mr-4"></i>
+                My <span class="font-bold">Community</span>
+            </h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-6" data-aos="zoom-in-down">
+                {{ range .Site.Data.community }}
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 shadow-xl border border-gray-800 hover:border-primary transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-center gap-4">
+                        {{ if .logo }}
+                        <div class="flex-shrink-0">
+                            <img src="{{ .logo }}" alt="{{ .organization }}" class="w-16 h-16 rounded-lg">
+                        </div>
+                        {{ end }}
+                        <div class="flex-grow">
+                            <div class="text-sm text-dark-muted mb-2">{{ .duration }}</div>
+                            <h3 class="text-xl font-bold text-white mb-1">{{ .role }}</h3>
+                            <div class="text-lg text-primary">
+                                {{ if .url }}
+                                <a href="{{ .url }}" target="_blank" class="hover:underline">{{ .organization }}</a>
+                                {{ else }}
+                                {{ .organization }}
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="zoom-in-up">
+            <h2 class="text-4xl mb-4">
+                <i class="fas fa-graduation-cap mr-4"></i>
+                My <span class="font-bold">Education</span>
+            </h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-6" data-aos="zoom-in-down">
+                {{ range .Site.Data.education }}
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 shadow-xl border border-gray-800">
+                    <div class="text-sm text-dark-muted mb-2">{{ .duration }}</div>
+                    <h3 class="text-xl font-bold text-white mb-1">{{ .institution }}</h3>
+                    <div class="text-sm text-dark-muted mb-2">{{ .location }}</div>
+                    <div class="text-gray-300">{{ .degree }}</div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Workshops Section -->
+<section id="workshops" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="zoom-in-up">
+            <h2 class="text-4xl mb-4">
+                <i class="fas fa-user-tie mr-4"></i>
+                My <span class="font-bold">Workshops / Sessions / Webinars</span>
+            </h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-2" data-aos="zoom-in-down">
+                {{ range .Site.Data.workshops }}
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-4 shadow-xl border border-gray-800 hover:border-primary transition-colors">
+                    <div class="xs text-dark-muted mb-2">{{ .date }}</div>
+                    <div class="text-md text-white">{{ .title | markdownify }}</div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Work Section -->
+<section id="work" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="zoom-in-up">
+            <h2 class="text-4xl mb-4">
+                <i class="fas fa-laptop-code mr-4"></i>
+                My <span class="font-bold">Work</span>
+            </h2>
+        </div>
+        
+        <!-- Work Tabs -->
+        <div class="flex justify-center mb-12">
+            <div class="bg-dark-card rounded-lg p-1 flex">
+                <button class="work-tab-btn active px-6 py-3 rounded-md transition-all" data-tab="apps">
+                    <i class="fa fa-mobile-alt mr-2"></i>Apps / Software
+                </button>
+                <button class="work-tab-btn px-6 py-3 rounded-md transition-all" data-tab="opensource">
+                    <i class="fab fa-github-alt mr-2"></i>Open Source
+                </button>
+            </div>
+        </div>
+        
+        <!-- Apps Tab Content -->
+        <div id="apps-content" class="work-content">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="zoom-in-down">
+                {{ range .Site.Data.work.apps }}
+                <div class="bg-dark-card backdrop-blur-md rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
+                    {{ if .image }}
+                    <img src="{{ .image }}" alt="{{ .title }}" class="w-full h-48 object-cover">
+                    {{ end }}
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">{{ .title }}</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">{{ .description | markdownify }}</p>
+                        <div class="flex flex-wrap gap-2">
+                            {{ range .links }}
+                            <a href="{{ .url }}" target="_blank" 
+                               class="inline-flex items-center px-4 py-2 bg-primary text-black rounded-md hover:bg-blue-400 transition-colors text-sm font-medium">
+                                {{ .text }}
+                            </a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        
+        <!-- Open Source Tab Content -->
+        <div id="opensource-content" class="work-content hidden">
+            <div class="text-center mb-8">
+                <p class="text-gray-300">See more projects on <a href="{{ .Site.Params.github }}" target="_blank" class="text-primary hover:underline">my GitHub</a></p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="zoom-in-down">
+                {{ range .Site.Data.work.opensource }}
+                <div class="bg-dark-card backdrop-blur-md rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
+                    {{ if .image }}
+                    <img src="{{ .image }}" alt="{{ .title }}" class="w-full h-48 object-cover">
+                    {{ end }}
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">{{ .title }}</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">{{ .description }}</p>
+                        <div class="flex flex-wrap gap-2">
+                            {{ range .links }}
+                            <a href="{{ .url }}" target="_blank" 
+                               class="inline-flex items-center px-4 py-2 bg-primary text-black rounded-md hover:bg-blue-400 transition-colors text-sm font-medium">
+                                {{ .text }}
+                            </a>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

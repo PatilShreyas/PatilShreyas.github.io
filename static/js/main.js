@@ -1,0 +1,343 @@
+// Main JavaScript for portfolio functionality
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS (Animate On Scroll)
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
+
+    // Animated headlines cycling
+    initAnimatedHeadlines();
+    
+    // Mobile menu functionality
+    initMobileMenu();
+    
+    // Smooth scrolling for navigation links
+    initSmoothScrolling();
+    
+    // Navbar scroll effect
+    initNavbarScrollEffect();
+    
+    // Navigation scroll spy
+    initScrollSpy();
+    
+    // Work section tabs
+    initWorkTabs();
+    
+    // Profile image tilt effect
+    initProfileTiltEffect();
+});
+
+// Animated headlines functionality
+function initAnimatedHeadlines() {
+    const headlines = [
+        "❤️ Android",
+        "💜 Kotlin & KMP",
+        "😍 Open Source",
+        "👨🏻‍💻 Enthusiast",
+        "✍️ Blogger",
+        "🇮🇳 Indian"
+    ];
+    
+    const animatedText = document.getElementById('animated-text');
+    if (!animatedText) return;
+    
+    let currentIndex = 0;
+    
+    function changeHeadline() {
+        // Fade out
+        animatedText.style.opacity = '0';
+        animatedText.style.transform = 'translateY(-20px)';
+        
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % headlines.length;
+            animatedText.textContent = headlines[currentIndex];
+            
+            // Fade in
+            animatedText.style.opacity = '1';
+            animatedText.style.transform = 'translateY(0)';
+        }, 300);
+    }
+    
+    // Set initial styles
+    animatedText.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    
+    // Change headline every 3 seconds
+    setInterval(changeHeadline, 3000);
+}
+
+// Mobile menu functionality
+function initMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (!mobileMenuBtn || !mobileMenu) return;
+    
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+        
+        // Toggle icon
+        const icon = mobileMenuBtn.querySelector('i');
+        if (mobileMenu.classList.contains('hidden')) {
+            icon.className = 'fas fa-bars text-xl';
+        } else {
+            icon.className = 'fas fa-times text-xl';
+        }
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.className = 'fas fa-bars text-xl';
+        });
+    });
+}
+
+// Smooth scrolling for navigation links
+function initSmoothScrolling() {
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+// Navbar scroll effect
+function initNavbarScrollEffect() {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    
+    let lastScrollY = window.scrollY;
+    
+    function handleScroll() {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+        
+        // Keep navbar always visible (sticky behavior)
+        navbar.style.transform = 'translateY(0)';
+        
+        lastScrollY = currentScrollY;
+    }
+    
+    // Throttle scroll events
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+}
+
+// Work section tabs functionality
+function initWorkTabs() {
+    const tabButtons = document.querySelectorAll('.work-tab-btn');
+    const tabContents = document.querySelectorAll('.work-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Hide all tab contents
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Show target tab content
+            const targetContent = document.getElementById(targetTab + '-content');
+            if (targetContent) {
+                targetContent.classList.remove('hidden');
+                
+                // Re-trigger AOS animations for the new content
+                AOS.refresh();
+            }
+        });
+    });
+}
+
+// Profile image tilt effect
+function initProfileTiltEffect() {
+    const profileImg = document.querySelector('#home img');
+    if (!profileImg) return;
+    
+    profileImg.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.05) rotate(2deg)';
+    });
+    
+    profileImg.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1) rotate(0deg)';
+    });
+}
+
+// Utility function to throttle function calls
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
+// Utility function to debounce function calls
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function() {
+        const context = this, args = arguments;
+        const later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
+// Intersection Observer for section highlighting in navigation
+function initSectionHighlighting() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                
+                // Remove active class from all nav links
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary');
+                    link.classList.add('text-white');
+                });
+                
+                // Add active class to current section's nav link
+                const activeLink = document.querySelector(`nav a[href="#${id}"]`);
+                if (activeLink) {
+                    activeLink.classList.remove('text-white');
+                    activeLink.classList.add('text-primary');
+                }
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '-80px 0px -80px 0px'
+    });
+    
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+}
+
+// Initialize section highlighting when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initSectionHighlighting();
+});
+
+// Preload images for better performance
+function preloadImages() {
+    const images = [
+        'Images/background.png',
+        'Images/profile.png'
+    ];
+    
+    images.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
+// Navigation scroll spy functionality
+function initScrollSpy() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    
+    if (!sections.length || !navLinks.length) return;
+    
+    function updateActiveNavItem() {
+        let currentSection = '';
+        const scrollPosition = window.scrollY + 100; // Offset for navbar height
+        
+        // Find the current section
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        
+        // Update active nav item
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            const targetId = href.substring(1); // Remove the '#'
+            
+            // Remove active class from all links
+            link.classList.remove('text-primary', 'border-b-2', 'border-primary');
+            link.classList.add('text-gray-300');
+            
+            // Add active class to current section link
+            if (targetId === currentSection) {
+                link.classList.remove('text-gray-300');
+                link.classList.add('text-primary', 'border-b-2', 'border-primary');
+            }
+        });
+    }
+    
+    // Throttled scroll event listener
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                updateActiveNavItem();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+    
+    // Initial call to set active item on page load
+    updateActiveNavItem();
+}
+
+// Call preload on page load
+window.addEventListener('load', preloadImages);

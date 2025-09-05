@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    
+    <!-- Meta tags -->
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="keywords" content="{{ .Site.Params.keywords }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}Images/profile.png" type="image/png" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}Images/profile.png">
+    <meta property="og:description" content="{{ .Site.Params.description }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ .Site.Title }}">
+    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}Images/profile.png">
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://www.statcounter.com">
+    
+    <!-- Fonts and CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#47d3f7',
+                        dark: {
+                            bg: '#000000',
+                            card: 'rgba(255, 255, 255, 0.05)',
+                            text: '#ffffff',
+                            muted: '#b7b6bb'
+                        }
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css">
+</head>
+<body class="dark bg-dark-bg text-dark-text font-montserrat">
+    {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    
+    {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
+    <script src="{{ .Site.BaseURL }}js/main.js"></script>
+    
+    <!-- Statcounter -->
+    <script type="text/javascript">
+        var sc_project = 12121673;
+        var sc_invisible = 1;
+        var sc_security = "206010bd"; 
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+                    class="statcounter" src="https://c.statcounter.com/12121673/0/206010bd/1/" alt="Web Analytics"></a>
+        </div>
+    </noscript>
+    <!-- End of Statcounter Code -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9ETE3JD3V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-X9ETE3JD3V');
+    </script>
+</body>
+</html>
