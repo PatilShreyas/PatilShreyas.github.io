@@ -72,12 +72,30 @@ apps:
         url: "https://play.google.com/store/apps/details?id=com.spdroid.emi&hl=en"
 
 opensource:
+  - title: "ByteMask"
+    description: "Android Gradle Plugin that masks secret strings for the app in the source code making it difficult to extract from reverse engineering."
+    image: "https://opengraph.githubassets.com/0022313ed19414e949c91ca3350e72846717c7c16695ac5f2a3faaf5289fdd5a/PatilShreyas/bytemask"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/bytemask"
+      - text: "View Docs"
+        url: "https://patilshreyas.github.io/bytemask/"
+
   - title: "Generative AI SDK for Kotlin Multiplatform"
     description: "✨Generative AI SDK for Kotlin Multiplatform (Supports: JVM, Android, iOS, Desktop, Web JS, Wasm)"
     image: "https://opengraph.githubassets.com/0022313ed19414e949c91ca3350e72846717c7c16695ac5f2a3faaf5289fdd5a/PatilShreyas/generative-ai-kmp"
     links:
       - text: "View on GitHub"
         url: "https://github.com/PatilShreyas/generative-ai-kmp"
+
+  - title: "ChaKt - KMP"
+    description: "✨ChaKt - A multiplatform chat-prompt based app for Android, iOS, Desktop, Web. Powered by Google's Gemini API (with Generative AI Multiplatform SDK)"
+    image: "https://opengraph.githubassets.com/0022313ed19414e949c91ca3350e72846717c7c16695ac5f2a3faaf5289fdd5a/PatilShreyas/ChaKt-KMP"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/ChaKt-KMP"
+      - text: "View Docs"
+        url: "https://patilshreyas.github.io/ChaKt-KMP"
 
   - title: "Foodium - KMM"
     description: "📱Sample application built to demonstrate the use of Kotlin Multiplatform Mobile for developing Android and iOS applications using Jetpack Compose 🚀"
@@ -110,6 +128,13 @@ opensource:
         url: "https://github.com/PatilShreyas/permission-flow-android"
       - text: "View Docs"
         url: "https://patilshreyas.github.io/permission-flow-android/"
+
+  - title: "Material Navigation View for Android"
+    description: "📱 Android Library to implement Rich, Beautiful, Stylish 😍 Material Navigation View for your project with Material Design Guidelines. Easy to use."
+    image: "https://opengraph.githubassets.com/0022313ed19414e949c91ca3350e72846717c7c16695ac5f2a3faaf5289fdd5a/PatilShreyas/MaterialNavigationView-Android"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/MaterialNavigationView-Android"
 
   - title: "Capturable"
     description: "🚀Jetpack Compose utility library for capturing Composable content and transforming it into Bitmap Image🖼️"
@@ -156,3 +181,12 @@ opensource:
     links:
       - text: "View on GitHub"
         url: "https://github.com/PatilShreyas/MaterialDialog-Android"
+
+  - title: "Firebase RecyclerView Pagination"
+    description: "[DEPRECATED] Android Library to implement Paging support for Realtime Database in RecyclerView."
+    image: "https://opengraph.githubassets.com/0022313ed19414e949c91ca3350e72846717c7c16695ac5f2a3faaf5289fdd5a/PatilShreyas/FirebaseRecyclerPagination"
+    links:
+      - text: "View on GitHub"
+        url: "https://github.com/PatilShreyas/FirebaseRecyclerPagination"
+      - text: "View Docs"
+        url: "https://firebaseopensource.com/projects/patilshreyas/firebaserecyclerpagination/"
