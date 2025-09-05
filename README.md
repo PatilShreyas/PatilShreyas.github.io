@@ -1,6 +1,6 @@
 # Shreyas Patil's Portfolio
 
-A modern, minimalist portfolio website built with Hugo, featuring a dark theme and showcasing my work as a Google Developer Expert for Android.
+A modern, minimalist portfolio website built with Hugo.
 
 **Live Site:** https://shreyaspatil.dev
 
