@@ -1,0 +1,19 @@
+{
+  "name": "shreyas-patil-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website of Shreyas Patil - Google Developer Expert for Android",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./static/css/tailwind.css --minify",
+    "watch-css": "tailwindcss -i ./src/input.css -o ./static/css/tailwind.css --watch",
+    "dev": "hugo server --bind 0.0.0.0 --port 1313",
+    "build": "npm run build-css && hugo --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10"
+  },
+  "keywords": ["hugo", "portfolio", "tailwindcss", "android", "developer"],
+  "author": "Shreyas Patil",
+  "license": "MIT"
+}
