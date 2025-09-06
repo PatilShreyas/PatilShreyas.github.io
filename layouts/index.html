@@ -1,119 +1,119 @@
 {{ define "main" }}
-<!-- Hero Section -->
-<section id="home" class="min-h-screen flex items-center justify-center relative">
+<!-- Split Screen Hero + About Section -->
+<section id="home-about-split" class="min-h-screen relative">
     <!-- Background with overlay -->
     <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90"></div>
     <!-- Background image loaded after page load -->
     <div id="background-image" class="absolute inset-0 bg-cover bg-center bg-fixed opacity-0 transition-opacity duration-1000"></div>
     <div class="absolute inset-0 bg-black bg-opacity-60"></div>
     
-    <div class="relative z-10 text-center px-4">
-        <!-- Profile Image with Loading Placeholder -->
-        <div class="mb-8 relative">
-            <!-- Placeholder circle while image loads -->
-            <div id="profile-placeholder" class="w-64 h-64 rounded-full mx-auto shadow-2xl bg-gradient-to-br from-primary to-blue-600 opacity-30 animate-pulse transition-opacity duration-500"></div>
-            <!-- Actual profile image -->
-            <img id="profile-image"
-                 src="{{ .Site.Params.profile_image }}"
-                 alt="{{ .Site.Params.name }}"
-                 class="w-64 h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-all duration-500 opacity-0 absolute inset-0"
-                 onload="this.style.opacity='1'; document.getElementById('profile-placeholder').style.opacity='0';">
-        </div>
+    <!-- Split Screen Container -->
+    <div class="relative z-10 min-h-screen flex flex-col lg:flex-row">
         
-        <!-- Name -->
-        <h1 class="text-2xl md:text-4xl mb-4 text-white font-weight-normal">
-            {{ .Site.Params.name }}
-        </h1>
-        
-        <!-- Animated Headlines -->
-        <div class="mb-8">
-            <h2 class="text-2xl font-medium text-secondary">
-                <span id="animated-text">❤️ Android</span>
-                <span class="animate-pulse">|</span>
-            </h2>
-        </div>
-        
-        <!-- CV Button -->
-        {{ with .Site.Params.cv_url }}
-        <div class="mb-8">
-            <a href="{{ . }}" target="_blank" 
-               class="inline-flex items-center px-8 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black rounded-lg font-medium">
-                <i class="fas fa-file mr-2"></i>
-                View CV
-            </a>
-        </div>
-        {{ end }}
-        
-        <!-- Social Links -->
-        <div class="flex justify-center space-x-4 flex-wrap">
-            {{ with .Site.Params.email }}
-            <a href="mailto:{{ . }}" class="social-icon bg-red-600 hover:bg-red-700">
-                <i class="far fa-envelope"></i>
-            </a>
-            {{ end }}
-            {{ with .Site.Params.facebook }}
-            <a href="{{ . }}" target="_blank" class="social-icon bg-blue-600 hover:bg-blue-700">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            {{ end }}
-            {{ with .Site.Params.twitter }}
-            <a href="{{ . }}" target="_blank" class="social-icon bg-blue-400 hover:bg-blue-500">
-                <i class="fab fa-twitter"></i>
-            </a>
-            {{ end }}
-            {{ with .Site.Params.instagram }}
-            <a href="{{ . }}" target="_blank" class="social-icon bg-pink-600 hover:bg-pink-700">
-                <i class="fab fa-instagram"></i>
-            </a>
-            {{ end }}
-            {{ with .Site.Params.linkedin }}
-            <a href="{{ . }}" target="_blank" class="social-icon bg-blue-800 hover:bg-blue-900">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            {{ end }}
-            {{ with .Site.Params.github }}
-            <a href="{{ . }}" target="_blank" class="social-icon bg-gray-800 hover:bg-gray-900">
-                <i class="fab fa-github-alt"></i>
-            </a>
-            {{ end }}
-            {{ with .Site.Params.playstore }}
-            <a href="{{ . }}" target="_blank" class="social-icon bg-green-600 hover:bg-green-700">
-                <i class="fab fa-google-play"></i>
-            </a>
-            {{ end }}
-            {{ with .Site.Params.medium }}
-            <a href="{{ . }}" target="_blank" class="social-icon bg-gray-700 hover:bg-gray-800">
-                <i class="fab fa-medium-m"></i>
-            </a>
-            {{ end }}
-            {{ with .Site.Params.blog }}
-            <a href="{{ . }}" target="_blank" class="social-icon bg-blue-500 hover:bg-blue-600">
-                <i class="fas fa-blog"></i>
-            </a>
-            {{ end }}
-        </div>
-    </div>
-</section>
-
-<!-- About Section -->
-<section id="about" class="py-20">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl mb-4">
-                <i class="fas fa-user-alt mr-4"></i>
-                About <span class="font-bold">Me</span>
-            </h2>
-        </div>
-        
-        <div class="max-w-4xl mx-auto">
-            <div class="bg-dark-card backdrop-blur-md rounded-lg p-8 shadow-xl">
-                {{ range .Site.Data.about }}
-                <p class="text-lg leading-relaxed mb-6 text-gray-300">
-                    {{ .content | markdownify }}
-                </p>
+        <!-- Home Section (Left Side on Desktop) -->
+        <div id="home" class="flex-1 lg:flex-none lg:w-2/5 flex items-center justify-center px-4 py-20 lg:py-0">
+            <div class="text-center max-w-lg">
+                <!-- Profile Image with Loading Placeholder -->
+                <div class="mb-8 relative">
+                    <!-- Placeholder circle while image loads -->
+                    <div id="profile-placeholder" class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl bg-gradient-to-br from-primary to-blue-600 opacity-30 animate-pulse transition-opacity duration-500"></div>
+                    <!-- Actual profile image -->
+                    <img id="profile-image"
+                         src="{{ .Site.Params.profile_image }}"
+                         alt="{{ .Site.Params.name }}"
+                         class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-all duration-500 opacity-0 absolute inset-0"
+                         onload="this.style.opacity='1'; document.getElementById('profile-placeholder').style.opacity='0';">
+                </div>
+                
+                <!-- Name -->
+                <h1 class="text-2xl md:text-3xl lg:text-4xl mb-4 text-white font-weight-normal">
+                    {{ .Site.Params.name }}
+                </h1>
+                
+                <!-- Animated Headlines -->
+                <div class="mb-8">
+                    <h2 class="text-xl md:text-2xl font-medium text-secondary">
+                        <span id="animated-text">❤️ Android</span>
+                        <span class="animate-pulse">|</span>
+                    </h2>
+                </div>
+                
+                <!-- CV Button -->
+                {{ with .Site.Params.cv_url }}
+                <div class="mb-8">
+                    <a href="{{ . }}" target="_blank" 
+                       class="inline-flex items-center px-6 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black rounded-lg font-medium text-sm lg:text-base">
+                        <i class="fas fa-file mr-2"></i>
+                        View CV
+                    </a>
+                </div>
                 {{ end }}
+                
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-3 flex-wrap">
+                    {{ with .Site.Params.email }}
+                    <a href="mailto:{{ . }}" class="social-icon bg-red-600 hover:bg-red-700">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.facebook }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-600 hover:bg-blue-700">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.twitter }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-400 hover:bg-blue-500">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.instagram }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-pink-600 hover:bg-pink-700">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.linkedin }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-800 hover:bg-blue-900">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.github }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-gray-800 hover:bg-gray-900">
+                        <i class="fab fa-github-alt"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.playstore }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-green-600 hover:bg-green-700">
+                        <i class="fab fa-google-play"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.medium }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-gray-700 hover:bg-gray-800">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.blog }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-500 hover:bg-blue-600">
+                        <i class="fas fa-blog"></i>
+                    </a>
+                    {{ end }}
+                </div>
             </div>
         </div>
+        
+        <!-- About Section (Right Side on Desktop) -->
+        <div id="about" class="flex-1 lg:flex-none lg:w-3/5 flex items-center justify-center px-4 py-20 lg:py-0">
+            <div class="max-w-lg lg:max-w-full">
+                <!-- About Content -->
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 lg:p-8 shadow-xl">
+                    {{ range .Site.Data.about }}
+                    <div class="text-base lg:text-lg leading-relaxed text-gray-300">
+                        {{ .content | markdownify }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        
     </div>
 </section>
 
