@@ -1,14 +1,6 @@
 // Main JavaScript for portfolio functionality
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS (Animate On Scroll)
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 100
-    });
-
     // Animated headlines cycling
     initAnimatedHeadlines();
     
@@ -26,9 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Work section tabs
     initWorkTabs();
-    
-    // Profile image tilt effect
-    initProfileTiltEffect();
 });
 
 // Animated headlines functionality
@@ -189,49 +178,6 @@ function initWorkTabs() {
     });
 }
 
-// Profile image tilt effect
-function initProfileTiltEffect() {
-    const profileImg = document.querySelector('#home img');
-    if (!profileImg) return;
-    
-    profileImg.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.05) rotate(2deg)';
-    });
-    
-    profileImg.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1) rotate(0deg)';
-    });
-}
-
-// Utility function to throttle function calls
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    }
-}
-
-// Utility function to debounce function calls
-function debounce(func, wait, immediate) {
-    let timeout;
-    return function() {
-        const context = this, args = arguments;
-        const later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        const callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-}
 
 // Intersection Observer for section highlighting in navigation
 function initSectionHighlighting() {
