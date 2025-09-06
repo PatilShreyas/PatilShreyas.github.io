@@ -33,12 +33,10 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"></noscript>
     <link rel="preload" href="{{ .Site.BaseURL }}{{ .Site.Params.profile_image }}" as="image">
-    <link rel="preload" href="{{ .Site.BaseURL }}Images/background-optimized.webp" as="image">
     
     <!-- Fonts and CSS -->
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fontawesome-minimal.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tailwind.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
 </head>
 <body class="dark bg-dark-bg text-dark-text font-montserrat">
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
@@ -54,10 +52,10 @@
     
     <!-- Image Loading Optimization Script -->
     <script>
-        // Load background image with WebP support and fallback
+        // Load background image directly to body with WebP support and fallback after 1 second delay
         document.addEventListener('DOMContentLoaded', function() {
-            const bgElement = document.getElementById('background-image');
-            if (bgElement) {
+            // Delay background loading by 1 second to prioritize content
+            setTimeout(function() {
                 // Check WebP support and use appropriate image
                 const webpSupported = (function() {
                     const canvas = document.createElement('canvas');
@@ -70,9 +68,13 @@
                     ? '/Images/background-optimized.webp' 
                     : '/Images/background-optimized.jpg';
                 
-                bgElement.style.backgroundImage = `url('${imageUrl}')`;
-                bgElement.style.opacity = '1';
-            }
+                // Set all background properties directly to body element
+                document.body.style.backgroundImage = `url('${imageUrl}')`;
+                document.body.style.backgroundSize = 'cover';
+                document.body.style.backgroundPosition = 'center';
+                document.body.style.backgroundAttachment = 'fixed';
+                document.body.style.backgroundRepeat = 'no-repeat';
+            }, 1000);
         });
     </script>
     
