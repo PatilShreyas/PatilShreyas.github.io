@@ -21,6 +21,7 @@ disableKinds = ["taxonomy", "term"]
   facebook = "https://www.facebook.com/shreyaspatil99"
   twitter = "https://twitter.com/imShreyasPatil"
   instagram = "https://instagram.com/shreyaspatil.dev/"
+  threads = "https://www.threads.net/@shreyaspatil.dev"
   linkedin = "https://www.linkedin.com/in/patil-shreyas"
   github = "https://github.com/PatilShreyas"
   playstore = "https://play.google.com/store/apps/dev?id=7315706573700759915"

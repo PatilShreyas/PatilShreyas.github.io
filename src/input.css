@@ -17,12 +17,12 @@
 /* Custom component styles */
 @layer components {
   .social-icon {
-    @apply w-12 h-12 rounded-full flex items-center justify-center text-white no-underline transition-all duration-300 shadow-2xl text-lg font-bold;
+    @apply w-12 h-12 rounded-full flex items-center justify-center text-white no-underline transition-all duration-300 shadow-2xl text-lg font-bold border border-white border-opacity-30 m-2;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   }
   
   .social-icon:hover {
-    @apply transform -translate-y-0.5 scale-110;
+    @apply transform -translate-y-0.5 scale-110 border-opacity-60;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   }
   
