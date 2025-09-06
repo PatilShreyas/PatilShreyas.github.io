@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "hugo --gc --minify"
+  command = "npm run build"
 
 [build.environment]
   HUGO_VERSION = "0.148.2"
@@ -8,10 +8,10 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.production]
-  command = "hugo --gc --minify --baseURL https://shreyaspatil.dev"
+  command = "npm run build"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL"
+  command = "npm run build"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL"
+  command = "npm run build"
