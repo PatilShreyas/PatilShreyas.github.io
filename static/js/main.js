@@ -13,9 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navbar scroll effect
     initNavbarScrollEffect();
     
-    // Navigation scroll spy
-    initScrollSpy();
-    
     // Work section tabs
     initWorkTabs();
 });
@@ -170,106 +167,12 @@ function initWorkTabs() {
             const targetContent = document.getElementById(targetTab + '-content');
             if (targetContent) {
                 targetContent.classList.remove('hidden');
-                
-                // Re-trigger AOS animations for the new content
-                AOS.refresh();
             }
         });
     });
 }
 
 
-// Intersection Observer for section highlighting in navigation
-function initSectionHighlighting() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                
-                // Remove active class from all nav links
-                navLinks.forEach(link => {
-                    link.classList.remove('text-primary');
-                    link.classList.add('text-white');
-                });
-                
-                // Add active class to current section's nav link
-                const activeLink = document.querySelector(`nav a[href="#${id}"]`);
-                if (activeLink) {
-                    activeLink.classList.remove('text-white');
-                    activeLink.classList.add('text-primary');
-                }
-            }
-        });
-    }, {
-        threshold: 0.3,
-        rootMargin: '-80px 0px -80px 0px'
-    });
-    
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-}
-
-// Initialize section highlighting when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initSectionHighlighting();
-});
 
 
-// Navigation scroll spy functionality
-function initScrollSpy() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    
-    if (!sections.length || !navLinks.length) return;
-    
-    function updateActiveNavItem() {
-        let currentSection = '';
-        const scrollPosition = window.scrollY + 100; // Offset for navbar height
-        
-        // Find the current section
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                currentSection = section.getAttribute('id');
-            }
-        });
-        
-        // Update active nav item
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            const targetId = href.substring(1); // Remove the '#'
-            
-            // Remove active class from all links
-            link.classList.remove('text-primary', 'border-b-2', 'border-primary');
-            link.classList.add('text-gray-300');
-            
-            // Add active class to current section link
-            if (targetId === currentSection) {
-                link.classList.remove('text-gray-300');
-                link.classList.add('text-primary', 'border-b-2', 'border-primary');
-            }
-        });
-    }
-    
-    // Throttled scroll event listener
-    let ticking = false;
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            requestAnimationFrame(function() {
-                updateActiveNavItem();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
-    
-    // Initial call to set active item on page load
-    updateActiveNavItem();
-}
 

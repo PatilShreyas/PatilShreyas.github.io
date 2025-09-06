@@ -86,6 +86,22 @@ main {
     text-decoration: none;
 }
 
+/* Navigation links - override Hugo's active states */
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #47d3f7 !important;
+}
+
+/* Override any Hugo-generated active classes */
+.nav-link.active,
+nav a.active,
+nav a[aria-current="page"] {
+    color: white !important;
+}
+
 /* Work tabs */
 .work-tab-btn {
     @apply text-gray-300 font-medium;
