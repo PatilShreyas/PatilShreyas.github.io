@@ -14,15 +14,17 @@
         <div id="home" class="flex-1 lg:flex-none lg:w-2/5 flex items-center justify-center px-4 py-20 lg:py-0">
             <div class="text-center max-w-lg">
                 <!-- Profile Image with Loading Placeholder -->
-                <div class="mb-8 relative">
+                <div class="mb-8 mt-8 relative">
                     <!-- Placeholder circle while image loads -->
                     <div id="profile-placeholder" class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl bg-gradient-to-br from-primary to-blue-600 opacity-30 animate-pulse transition-opacity duration-500"></div>
-                    <!-- Actual profile image -->
-                    <img id="profile-image"
-                         src="{{ .Site.Params.profile_image }}"
-                         alt="{{ .Site.Params.name }}"
-                         class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-all duration-500 opacity-0 absolute inset-0"
-                         onload="this.style.opacity='1'; document.getElementById('profile-placeholder').style.opacity='0';">
+                    <!-- Actual profile image with WebP support -->
+                    <picture id="profile-image" class="opacity-0 absolute inset-0 transition-opacity duration-500">
+                        <source srcset="{{ .Site.Params.profile_image }}" type="image/webp">
+                        <img src="/Images/profile-optimized.png"
+                             alt="{{ .Site.Params.name }}"
+                             class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-all duration-500"
+                             onload="this.parentElement.style.opacity='1'; document.getElementById('profile-placeholder').style.opacity='0';">
+                    </picture>
                 </div>
                 
                 <!-- Name -->
@@ -32,7 +34,7 @@
                 
                 <!-- Animated Headlines -->
                 <div class="mb-8">
-                    <h2 class="text-xl md:text-2xl font-medium text-secondary">
+                    <h2 class="text-xl md:text-2xl font-medium">
                         <span id="animated-text">❤️ Android</span>
                         <span class="animate-pulse">|</span>
                     </h2>
@@ -56,19 +58,14 @@
                         <i class="far fa-envelope"></i>
                     </a>
                     {{ end }}
-                    {{ with .Site.Params.facebook }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-600 hover:bg-blue-700">
-                        <i class="fab fa-facebook-f"></i>
+                    {{ with .Site.Params.github }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-gray-600 hover:bg-gray-700">
+                        <i class="fab fa-github-alt"></i>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.twitter }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-400 hover:bg-blue-500">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    {{ end }}
-                    {{ with .Site.Params.instagram }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-pink-600 hover:bg-pink-700">
-                        <i class="fab fa-instagram"></i>
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-black hover:bg-gray-800">
+                        <span class="font-bold text-lg">𝕏</span>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.linkedin }}
@@ -76,9 +73,9 @@
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     {{ end }}
-                    {{ with .Site.Params.github }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-gray-800 hover:bg-gray-900">
-                        <i class="fab fa-github-alt"></i>
+                    {{ with .Site.Params.threads }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-gray-900 hover:bg-black">
+                        <span class="font-bold text-lg">@</span>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.playstore }}
@@ -94,6 +91,16 @@
                     {{ with .Site.Params.blog }}
                     <a href="{{ . }}" target="_blank" class="social-icon bg-blue-500 hover:bg-blue-600">
                         <i class="fas fa-blog"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.facebook }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-600 hover:bg-blue-700">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    {{ end }}
+                    {{ with .Site.Params.instagram }}
+                    <a href="{{ . }}" target="_blank" class="social-icon bg-pink-600 hover:bg-pink-700">
+                        <i class="fab fa-instagram"></i>
                     </a>
                     {{ end }}
                 </div>

@@ -10,11 +10,11 @@
     <meta name="keywords" content="{{ .Site.Params.keywords }}">
     <meta name="author" content="{{ .Site.Params.author }}">
     <link rel="canonical" href="{{ .Permalink }}" />
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}Images/profile.png" type="image/png" />
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}Images/profile-optimized.png" type="image/png" />
     
     <!-- Open Graph -->
     <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:image" content="{{ .Site.BaseURL }}Images/profile.png">
+    <meta property="og:image" content="{{ .Site.BaseURL }}Images/profile-optimized.png">
     <meta property="og:description" content="{{ .Site.Params.description }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:type" content="website">
@@ -23,39 +23,21 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Site.Title }}">
     <meta name="twitter:description" content="{{ .Site.Params.description }}">
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}Images/profile.png">
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}Images/profile-optimized.png">
     
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"></noscript>
+    <link rel="preload" href="{{ .Site.BaseURL }}{{ .Site.Params.profile_image }}" as="image">
+    <link rel="preload" href="{{ .Site.BaseURL }}Images/background-optimized.webp" as="image">
     
     <!-- Fonts and CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#47d3f7',
-                        dark: {
-                            bg: '#000000',
-                            card: 'rgba(255, 255, 255, 0.05)',
-                            text: '#ffffff',
-                            muted: '#b7b6bb'
-                        }
-                    },
-                    fontFamily: {
-                        'montserrat': ['Montserrat', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fontawesome-minimal.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tailwind.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
 </head>
 <body class="dark bg-dark-bg text-dark-text font-montserrat">
@@ -72,19 +54,25 @@
     
     <!-- Image Loading Optimization Script -->
     <script>
-        // Load background image after page is fully loaded
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const bgElement = document.getElementById('background-image');
-                if (bgElement) {
-                    const img = new Image();
-                    img.onload = function() {
-                        bgElement.style.backgroundImage = "url('/Images/background.png')";
-                        bgElement.style.opacity = '1';
-                    };
-                    img.src = '/Images/background.png';
-                }
-            }, 1000);
+        // Load background image with WebP support and fallback
+        document.addEventListener('DOMContentLoaded', function() {
+            const bgElement = document.getElementById('background-image');
+            if (bgElement) {
+                // Check WebP support and use appropriate image
+                const webpSupported = (function() {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = 1;
+                    canvas.height = 1;
+                    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+                })();
+                
+                const imageUrl = webpSupported 
+                    ? '/Images/background-optimized.webp' 
+                    : '/Images/background-optimized.jpg';
+                
+                bgElement.style.backgroundImage = `url('${imageUrl}')`;
+                bgElement.style.opacity = '1';
+            }
         });
     </script>
     

@@ -1,0 +1,105 @@
+/*!
+ * Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Minimal build containing only the icons used in this portfolio
+ */
+
+/* Font Face Declarations */
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+/* Base Icon Styles */
+.fa, .fas, .far, .fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fas {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.far {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fab {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+/* Icon Definitions - Only the ones you use */
+.fa-bars:before { content: "\f0c9"; }
+.fa-times:before { content: "\f00d"; }
+.fa-file:before { content: "\f15b"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-facebook-f:before { content: "\f39e"; }
+.fa-twitter:before { content: "\f099"; }
+.fa-instagram:before { content: "\f16d"; }
+.fa-linkedin-in:before { content: "\f0e1"; }
+.fa-github-alt:before { content: "\f113"; }
+.fa-google-play:before { content: "\f3ab"; }
+.fa-medium-m:before { content: "\f23a"; }
+.fa-blog:before { content: "\f781"; }
+.fa-briefcase:before { content: "\f0b1"; }
+.fa-users:before { content: "\f0c0"; }
+.fa-graduation-cap:before { content: "\f19d"; }
+.fa-user-tie:before { content: "\f508"; }
+.fa-laptop-code:before { content: "\f5fc"; }
+.fa-mobile-alt:before { content: "\f3cd"; }
+
+/* Utility Classes */
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-lg {
+  font-size: 1.33333em;
+  line-height: 0.75em;
+  vertical-align: -0.0667em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0417em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.0313em;
+  vertical-align: -0.1875em;
+}

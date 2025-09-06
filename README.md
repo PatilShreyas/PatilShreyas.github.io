@@ -17,9 +17,10 @@ A modern, minimalist portfolio website built with Hugo.
 
 ### Prerequisites
 - [Hugo Extended](https://gohugo.io/installation/) (v0.148.2 or later)
-- Node.js (for Tailwind CSS)
+- [Node.js](https://nodejs.org/) (v16 or later)
+- npm (comes with Node.js)
 
-### Local Development
+### Local Development Setup
 ```bash
 # Clone the repository
 git clone https://github.com/PatilShreyas/PatilShreyas.github.io.git
@@ -31,9 +32,36 @@ hugo server
 # Site will be available at http://localhost:1313
 ```
 
+### CSS Development (Optional)
+If you need to modify Tailwind CSS:
+
+```bash
+# Install dependencies (only needed for CSS changes)
+npm install
+
+# Build optimized CSS after making Tailwind changes
+npm run build-css
+
+# Commit the generated CSS file
+git add static/css/tailwind.css
+git commit -m "Update optimized CSS"
+```
+
+### Available npm Scripts (Development Only)
+```bash
+npm run build-css    # Build optimized Tailwind CSS
+npm run watch-css    # Watch for changes and rebuild CSS
+npm run build        # Build both CSS and Hugo site
+```
+
+### CSS Development Notes
+- **Source:** `src/input.css` (Tailwind directives and custom CSS)
+- **Output:** `static/css/tailwind.css` (committed to repository)
+- **Config:** `tailwind.config.js` (Tailwind configuration)
+- **Deployment:** CSS is pre-generated and committed, no build step needed
+
 ### Building for Production
 ```bash
-# Build the site
 hugo --minify
 
 # Output will be in the 'public/' directory
@@ -41,10 +69,12 @@ hugo --minify
 
 ## 🚀 Deployment
 
-### GitHub Actions (Recommended)
-The repository includes GitHub Actions workflow for automatic deployment:
+Both deployment platforms are configured for simple Hugo-only builds (no Node.js dependencies required).
 
-[.github/workflows/hugo.yml](.github/workflows/hugo.yml)
+### GitHub Actions (Recommended)
+The repository includes GitHub Actions workflow for automatic deployment with optimized builds:
+
+[.github/workflows/deploy-to-pages.yml](.github/workflows/deploy-to-pages.yml)
 
 ### Netlify
 Current deployment is on Netlify with automatic builds from the main branch.
@@ -52,7 +82,6 @@ Configured in [netlify.toml](netlify.toml).
 
 ### Manual Deployment
 ```bash
-# Build the site
 hugo --minify
 
 # Deploy the 'public/' directory to your hosting provider
