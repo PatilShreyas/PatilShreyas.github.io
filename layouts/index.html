@@ -17,12 +17,14 @@
                 <div class="mb-8 relative">
                     <!-- Placeholder circle while image loads -->
                     <div id="profile-placeholder" class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl bg-gradient-to-br from-primary to-blue-600 opacity-30 animate-pulse transition-opacity duration-500"></div>
-                    <!-- Actual profile image -->
-                    <img id="profile-image"
-                         src="{{ .Site.Params.profile_image }}"
-                         alt="{{ .Site.Params.name }}"
-                         class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-all duration-500 opacity-0 absolute inset-0"
-                         onload="this.style.opacity='1'; document.getElementById('profile-placeholder').style.opacity='0';">
+                    <!-- Actual profile image with WebP support -->
+                    <picture id="profile-image" class="opacity-0 absolute inset-0 transition-opacity duration-500">
+                        <source srcset="{{ .Site.Params.profile_image }}" type="image/webp">
+                        <img src="/Images/profile-optimized.png"
+                             alt="{{ .Site.Params.name }}"
+                             class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-all duration-500"
+                             onload="this.parentElement.style.opacity='1'; document.getElementById('profile-placeholder').style.opacity='0';">
+                    </picture>
                 </div>
                 
                 <!-- Name -->
