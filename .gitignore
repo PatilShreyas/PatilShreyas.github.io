@@ -33,9 +33,6 @@ yarn-error.log*
 package-lock.json
 yarn.lock
 
-# Generated CSS files (rebuilt from source)
-static/css/tailwind.css
-
 # Logs
 *.log
 logs/

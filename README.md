@@ -26,49 +26,42 @@ A modern, minimalist portfolio website built with Hugo.
 git clone https://github.com/PatilShreyas/PatilShreyas.github.io.git
 cd PatilShreyas.github.io
 
-# Install dependencies
-npm install
-
-# Build optimized CSS (required for first run)
-npm run build-css
-
 # Start Hugo development server
 hugo server
 
 # Site will be available at http://localhost:1313
 ```
 
-### Development Workflow
+### CSS Development (Optional)
+If you need to modify Tailwind CSS:
+
 ```bash
-# Watch for CSS changes during development (optional)
-npm run watch-css
+# Install dependencies (only needed for CSS changes)
+npm install
 
 # Build optimized CSS after making Tailwind changes
 npm run build-css
 
-# Start Hugo server for live reload
-hugo server
+# Commit the generated CSS file
+git add static/css/tailwind.css
+git commit -m "Update optimized CSS"
 ```
 
-### Available npm Scripts
+### Available npm Scripts (Development Only)
 ```bash
 npm run build-css    # Build optimized Tailwind CSS
 npm run watch-css    # Watch for changes and rebuild CSS
 npm run build        # Build both CSS and Hugo site
 ```
 
-### CSS Development
+### CSS Development Notes
 - **Source:** `src/input.css` (Tailwind directives and custom CSS)
-- **Output:** `static/css/tailwind.css` (generated, do not edit)
+- **Output:** `static/css/tailwind.css` (committed to repository)
 - **Config:** `tailwind.config.js` (Tailwind configuration)
+- **Deployment:** CSS is pre-generated and committed, no build step needed
 
 ### Building for Production
 ```bash
-# Build optimized CSS and Hugo site
-npm run build
-
-# Or build separately
-npm run build-css
 hugo --minify
 
 # Output will be in the 'public/' directory
@@ -76,7 +69,7 @@ hugo --minify
 
 ## 🚀 Deployment
 
-Both deployment platforms are configured to automatically build optimized CSS during deployment.
+Both deployment platforms are configured for simple Hugo-only builds (no Node.js dependencies required).
 
 ### GitHub Actions (Recommended)
 The repository includes GitHub Actions workflow for automatic deployment with optimized builds:
@@ -89,11 +82,6 @@ Configured in [netlify.toml](netlify.toml).
 
 ### Manual Deployment
 ```bash
-# Build optimized site
-npm run build
-
-# Or build step by step
-npm run build-css
 hugo --minify
 
 # Deploy the 'public/' directory to your hosting provider
