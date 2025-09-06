@@ -1,4 +1,4 @@
-name: Deploy Hugo site to Pages
+name: Deploy to Pages
 
 on:
   push:
@@ -47,8 +47,15 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
       - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        run: npm ci
+      - name: Build optimized CSS
+        run: npm run build-css
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
