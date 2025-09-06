@@ -34,6 +34,10 @@
     @apply text-primary;
   }
   
+  .nav-link:focus {
+    @apply outline-none text-primary;
+  }
+  
   .work-tab-btn {
     @apply text-gray-300 font-medium px-6 py-3 rounded-md transition-all duration-300;
   }
@@ -208,6 +212,14 @@ p a:not(.social-icon):not(.nav-link):not(.btn):hover,
 a:focus,
 button:focus {
   @apply outline-none ring-2 ring-primary ring-opacity-50;
+}
+
+/* Remove focus borders from navigation links */
+.nav-link:focus,
+.mobile-menu-link:focus {
+  @apply outline-none ring-0;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Print styles */
