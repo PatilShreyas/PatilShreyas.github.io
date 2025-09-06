@@ -3,16 +3,21 @@
 <section id="home" class="min-h-screen flex items-center justify-center relative">
     <!-- Background with overlay -->
     <div class="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90"></div>
-    <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('/Images/background.png');"></div>
+    <!-- Background image loaded after page load -->
+    <div id="background-image" class="absolute inset-0 bg-cover bg-center bg-fixed opacity-0 transition-opacity duration-1000"></div>
     <div class="absolute inset-0 bg-black bg-opacity-60"></div>
     
-    <div class="relative z-10 text-center px-4" data-aos="fade-up">
-        <!-- Profile Image -->
-        <div class="mb-8">
-            <img src="{{ .Site.Params.profile_image }}" 
-                 alt="{{ .Site.Params.name }}" 
-                 class="w-64 h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-transform duration-300"
-                 data-aos="zoom-in-up">
+    <div class="relative z-10 text-center px-4">
+        <!-- Profile Image with Loading Placeholder -->
+        <div class="mb-8 relative">
+            <!-- Placeholder circle while image loads -->
+            <div id="profile-placeholder" class="w-64 h-64 rounded-full mx-auto shadow-2xl bg-gradient-to-br from-primary to-blue-600 opacity-30 animate-pulse transition-opacity duration-500"></div>
+            <!-- Actual profile image -->
+            <img id="profile-image"
+                 src="{{ .Site.Params.profile_image }}"
+                 alt="{{ .Site.Params.name }}"
+                 class="w-64 h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-all duration-500 opacity-0 absolute inset-0"
+                 onload="this.style.opacity='1'; document.getElementById('profile-placeholder').style.opacity='0';">
         </div>
         
         <!-- Name -->
@@ -32,7 +37,7 @@
         {{ with .Site.Params.cv_url }}
         <div class="mb-8">
             <a href="{{ . }}" target="_blank" 
-               class="inline-flex items-center px-8 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black transition-all duration-300 rounded-lg font-medium">
+               class="inline-flex items-center px-8 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black rounded-lg font-medium">
                 <i class="fas fa-file mr-2"></i>
                 View CV
             </a>
@@ -40,7 +45,7 @@
         {{ end }}
         
         <!-- Social Links -->
-        <div class="flex justify-center space-x-4 flex-wrap" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex justify-center space-x-4 flex-wrap">
             {{ with .Site.Params.email }}
             <a href="mailto:{{ . }}" class="social-icon bg-red-600 hover:bg-red-700">
                 <i class="far fa-envelope"></i>
@@ -93,7 +98,7 @@
 <!-- About Section -->
 <section id="about" class="py-20">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-aos="zoom-in-up">
+        <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
                 <i class="fas fa-user-alt mr-4"></i>
                 About <span class="font-bold">Me</span>
@@ -101,7 +106,7 @@
         </div>
         
         <div class="max-w-4xl mx-auto">
-            <div class="bg-dark-card backdrop-blur-md rounded-lg p-8 shadow-xl" data-aos="zoom-in-down">
+            <div class="bg-dark-card backdrop-blur-md rounded-lg p-8 shadow-xl">
                 {{ range .Site.Data.about }}
                 <p class="text-lg leading-relaxed mb-6 text-gray-300">
                     {{ .content | markdownify }}
@@ -115,7 +120,7 @@
 <!-- Experience Section -->
 <section id="experience" class="py-20">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-8" data-aos="zoom-in-up">
+        <div class="text-center mb-8">
             <h2 class="text-4xl mb-2">
                 <i class="fas fa-briefcase mr-4"></i>
                 My <span class="font-bold">Experience</span>
@@ -123,7 +128,7 @@
         </div>
         
         <div class="max-w-4xl mx-auto">
-            <div class="space-y-6" data-aos="zoom-in-down">
+            <div class="space-y-6">
                 {{ range .Site.Data.experience }}
                 <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 shadow-xl border border-gray-800 hover:border-primary transition-colors">
                     <div class="flex flex-col md:flex-row gap-4">
@@ -155,7 +160,7 @@
 <!-- Community Section -->
 <section id="community" class="py-20">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-aos="zoom-in-up">
+        <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
                 <i class="fas fa-users mr-4"></i>
                 My <span class="font-bold">Community</span>
@@ -163,7 +168,7 @@
         </div>
         
         <div class="max-w-4xl mx-auto">
-            <div class="space-y-6" data-aos="zoom-in-down">
+            <div class="space-y-6">
                 {{ range .Site.Data.community }}
                 <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 shadow-xl border border-gray-800 hover:border-primary transition-colors">
                     <div class="flex flex-col md:flex-row md:items-center gap-4">
@@ -194,7 +199,7 @@
 <!-- Education Section -->
 <section id="education" class="py-20">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-aos="zoom-in-up">
+        <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
                 <i class="fas fa-graduation-cap mr-4"></i>
                 My <span class="font-bold">Education</span>
@@ -202,7 +207,7 @@
         </div>
         
         <div class="max-w-4xl mx-auto">
-            <div class="space-y-6" data-aos="zoom-in-down">
+            <div class="space-y-6">
                 {{ range .Site.Data.education }}
                 <div class="bg-dark-card backdrop-blur-md rounded-lg p-6 shadow-xl border border-gray-800">
                     <div class="text-sm text-dark-muted mb-2">{{ .duration }}</div>
@@ -220,7 +225,7 @@
 <!-- Workshops Section -->
 <section id="workshops" class="py-20">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-aos="zoom-in-up">
+        <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
                 <i class="fas fa-user-tie mr-4"></i>
                 My <span class="font-bold">Workshops / Sessions / Webinars</span>
@@ -228,7 +233,7 @@
         </div>
         
         <div class="max-w-4xl mx-auto">
-            <div class="space-y-2" data-aos="zoom-in-down">
+            <div class="space-y-2">
                 {{ range .Site.Data.workshops }}
                 <div class="bg-dark-card backdrop-blur-md rounded-lg p-4 shadow-xl border border-gray-800 hover:border-primary transition-colors">
                     <div class="xs text-dark-muted mb-2">{{ .date }}</div>
@@ -243,7 +248,7 @@
 <!-- Work Section -->
 <section id="work" class="py-20">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-16" data-aos="zoom-in-up">
+        <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
                 <i class="fas fa-laptop-code mr-4"></i>
                 My <span class="font-bold">Work</span>
@@ -264,7 +269,7 @@
         
         <!-- Apps Tab Content -->
         <div id="apps-content" class="work-content">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="zoom-in-down">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {{ range .Site.Data.work.apps }}
                 <div class="bg-dark-card backdrop-blur-md rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
                     {{ if .image }}
@@ -292,7 +297,7 @@
             <div class="text-center mb-8">
                 <p class="text-gray-300">See more projects on <a href="{{ .Site.Params.github }}" target="_blank" class="text-primary hover:underline">my GitHub</a></p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="zoom-in-down">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {{ range .Site.Data.work.opensource }}
                 <div class="bg-dark-card backdrop-blur-md rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
                     {{ if .image }}

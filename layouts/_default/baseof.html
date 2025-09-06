@@ -59,7 +59,6 @@
         }
     </script>
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css">
 </head>
 <body class="dark bg-dark-bg text-dark-text font-montserrat">
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
@@ -71,8 +70,25 @@
     {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
     
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@3.0.0-beta.6/dist/aos.js"></script>
     <script src="{{ .Site.BaseURL }}js/main.js"></script>
+    
+    <!-- Image Loading Optimization Script -->
+    <script>
+        // Load background image after page is fully loaded
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const bgElement = document.getElementById('background-image');
+                if (bgElement) {
+                    const img = new Image();
+                    img.onload = function() {
+                        bgElement.style.backgroundImage = "url('/Images/background.png')";
+                        bgElement.style.opacity = '1';
+                    };
+                    img.src = '/Images/background.png';
+                }
+            }, 1000);
+        });
+    </script>
     
     <!-- Statcounter -->
     <script type="text/javascript">
