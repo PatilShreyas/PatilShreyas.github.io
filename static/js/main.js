@@ -218,18 +218,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initSectionHighlighting();
 });
 
-// Preload images for better performance
-function preloadImages() {
-    const images = [
-        'Images/background.png',
-        'Images/profile.png'
-    ];
-    
-    images.forEach(src => {
-        const img = new Image();
-        img.src = src;
-    });
-}
 
 // Navigation scroll spy functionality
 function initScrollSpy() {
@@ -285,5 +273,3 @@ function initScrollSpy() {
     updateActiveNavItem();
 }
 
-// Call preload on page load
-window.addEventListener('load', preloadImages);
