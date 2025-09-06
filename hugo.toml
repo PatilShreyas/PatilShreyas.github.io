@@ -47,8 +47,8 @@ disableKinds = ["taxonomy", "term"]
     url = "#education"
     weight = 3
   [[menu.main]]
-    name = "Workshops"
-    url = "#workshops"
+    name = "Activities"
+    url = "#activities"
     weight = 4
   [[menu.main]]
     name = "My Work"
