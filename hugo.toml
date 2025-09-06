@@ -35,30 +35,26 @@ disableKinds = ["taxonomy", "term"]
 
 [menu]
   [[menu.main]]
-    name = "About Me"
-    url = "#about"
-    weight = 1
-  [[menu.main]]
     name = "Experience"
     url = "#experience"
-    weight = 2
+    weight = 1
   [[menu.main]]
     name = "Community"
     url = "#community"
-    weight = 3
+    weight = 2
   [[menu.main]]
     name = "Education"
     url = "#education"
-    weight = 4
+    weight = 3
   [[menu.main]]
     name = "Workshops"
     url = "#workshops"
-    weight = 5
+    weight = 4
   [[menu.main]]
     name = "My Work"
     url = "#work"
-    weight = 6
+    weight = 5
   [[menu.main]]
-    name = "Blog"
+    name = "Blogs"
     url = "https://blog.shreyaspatil.dev"
-    weight = 7
+    weight = 6
