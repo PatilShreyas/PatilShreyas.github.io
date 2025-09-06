@@ -97,11 +97,15 @@ function initSmoothScrolling() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
-                
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
+                // Use getBoundingClientRect() with requestAnimationFrame to avoid forced reflow
+                requestAnimationFrame(() => {
+                    const rect = targetSection.getBoundingClientRect();
+                    const offsetTop = window.scrollY + rect.top;
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
                 });
             }
         });
