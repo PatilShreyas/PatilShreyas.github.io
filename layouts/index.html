@@ -223,13 +223,44 @@
 </section>
 
 
-<!-- Workshops Section -->
+<!-- Activities Section -->
 <section id="activities" class="py-20">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
+                <i class="fas fa-star mr-4"></i>
+                My <span class="font-bold">Activities</span>
+            </h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-2">
+                {{ range .Site.Data.activities }}
+                <div class="bg-dark-card backdrop-blur-md rounded-lg p-4 shadow-xl border border-gray-800 hover:border-primary transition-colors">
+                    <div class="text-sm text-dark-muted mb-2">{{ .date }}</div>
+                    <div class="text-base lg:text-lg text-white leading-relaxed">
+                        {{ if .link }}
+                        <a href="{{ .link }}" target="_blank" class="hover:text-primary transition-colors">
+                            {{ .title | safeHTML }}
+                        </a>
+                        {{ else }}
+                        {{ .title | safeHTML }}
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Workshops Section -->
+<section id="workshops" class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl mb-4">
                 <i class="fas fa-user-tie mr-4"></i>
-                My <span class="font-bold">Workshops / Sessions / Webinars</span>
+                My <span class="font-bold">Sessions /  Workshops</span>
             </h2>
         </div>
         
@@ -237,8 +268,8 @@
             <div class="space-y-2">
                 {{ range .Site.Data.workshops }}
                 <div class="bg-dark-card backdrop-blur-md rounded-lg p-4 shadow-xl border border-gray-800 hover:border-primary transition-colors">
-                    <div class="xs text-dark-muted mb-2">{{ .date }}</div>
-                    <div class="text-md text-white">{{ .title | markdownify }}</div>
+                    <div class="text-sm text-dark-muted mb-2">{{ .date }}</div>
+                    <div class="text-base lg:text-lg text-white leading-relaxed">{{ .title | markdownify }}</div>
                 </div>
                 {{ end }}
             </div>
