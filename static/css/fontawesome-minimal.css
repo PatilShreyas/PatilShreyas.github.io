@@ -79,6 +79,7 @@
 .fa-user-tie:before { content: "\f508"; }
 .fa-laptop-code:before { content: "\f5fc"; }
 .fa-mobile-alt:before { content: "\f3cd"; }
+.fa-star:before { content: "\f005"; }
 
 /* Utility Classes */
 .fa-fw {
