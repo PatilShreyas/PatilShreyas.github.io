@@ -30,15 +30,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
     <link rel="preload" href="{{ .Site.BaseURL }}{{ .Site.Params.profile_image }}" as="image">
     
     <!-- Fonts and CSS -->
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fontawesome-minimal.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tailwind.css">
 </head>
-<body class="dark bg-dark-bg text-dark-text font-montserrat">
+<body class="dark bg-dark-bg text-dark-text font-inter">
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
     
     <main>
