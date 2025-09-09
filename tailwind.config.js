@@ -14,7 +14,7 @@ module.exports = {
         primary: '#47d3f7',
         secondary: '#47d3f7',
         dark: {
-          bg: '#000000',
+          bg: '#1B1B1B',
           card: 'rgba(255, 255, 255, 0.05)',
           text: '#ffffff',
           muted: '#b7b6bb'
