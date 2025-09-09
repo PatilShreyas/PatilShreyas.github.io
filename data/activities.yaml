@@ -12,6 +12,10 @@
 - date: "September, 2019"
   title: 'Volunteered at @GDG DevFest Pune 2019 - Mobile app development'
 
+- date: "2019"
+  title: 'Contributed pagination API for realtime database in Firebase UI SDK, some query APIs and bug fixes'
+  link: "https://github.com/firebase/FirebaseUI-Android/pulls?q=is%3Apr+author%3APatilShreyas+is%3Aclosed"
+
 - date: "March, 2018"
   title: 'Participated and qualified for Grand Finale of <b>Smart India Hackathon 2018 - Software Edition</b>'
 
