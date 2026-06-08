@@ -1,0 +1,3 @@
+## 2024-06-08 - Added Lazy Loading to Single Page Portfolio
+**Learning:** This static portfolio renders all major sections (Experience, Community, Work) on a single `index.html` page. Since below-the-fold assets (like company logos and project images) can slow down initial load time, proactive lazy loading (`loading="lazy"`) is critical to prevent network bottlenecks during the initial render.
+**Action:** Always verify if an application uses a single-page layout for substantial content and add `loading="lazy"` attributes to non-critical `<img />` tags rendered outside the initial viewport.
