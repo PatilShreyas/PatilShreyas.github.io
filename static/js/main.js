@@ -51,8 +51,31 @@ function initAnimatedHeadlines() {
     // Set initial styles
     animatedText.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
     
-    // Change headline every 3 seconds
-    setInterval(changeHeadline, 3000);
+    let intervalId = null;
+
+    // Use IntersectionObserver to pause animation when off-screen
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (!intervalId) {
+                        // Change headline every 3 seconds
+                        intervalId = setInterval(changeHeadline, 3000);
+                    }
+                } else {
+                    if (intervalId) {
+                        clearInterval(intervalId);
+                        intervalId = null;
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(document.getElementById('home') || animatedText);
+    } else {
+        // Fallback for older browsers
+        intervalId = setInterval(changeHeadline, 3000);
+    }
 }
 
 // Mobile menu functionality
@@ -128,9 +151,6 @@ function initNavbarScrollEffect() {
             navbar.classList.remove('navbar-scrolled');
         }
         
-        // Keep navbar always visible (sticky behavior)
-        navbar.style.transform = 'translateY(0)';
-        
         lastScrollY = currentScrollY;
     }
     
@@ -144,7 +164,7 @@ function initNavbarScrollEffect() {
             });
             ticking = true;
         }
-    });
+    }, { passive: true });
 }
 
 // Work section tabs functionality
