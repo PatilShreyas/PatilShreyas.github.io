@@ -117,21 +117,28 @@ function initNavbarScrollEffect() {
     const navbar = document.getElementById('navbar');
     if (!navbar) return;
     
-    let lastScrollY = window.scrollY;
+    // Track scroll state to prevent unnecessary DOM mutations
+    let isScrolled = window.scrollY > 100;
+
+    // Initialize state
+    if (isScrolled) {
+        navbar.classList.add('navbar-scrolled');
+    }
+    // Keep navbar always visible (sticky behavior) - only needs to be set once
+    navbar.style.transform = 'translateY(0)';
     
     function handleScroll() {
-        const currentScrollY = window.scrollY;
+        const shouldBeScrolled = window.scrollY > 100;
         
-        if (currentScrollY > 100) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
+        // Only mutate DOM if the state actually changes
+        if (shouldBeScrolled !== isScrolled) {
+            if (shouldBeScrolled) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+            isScrolled = shouldBeScrolled;
         }
-        
-        // Keep navbar always visible (sticky behavior)
-        navbar.style.transform = 'translateY(0)';
-        
-        lastScrollY = currentScrollY;
     }
     
     // Throttle scroll events
@@ -144,7 +151,7 @@ function initNavbarScrollEffect() {
             });
             ticking = true;
         }
-    });
+    }, { passive: true }); // Improve scroll performance
 }
 
 // Work section tabs functionality
