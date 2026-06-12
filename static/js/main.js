@@ -144,7 +144,7 @@ function initNavbarScrollEffect() {
             });
             ticking = true;
         }
-    });
+    }, { passive: true });
 }
 
 // Work section tabs functionality
