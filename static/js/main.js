@@ -32,6 +32,7 @@ function initAnimatedHeadlines() {
     if (!animatedText) return;
     
     let currentIndex = 0;
+    let intervalId = null;
     
     function changeHeadline() {
         // Fade out
@@ -51,8 +52,27 @@ function initAnimatedHeadlines() {
     // Set initial styles
     animatedText.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
     
-    // Change headline every 3 seconds
-    setInterval(changeHeadline, 3000);
+    // Use IntersectionObserver to only animate when visible
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (!intervalId) {
+                        intervalId = setInterval(changeHeadline, 3000);
+                    }
+                } else {
+                    if (intervalId) {
+                        clearInterval(intervalId);
+                        intervalId = null;
+                    }
+                }
+            });
+        });
+        observer.observe(animatedText);
+    } else {
+        // Fallback for older browsers
+        setInterval(changeHeadline, 3000);
+    }
 }
 
 // Mobile menu functionality
@@ -117,21 +137,25 @@ function initNavbarScrollEffect() {
     const navbar = document.getElementById('navbar');
     if (!navbar) return;
     
-    let lastScrollY = window.scrollY;
+    let isScrolled = window.scrollY > 100;
+
+    // Initialize correct state
+    if (isScrolled) {
+        navbar.classList.add('navbar-scrolled');
+    }
     
     function handleScroll() {
         const currentScrollY = window.scrollY;
+        const shouldBeScrolled = currentScrollY > 100;
         
-        if (currentScrollY > 100) {
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
+        if (shouldBeScrolled !== isScrolled) {
+            isScrolled = shouldBeScrolled;
+            if (isScrolled) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
         }
-        
-        // Keep navbar always visible (sticky behavior)
-        navbar.style.transform = 'translateY(0)';
-        
-        lastScrollY = currentScrollY;
     }
     
     // Throttle scroll events
@@ -144,7 +168,7 @@ function initNavbarScrollEffect() {
             });
             ticking = true;
         }
-    });
+    }, { passive: true });
 }
 
 // Work section tabs functionality
