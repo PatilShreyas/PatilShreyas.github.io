@@ -32,7 +32,8 @@
     <!-- Preload Critical Resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
-    <link rel="preload" href="{{ .Site.BaseURL }}{{ .Site.Params.profile_image }}" as="image">
+    <!-- Use absURL to correctly handle the BaseURL trailing slash and prevent double-slash cache miss -->
+    <link rel="preload" href="{{ .Site.Params.profile_image | absURL }}" as="image">
     
     <!-- Fonts and CSS -->
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fontawesome-minimal.css">
