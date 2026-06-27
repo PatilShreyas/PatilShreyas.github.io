@@ -10,11 +10,12 @@
     <meta name="keywords" content="{{ .Site.Params.keywords }}">
     <meta name="author" content="{{ .Site.Params.author }}">
     <link rel="canonical" href="{{ .Permalink }}" />
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}Images/profile-optimized.png" type="image/png" />
+    <!-- Use absURL to avoid double-slash (//) URL generation that causes browser cache misses for preloaded assets -->
+    <link rel="shortcut icon" href="{{ "Images/profile-optimized.png" | absURL }}" type="image/png" />
     
     <!-- Open Graph -->
     <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:image" content="{{ .Site.BaseURL }}Images/profile-optimized.png">
+    <meta property="og:image" content="{{ "Images/profile-optimized.png" | absURL }}">
     <meta property="og:description" content="{{ .Site.Params.description }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:type" content="website">
@@ -23,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Site.Title }}">
     <meta name="twitter:description" content="{{ .Site.Params.description }}">
-    <meta name="twitter:image" content="{{ .Site.BaseURL }}Images/profile-optimized.png">
+    <meta name="twitter:image" content="{{ "Images/profile-optimized.png" | absURL }}">
     
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,11 +33,11 @@
     <!-- Preload Critical Resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
-    <link rel="preload" href="{{ .Site.BaseURL }}{{ .Site.Params.profile_image }}" as="image">
+    <link rel="preload" href="{{ .Site.Params.profile_image | absURL }}" as="image">
     
     <!-- Fonts and CSS -->
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fontawesome-minimal.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tailwind.css">
+    <link rel="stylesheet" href="{{ "css/fontawesome-minimal.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/tailwind.css" | absURL }}">
 </head>
 <body class="dark bg-dark-bg text-dark-text font-inter" style="background-color: #1b1b1b;">
     {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
@@ -48,7 +49,7 @@
     {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
     
     <!-- Scripts -->
-    <script src="{{ .Site.BaseURL }}js/main.js"></script>
+    <script src="{{ "js/main.js" | absURL }}"></script>
     
     
     <!-- Statcounter -->
