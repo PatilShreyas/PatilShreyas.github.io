@@ -1,24 +1,34 @@
 // Main JavaScript for portfolio functionality
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Animated headlines cycling
+    // Animated headlines cycling with reduced-motion and visibility checks
     initAnimatedHeadlines();
     
-    // Mobile menu functionality
+    // Accessible mobile menu functionality
     initMobileMenu();
     
-    // Smooth scrolling for navigation links
+    // Hash navigation and focus management
     initSmoothScrolling();
     
-    // Navbar scroll effect
+    // Navbar scroll effect using IntersectionObserver
     initNavbarScrollEffect();
     
-    // Work section tabs
+    // Scrollspy for active nav state
+    initScrollspy();
+    
+    // Accessible WAI-ARIA tabs for Work section
     initWorkTabs();
 });
 
 // Animated headlines functionality
 function initAnimatedHeadlines() {
+    const animatedText = document.getElementById('animated-text');
+    if (!animatedText) return;
+    
+    // Respect user's motion preferences (WCAG 2.2.2)
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+    
     const headlines = [
         "❤️ Android",
         "💜 Kotlin & KMP",
@@ -28,155 +38,228 @@ function initAnimatedHeadlines() {
         "🇮🇳 Indian"
     ];
     
-    const animatedText = document.getElementById('animated-text');
-    if (!animatedText) return;
-    
     let currentIndex = 0;
+    let timerId = null;
     
     function changeHeadline() {
-        // Fade out
         animatedText.style.opacity = '0';
         animatedText.style.transform = 'translateY(-20px)';
         
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % headlines.length;
             animatedText.textContent = headlines[currentIndex];
-            
-            // Fade in
             animatedText.style.opacity = '1';
             animatedText.style.transform = 'translateY(0)';
         }, 300);
     }
     
-    // Set initial styles
     animatedText.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
     
-    // Change headline every 3 seconds
-    setInterval(changeHeadline, 3000);
+    function startTimer() {
+        if (!timerId) {
+            timerId = setInterval(changeHeadline, 3000);
+        }
+    }
+    
+    function stopTimer() {
+        if (timerId) {
+            clearInterval(timerId);
+            timerId = null;
+        }
+    }
+    
+    // Page Visibility API - pause interval when page is in background
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stopTimer();
+        } else {
+            startTimer();
+        }
+    });
+    
+    startTimer();
 }
 
-// Mobile menu functionality
+// Accessible mobile menu functionality
 function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     
     if (!mobileMenuBtn || !mobileMenu) return;
     
-    mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
+    function toggleMenu(isOpen) {
+        const currentlyOpen = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        const open = typeof isOpen === 'boolean' ? isOpen : !currentlyOpen;
         
-        // Toggle icon
+        mobileMenuBtn.setAttribute('aria-expanded', String(open));
+        mobileMenu.classList.toggle('hidden', !open);
+        
         const icon = mobileMenuBtn.querySelector('i');
-        if (mobileMenu.classList.contains('hidden')) {
-            icon.className = 'fas fa-bars text-xl';
-        } else {
-            icon.className = 'fas fa-times text-xl';
+        if (icon) {
+            icon.className = open ? 'fas fa-times text-2xl' : 'fas fa-bars text-2xl';
+        }
+    }
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        toggleMenu();
+    });
+    
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            toggleMenu(false);
+        });
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenuBtn.getAttribute('aria-expanded') === 'true') {
+            toggleMenu(false);
+            mobileMenuBtn.focus();
         }
     });
     
-    // Close mobile menu when clicking on a link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenu.classList.add('hidden');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.className = 'fas fa-bars text-xl';
-        });
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            toggleMenu(false);
+        }
     });
 }
 
-// Smooth scrolling for navigation links
+// Native smooth scrolling & focus management for internal anchors
 function initSmoothScrolling() {
     const navLinks = document.querySelectorAll('a[href^="#"]');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            if (targetId === '#' || !targetId) return;
             
+            const targetSection = document.querySelector(targetId);
             if (targetSection) {
-                // Use getBoundingClientRect() with requestAnimationFrame to avoid forced reflow
-                requestAnimationFrame(() => {
-                    const rect = targetSection.getBoundingClientRect();
-                    const offsetTop = window.scrollY + rect.top;
-                    
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                });
+                e.preventDefault();
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // Update URL hash without causing an instant jump
+                if (history.pushState) {
+                    history.pushState(null, '', targetId);
+                } else {
+                    location.hash = targetId;
+                }
+                
+                // Move focus to target section for keyboard/screen reader users
+                if (!targetSection.hasAttribute('tabindex')) {
+                    targetSection.setAttribute('tabindex', '-1');
+                }
+                targetSection.focus({ preventScroll: true });
             }
         });
     });
 }
 
-// Navbar scroll effect
+// Navbar scroll effect using IntersectionObserver
 function initNavbarScrollEffect() {
     const navbar = document.getElementById('navbar');
-    if (!navbar) return;
+    if (!navbar || !('IntersectionObserver' in window)) return;
     
-    let lastScrollY = window.scrollY;
+    // Sentinel element at top of page
+    const sentinel = document.createElement('div');
+    sentinel.id = 'navbar-sentinel';
+    sentinel.style.cssText = 'position: absolute; top: 0; left: 0; width: 1px; height: 60px; pointer-events: none; visibility: hidden;';
+    document.body.prepend(sentinel);
     
-    function handleScroll() {
-        const currentScrollY = window.scrollY;
-        
-        if (currentScrollY > 100) {
+    const observer = new IntersectionObserver((entries) => {
+        const isAtTop = entries[0].isIntersecting;
+        if (!isAtTop) {
             navbar.classList.add('navbar-scrolled');
         } else {
             navbar.classList.remove('navbar-scrolled');
         }
-        
-        // Keep navbar always visible (sticky behavior)
-        navbar.style.transform = 'translateY(0)';
-        
-        lastScrollY = currentScrollY;
-    }
+    }, { rootMargin: '0px', threshold: 0 });
     
-    // Throttle scroll events
-    let ticking = false;
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            requestAnimationFrame(function() {
-                handleScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
+    observer.observe(sentinel);
 }
 
-// Work section tabs functionality
-function initWorkTabs() {
-    const tabButtons = document.querySelectorAll('.work-tab-btn');
-    const tabContents = document.querySelectorAll('.work-content');
+// Scrollspy to synchronize active nav state and aria-current
+function initScrollspy() {
+    if (!('IntersectionObserver' in window)) return;
     
-    tabButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const targetTab = this.getAttribute('data-tab');
+    const sections = document.querySelectorAll('section[id], div[id="home"]');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-menu-link');
+    if (sections.length === 0 || navLinks.length === 0) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === '#' + id) {
+                        link.classList.add(':target-current');
+                        link.setAttribute('aria-current', 'location');
+                    } else {
+                        link.classList.remove(':target-current');
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            }
+        });
+    }, {
+        rootMargin: '-20% 0px -70% 0px'
+    });
+    
+    sections.forEach(section => observer.observe(section));
+}
+
+// WAI-ARIA accessible tabs pattern for Work section
+function initWorkTabs() {
+    const tabList = document.querySelector('[role="tablist"]');
+    const tabButtons = document.querySelectorAll('.work-tab-btn');
+    const tabPanels = document.querySelectorAll('.work-content');
+    
+    if (!tabButtons.length || !tabPanels.length) return;
+    
+    function switchTab(newTab) {
+        const targetTabId = newTab.getAttribute('data-tab');
+        
+        tabButtons.forEach(btn => {
+            const isSelected = btn === newTab;
+            btn.classList.toggle('active', isSelected);
+            btn.setAttribute('aria-selected', String(isSelected));
+            btn.setAttribute('tabindex', isSelected ? '0' : '-1');
+        });
+        
+        tabPanels.forEach(panel => {
+            const isTarget = panel.id === targetTabId + '-content';
+            panel.classList.toggle('hidden', !isTarget);
+            panel.setAttribute('aria-hidden', String(!isTarget));
+        });
+        
+        newTab.focus();
+    }
+    
+    tabButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            switchTab(button);
+        });
+        
+        button.addEventListener('keydown', (e) => {
+            let nextIndex = null;
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                nextIndex = (index + 1) % tabButtons.length;
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                nextIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+            } else if (e.key === 'Home') {
+                nextIndex = 0;
+            } else if (e.key === 'End') {
+                nextIndex = tabButtons.length - 1;
+            }
             
-            // Remove active class from all buttons
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Hide all tab contents
-            tabContents.forEach(content => {
-                content.classList.add('hidden');
-            });
-            
-            // Show target tab content
-            const targetContent = document.getElementById(targetTab + '-content');
-            if (targetContent) {
-                targetContent.classList.remove('hidden');
+            if (nextIndex !== null) {
+                e.preventDefault();
+                switchTab(tabButtons[nextIndex]);
             }
         });
     });
 }
-
-
-
-
-
