@@ -1,24 +1,23 @@
 {{ define "main" }}
 <!-- Split Screen Hero + About Section -->
-<section id="home-about-split" class="min-h-screen relative">
+<section id="home-about-split" class="min-h-dvh relative">
     <!-- Split Screen Container -->
-    <div class="relative z-10 min-h-screen flex flex-col lg:flex-row">
+    <div class="relative z-10 min-h-dvh flex flex-col lg:flex-row">
         
         <!-- Home Section (Left Side on Desktop) -->
         <div id="home" class="flex-1 lg:flex-none lg:w-2/5 flex items-start justify-center px-4 py-20 lg:pt-20 lg:pb-0">
             <div class="text-center max-w-lg">
-                <!-- Profile Image with Loading Placeholder -->
+                <!-- Profile Image -->
                 <div class="mb-8 mt-8 relative">
-                    <!-- Placeholder circle while image loads -->
-                    <div id="profile-placeholder" class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl bg-gradient-to-br from-primary to-blue-600 opacity-30 animate-pulse transition-opacity duration-500"></div>
-                    <!-- Actual profile image with WebP support -->
-                    <picture id="profile-image" class="opacity-0 absolute inset-0 transition-opacity duration-500">
+                    <picture id="profile-image">
                         <source srcset="{{ .Site.Params.profile_image }}" type="image/webp">
                         <img src="/Images/profile-optimized.png"
                              alt="{{ .Site.Params.name }}"
+                             width="256"
+                             height="256"
                              fetchpriority="high"
-                             class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-all duration-500"
-                             onload="this.parentElement.style.opacity='1'; document.getElementById('profile-placeholder').style.opacity='0';">
+                             decoding="async"
+                             class="w-48 h-48 lg:w-64 lg:h-64 rounded-full mx-auto shadow-2xl border-2 border-secondary hover:scale-105 transition-all duration-500">
                     </picture>
                 </div>
                 
@@ -31,16 +30,16 @@
                 <div class="mb-8">
                     <h2 class="text-xl md:text-2xl font-medium">
                         <span id="animated-text">❤️ Android</span>
-                        <span class="animate-pulse">|</span>
+                        <span class="animate-pulse" aria-hidden="true">|</span>
                     </h2>
                 </div>
                 
                 <!-- CV Button -->
                 {{ with .Site.Params.cv_url }}
                 <div class="mb-8">
-                    <a href="{{ . }}" target="_blank" 
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center px-6 py-3 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black rounded-lg font-medium text-sm lg:text-base">
-                        <i class="fas fa-file mr-2"></i>
+                        <i class="fas fa-file mr-2" aria-hidden="true"></i>
                         View CV
                     </a>
                 </div>
@@ -49,53 +48,53 @@
                 <!-- Social Links -->
                 <div class="flex justify-center space-x-3 flex-wrap">
                     {{ with .Site.Params.email }}
-                    <a href="mailto:{{ . }}" class="social-icon bg-red-600 hover:bg-red-700">
-                        <i class="far fa-envelope"></i>
+                    <a href="mailto:{{ . }}" class="social-icon bg-red-600 hover:bg-red-700" aria-label="Send email to Shreyas">
+                        <i class="far fa-envelope" aria-hidden="true"></i>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.github }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-gray-600 hover:bg-gray-700">
-                        <i class="fab fa-github-alt"></i>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon bg-gray-600 hover:bg-gray-700" aria-label="Visit Shreyas on GitHub">
+                        <i class="fab fa-github-alt" aria-hidden="true"></i>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.twitter }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-black hover:bg-gray-800">
-                        <span class="font-bold text-lg">𝕏</span>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon bg-black hover:bg-gray-800" aria-label="Visit Shreyas on X">
+                        <span class="font-bold text-lg" aria-hidden="true">𝕏</span>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.linkedin }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-800 hover:bg-blue-900">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon bg-blue-800 hover:bg-blue-900" aria-label="Visit Shreyas on LinkedIn">
+                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.threads }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-gray-900 hover:bg-black">
-                        <span class="font-bold text-lg">@</span>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon bg-gray-900 hover:bg-black" aria-label="Visit Shreyas on Threads">
+                        <span class="font-bold text-lg" aria-hidden="true">@</span>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.playstore }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-green-600 hover:bg-green-700">
-                        <i class="fab fa-google-play"></i>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon bg-green-600 hover:bg-green-700" aria-label="Visit Shreyas on Google Play Store">
+                        <i class="fab fa-google-play" aria-hidden="true"></i>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.medium }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-gray-700 hover:bg-gray-800">
-                        <i class="fab fa-medium-m"></i>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon bg-gray-700 hover:bg-gray-800" aria-label="Read Shreyas on Medium">
+                        <i class="fab fa-medium-m" aria-hidden="true"></i>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.blog }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-500 hover:bg-blue-600">
-                        <i class="fas fa-blog"></i>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon bg-blue-500 hover:bg-blue-600" aria-label="Visit Shreyas' Blog">
+                        <i class="fas fa-blog" aria-hidden="true"></i>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.facebook }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-blue-600 hover:bg-blue-700">
-                        <i class="fab fa-facebook-f"></i>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon bg-blue-600 hover:bg-blue-700" aria-label="Visit Shreyas on Facebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
                     </a>
                     {{ end }}
                     {{ with .Site.Params.instagram }}
-                    <a href="{{ . }}" target="_blank" class="social-icon bg-pink-600 hover:bg-pink-700">
-                        <i class="fab fa-instagram"></i>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon bg-pink-600 hover:bg-pink-700" aria-label="Visit Shreyas on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
                     {{ end }}
                 </div>
@@ -124,7 +123,7 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-8">
             <h2 class="text-4xl mb-2">
-                <i class="fas fa-briefcase mr-4"></i>
+                <i class="fas fa-briefcase mr-4" aria-hidden="true"></i>
                 My <span class="font-bold">Experience</span>
             </h2>
         </div>
@@ -136,7 +135,7 @@
                     <div class="flex flex-col md:flex-row gap-4">
                         {{ if .logo }}
                         <div class="flex-shrink-0">
-                            <img src="{{ .logo }}" alt="{{ .company }}" loading="lazy" decoding="async" class="w-16 h-16 rounded-lg bg-white">
+                            <img src="{{ .logo }}" alt="{{ .company }}" width="64" height="64" loading="lazy" decoding="async" class="w-16 h-16 rounded-lg bg-white">
                         </div>
                         {{ end }}
                         <div class="flex-grow">
@@ -144,7 +143,7 @@
                             <h3 class="text-xl font-bold text-white mb-1">{{ .position }}</h3>
                             <div class="text-lg text-primary mb-1">
                                 {{ if .url }}
-                                <a href="{{ .url }}" target="_blank" class="hover:underline">{{ .company }}</a>
+                                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="hover:underline">{{ .company }}</a>
                                 {{ else }}
                                 {{ .company }}
                                 {{ end }}
@@ -160,11 +159,11 @@
 </section>
 
 <!-- Community Section -->
-<section id="community" class="py-20">
+<section id="community" class="py-20 heavy-section-deferred">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
-                <i class="fas fa-users mr-4"></i>
+                <i class="fas fa-users mr-4" aria-hidden="true"></i>
                 My <span class="font-bold">Community</span>
             </h2>
         </div>
@@ -176,7 +175,7 @@
                     <div class="flex flex-col md:flex-row md:items-center gap-4">
                         {{ if .logo }}
                         <div class="flex-shrink-0">
-                            <img src="{{ .logo }}" alt="{{ .organization }}" loading="lazy" decoding="async" class="w-16 h-16 rounded-lg">
+                            <img src="{{ .logo }}" alt="{{ .organization }}" width="64" height="64" loading="lazy" decoding="async" class="w-16 h-16 rounded-lg">
                         </div>
                         {{ end }}
                         <div class="flex-grow">
@@ -184,7 +183,7 @@
                             <h3 class="text-xl font-bold text-white mb-1">{{ .role }}</h3>
                             <div class="text-lg text-primary">
                                 {{ if .url }}
-                                <a href="{{ .url }}" target="_blank" class="hover:underline">{{ .organization }}</a>
+                                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="hover:underline">{{ .organization }}</a>
                                 {{ else }}
                                 {{ .organization }}
                                 {{ end }}
@@ -199,11 +198,11 @@
 </section>
 
 <!-- Education Section -->
-<section id="education" class="py-20">
+<section id="education" class="py-20 heavy-section-deferred">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
-                <i class="fas fa-graduation-cap mr-4"></i>
+                <i class="fas fa-graduation-cap mr-4" aria-hidden="true"></i>
                 My <span class="font-bold">Education</span>
             </h2>
         </div>
@@ -223,13 +222,12 @@
     </div>
 </section>
 
-
 <!-- Activities Section -->
-<section id="activities" class="py-20">
+<section id="activities" class="py-20 heavy-section-deferred">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
-                <i class="fas fa-star mr-4"></i>
+                <i class="fas fa-star mr-4" aria-hidden="true"></i>
                 My <span class="font-bold">Activities</span>
             </h2>
         </div>
@@ -241,7 +239,7 @@
                     <div class="text-sm text-dark-muted mb-2">{{ .date }}</div>
                     <div class="text-base lg:text-lg text-white leading-relaxed">
                         {{ if .link }}
-                        <a href="{{ .link }}" target="_blank" class="hover:text-primary transition-colors">
+                        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
                             {{ .title | safeHTML }}
                         </a>
                         {{ else }}
@@ -256,11 +254,11 @@
 </section>
 
 <!-- Workshops Section -->
-<section id="workshops" class="py-20">
+<section id="workshops" class="py-20 heavy-section-deferred">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
-                <i class="fas fa-user-tie mr-4"></i>
+                <i class="fas fa-user-tie mr-4" aria-hidden="true"></i>
                 My <span class="font-bold">Sessions /  Workshops</span>
             </h2>
         </div>
@@ -279,41 +277,41 @@
 </section>
 
 <!-- Work Section -->
-<section id="work" class="py-20">
+<section id="work" class="py-20 heavy-section-deferred">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl mb-4">
-                <i class="fas fa-laptop-code mr-4"></i>
+                <i class="fas fa-laptop-code mr-4" aria-hidden="true"></i>
                 My <span class="font-bold">Work</span>
             </h2>
         </div>
         
         <!-- Work Tabs -->
         <div class="flex justify-center mb-12">
-            <div class="bg-dark-card rounded-lg p-1 flex">
-                <button class="work-tab-btn active px-6 py-3 rounded-md transition-all" data-tab="apps">
-                    <i class="fa fa-mobile-alt mr-2"></i>Apps / Software
+            <div class="bg-dark-card rounded-lg p-1 flex" role="tablist" aria-label="Work categories">
+                <button class="work-tab-btn active px-6 py-3 rounded-md transition-all" data-tab="apps" role="tab" id="tab-apps" aria-controls="apps-content" aria-selected="true" tabindex="0">
+                    <i class="fa fa-mobile-alt mr-2" aria-hidden="true"></i>Apps / Software
                 </button>
-                <button class="work-tab-btn px-6 py-3 rounded-md transition-all" data-tab="opensource">
-                    <i class="fab fa-github-alt mr-2"></i>Open Source
+                <button class="work-tab-btn px-6 py-3 rounded-md transition-all" data-tab="opensource" role="tab" id="tab-opensource" aria-controls="opensource-content" aria-selected="false" tabindex="-1">
+                    <i class="fab fa-github-alt mr-2" aria-hidden="true"></i>Open Source
                 </button>
             </div>
         </div>
         
         <!-- Apps Tab Content -->
-        <div id="apps-content" class="work-content">
+        <div id="apps-content" class="work-content" role="tabpanel" aria-labelledby="tab-apps" tabindex="0">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {{ range .Site.Data.work.apps }}
                 <div class="bg-dark-card backdrop-blur-md rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
                     {{ if .image }}
-                    <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" decoding="async" class="w-full h-48 object-cover">
+                    <img src="{{ .image }}" alt="{{ .title }}" width="400" height="192" loading="lazy" decoding="async" class="w-full h-48 object-cover">
                     {{ end }}
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-3">{{ .title }}</h3>
                         <p class="text-gray-300 mb-4 text-sm leading-relaxed">{{ .description | markdownify }}</p>
                         <div class="flex flex-wrap gap-2">
                             {{ range .links }}
-                            <a href="{{ .url }}" target="_blank" 
+                            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
                                class="inline-flex items-center px-4 py-2 bg-primary text-black rounded-md hover:bg-blue-400 transition-colors text-sm font-medium">
                                 {{ .text }}
                             </a>
@@ -326,22 +324,22 @@
         </div>
         
         <!-- Open Source Tab Content -->
-        <div id="opensource-content" class="work-content hidden">
+        <div id="opensource-content" class="work-content hidden" role="tabpanel" aria-labelledby="tab-opensource" tabindex="0">
             <div class="text-center mb-8">
-                <p class="text-gray-300">See more projects on <a href="{{ .Site.Params.github }}" target="_blank" class="text-primary hover:underline">my GitHub</a></p>
+                <p class="text-gray-300">See more projects on <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">my GitHub</a></p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {{ range .Site.Data.work.opensource }}
                 <div class="bg-dark-card backdrop-blur-md rounded-lg overflow-hidden shadow-xl border border-gray-800 hover:border-primary transition-all duration-300 hover:scale-105">
                     {{ if .image }}
-                    <img src="{{ .image }}" alt="{{ .title }}" loading="lazy" decoding="async" class="w-full h-48 object-cover">
+                    <img src="{{ .image }}" alt="{{ .title }}" width="400" height="192" loading="lazy" decoding="async" class="w-full h-48 object-cover">
                     {{ end }}
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-3">{{ .title }}</h3>
                         <p class="text-gray-300 mb-4 text-sm leading-relaxed">{{ .description }}</p>
                         <div class="flex flex-wrap gap-2">
                             {{ range .links }}
-                            <a href="{{ .url }}" target="_blank" 
+                            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
                                class="inline-flex items-center px-4 py-2 bg-primary text-black rounded-md hover:bg-blue-400 transition-colors text-sm font-medium">
                                 {{ .text }}
                             </a>
