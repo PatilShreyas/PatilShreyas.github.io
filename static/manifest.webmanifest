@@ -1,0 +1,22 @@
+{
+  "name": "Shreyas Patil - Software Engineer",
+  "short_name": "Shreyas Patil",
+  "description": "Official Website of Shreyas Sharad Patil. Android Developer, Web Developer, Open Source Enthusiast.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1b1b1b",
+  "theme_color": "#1b1b1b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Images/profile-optimized.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ]
+}
