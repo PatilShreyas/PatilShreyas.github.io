@@ -1,5 +1,6 @@
 baseURL = "https://shreyaspatil.dev/"
 locale = "en-us"
+languageCode = "en-us"
 title = "Shreyas Patil - Software Engineer (Mobile - Android, Kotlin, Open Source)"
 
 # Disable taxonomies since this is a single-page portfolio

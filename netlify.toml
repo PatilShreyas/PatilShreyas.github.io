@@ -43,13 +43,9 @@
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.svg"
+  for = "/favicon.svg"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.png"
-  [headers.values]
+    Content-Type = "image/svg+xml"
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
