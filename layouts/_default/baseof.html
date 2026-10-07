@@ -9,8 +9,12 @@
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="keywords" content="{{ .Site.Params.keywords }}">
     <meta name="author" content="{{ .Site.Params.author }}">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#1b1b1b">
     <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="icon" href="{{ .Site.BaseURL }}favicon.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}Images/profile-optimized.png" type="image/png" />
+    <link rel="manifest" href="{{ .Site.BaseURL }}manifest.webmanifest">
     
     <!-- Open Graph -->
     <meta property="og:title" content="{{ .Site.Title }}">
@@ -39,9 +43,16 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tailwind.css">
 </head>
 <body class="dark bg-dark-bg text-dark-text font-inter" style="background-color: #1b1b1b;">
-    {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    <!-- Skip to main content link for keyboard and screen reader accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[10000] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:font-bold focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white">
+        Skip to content
+    </a>
+
+    <header role="banner">
+        {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    </header>
     
-    <main>
+    <main id="main-content" tabindex="-1">
         {{ block "main" . }}{{ end }}
     </main>
     

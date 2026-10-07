@@ -9,11 +9,17 @@
     "build": "npm run build-css && hugo --minify"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.0",
-    "@tailwindcss/forms": "^0.5.7",
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.20",
+    "tailwindcss": "^3.4.19"
   },
-  "keywords": ["hugo", "portfolio", "tailwindcss", "android", "developer"],
+  "keywords": [
+    "hugo",
+    "portfolio",
+    "tailwindcss",
+    "android",
+    "developer"
+  ],
   "author": "Shreyas Patil",
   "license": "MIT"
 }

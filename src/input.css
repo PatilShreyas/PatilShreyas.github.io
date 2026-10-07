@@ -4,13 +4,28 @@
 
 /* Custom base styles */
 @layer base {
+    :root {
+        color-scheme: dark;
+    }
+
     html {
         scroll-behavior: smooth;
+        scroll-padding-top: 5rem;
+        scrollbar-width: thin;
+        scrollbar-color: #47d3f7 #1b1b1b;
     }
 
     body {
         padding-top: 0;
         background-color: #1b1b1b;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-wrap: balance;
+    }
+
+    p, li {
+        text-wrap: pretty;
     }
 }
 
@@ -83,24 +98,42 @@
     .cursor-blink {
         animation: blink 1s infinite;
     }
+
+    .heavy-section-deferred {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 600px;
+    }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
+/* Scrollspy active styles */
+.nav-link:is(:target-current, .\:target-current),
+.mobile-menu-link:is(:target-current, .\:target-current) {
+    color: #47d3f7 !important;
+    font-weight: 600;
 }
 
-::-webkit-scrollbar-track {
-    background: #1b1b1b;
+.nav-link:is(:target-current, .\:target-current) {
+    border-bottom: 2px solid #47d3f7;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #47d3f7;
-    border-radius: 4px;
-}
+/* Legacy scrollbar fallback for WebKit/Blink browsers without scrollbar-color support */
+@supports not (scrollbar-color: auto) {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #00bcd4;
+    ::-webkit-scrollbar-track {
+        background: #1b1b1b;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #47d3f7;
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00bcd4;
+    }
 }
 
 /* Keyframes */
@@ -197,17 +230,9 @@ p a:not(.social-icon):not(.nav-link):not(.btn):hover,
 }
 
 /* Focus styles for accessibility */
-a:focus,
-button:focus {
-    @apply outline-none ring-2 ring-primary ring-opacity-50;
-}
-
-/* Remove focus borders from navigation links */
-.nav-link:focus,
-.mobile-menu-link:focus {
-    @apply outline-none ring-0;
-    border: none !important;
-    box-shadow: none !important;
+a:focus-visible,
+button:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-[#1b1b1b];
 }
 
 /* Print styles */
